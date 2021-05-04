@@ -1,3 +1,7 @@
+.a-container {
+  display: flex;
+}
+
 .admin-sidebar {
   display: flex;
   flex-direction: column;
@@ -22,6 +26,7 @@
   text-decoration: none;
   color: inherit;
 }
+
 .sidemenu-items a:hover {
   color: red;
 }

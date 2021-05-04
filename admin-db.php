@@ -1,7 +1,6 @@
 <!DOCTYPE html>
 <html>
   <head>
-    <script src="javascript/charts.js"></script>
     <link rel="styleSheet" href="css/admin-db.css" />
     <link rel="styleSheet" href="css/admin-sidebar.css" />
     <?php include 'header.php'; ?>
