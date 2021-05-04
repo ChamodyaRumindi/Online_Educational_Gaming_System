@@ -5,4 +5,33 @@
 .db-container {
   padding-left: 20px;
   padding-top: 20px;
+  display: flex;
+}
+
+.in-numbers-item {
+  width: 400px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  font-family: "Bree Serif", serif;
+  line-height: 0.8;
+
+  border-bottom-style: solid;
+  border-bottom-width: 1px;
+  border-bottom-color: rgb(224, 217, 217);
+}
+
+.in-numbers-item h3 {
+  font-size: 15px;
+}
+
+.in-numbers-item p {
+  font-size: 15px;
+}
+
+.graphical {
+  margin-left: 50px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
 }
