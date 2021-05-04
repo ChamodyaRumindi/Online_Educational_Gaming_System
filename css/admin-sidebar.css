@@ -56,13 +56,24 @@
   border-color: black;
   border-radius: 100px;
 }
+.propic:hover {
+  border-color: red;
+}
 
 .a-name {
   margin: 0;
   font-size: 17px;
 }
 
+.a-name:hover {
+  color: red;
+}
+
 .role {
   margin: 0;
   text-transform: uppercase;
+}
+
+.role:hover {
+  color: red;
 }
