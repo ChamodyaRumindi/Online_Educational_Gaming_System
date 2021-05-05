@@ -1,3 +1,7 @@
+.a-container {
+  display: flex;
+}
+
 .admin-sidebar {
   display: flex;
   flex-direction: column;
@@ -22,6 +26,7 @@
   text-decoration: none;
   color: inherit;
 }
+
 .sidemenu-items a:hover {
   color: red;
 }
@@ -56,13 +61,24 @@
   border-color: black;
   border-radius: 100px;
 }
+.propic:hover {
+  border-color: red;
+}
 
 .a-name {
   margin: 0;
   font-size: 17px;
 }
 
+.a-name:hover {
+  color: red;
+}
+
 .role {
   margin: 0;
   text-transform: uppercase;
+}
+
+.role:hover {
+  color: red;
 }
