@@ -3,6 +3,30 @@
     include_once 'header.php';
     
 ?>
+<?php
+
+    if (isset($_POST["log"])){
+        
+        $email = $_POST["email"];
+        $password = $_POST["psw"];
+
+        require_once 'database.php';
+        require_once 'functions.php';
+
+        if(emptyInputSignIn($email, $password) !== false) {
+            header("location: ../login.php?error=emptyinput");
+            exit();
+        }
+    }
+
+    else{
+
+        header("location: ../login.php");
+        exit();
+    }
+    
+
+?>
 
 <!DOCTYPE>
 <html>
@@ -12,7 +36,7 @@
 
     <body>
         <div class ="login"> 
-            <form id ="login" method ="POST" action ="login.php">  
+            <form id ="login" method ="POST" action ="includes/login.php">  
             <h2>SIGN IN</h2>
             
                 <div class ="form-group">
@@ -64,6 +88,8 @@
             </form>
         </div>
     </body>
+
+    
     
 </html>
 
