@@ -1,0 +1,54 @@
+body{
+    margin: 0;
+    padding: 0;
+    background-color: white;
+    font-family: 'Courier New', Courier, monospace;
+    
+}
+
+h2{
+    font-size: 30px;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    color: black;
+    text-align: center;
+    margin-bottom: 30px;
+    font-weight: normal;
+}
+
+.signup-form{
+    background: #fff;
+    width: 450px;
+    border-radius: 6px;
+    margin: 0 auto;
+    display: table;
+    padding: 15px 30px 30px;
+    box-sizing: border-box;
+}
+
+.seperator{
+    float: left;
+    width: 100%;
+    border-top: 1px solid #ccc;
+    text-align: center;
+    margin: 50px 0 0;
+
+}
+
+.seperator b{
+    width: 40px;
+    height: 40px;
+    font-size: 15px;
+    text-align: center;
+    line-height: 40px;
+    background: #fff;
+    display: inline-block;
+    border: 1px solid white;
+    position: relative;
+    top: -22px;
+    z-index: 1;
+}
+
+.social{
+    width: 25px;
+    height: 25px;
+}
