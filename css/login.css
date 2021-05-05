@@ -1,0 +1,131 @@
+body{
+    margin: 0;
+    padding: 0;
+    background-color: white;
+    font-family: 'Courier New', Courier, monospace;
+}
+
+h2{
+    font-size: 30px;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    color: black;
+    text-align: center;
+    margin-bottom: 30px;
+    font-weight: normal;
+}
+
+.login{
+    background: #fff;
+    width: 450px;
+    border-radius: 6px;
+    margin: 0 auto;
+    display: table;
+    padding: 15px 30px 30px;
+    box-sizing: border-box;
+}
+
+.form-group{
+    float: center;
+    width: 100%;
+    margin: 0 0 15px;
+    position: relative;
+}
+
+.login input{
+    width: 100%;
+    padding: 5px;
+    height: 30px;
+    border-radius: 74px;
+    border: 1px solid #ccc;
+    box-sizing: border-box;
+    font-size: 12px;
+    padding-left: 75px;
+}
+
+
+
+/*.che label{
+    font-size: 15px;
+    color: black;
+    
+}*/
+
+.login .reset-psw{
+    float: right;
+    width: 100%;
+    text-decoration: none;
+    color: #45aba6;
+    font-size: 14px;
+    text-align: right;
+    margin-top: 11px;
+}
+
+.reset-psw:hover{
+    color: red;
+}
+
+.login .login-btn{
+    background: #45aba6;
+    padding: 15px 50px;
+    border-color: #45aba6;
+    color: white;
+    text-align: center;
+    margin: 0 auto;
+    font-size: 15px;
+    border: 1px solid #45aba6;
+    border-radius: 44px;
+    width: 100%;
+    height: 45px;
+    cursor: pointer;
+    
+}
+
+.login button:hover{
+    color: darkblue;
+    opacity: 0.9;
+}
+
+.seperator{
+    float: left;
+    width: 100%;
+    border-top: 1px solid #ccc;
+    text-align: center;
+    margin: 50px 0 0;
+
+}
+
+.seperator b{
+    width: 40px;
+    height: 40px;
+    font-size: 15px;
+    text-align: center;
+    line-height: 40px;
+    background: #fff;
+    display: inline-block;
+    border: 1px solid white;
+    position: relative;
+    top: -22px;
+    z-index: 1;
+}
+
+.social{
+    width: 25px;
+    height: 25px;
+    padding: 0px 10px;
+    display: flex;
+    align-items: center;
+}
+
+.btn1{
+    display:inline-block;
+    width:35px; 
+    overflow:hidden;
+    position:relative;
+    justify-content: center;   
+}
+
+.btn1:hover{
+    transform:scale(0.8);
+    
+}
+
