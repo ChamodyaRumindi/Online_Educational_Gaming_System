@@ -13,58 +13,76 @@
         <h2>- Add a game -</h2>
 
         <form action="" method="post">
-          <label for="name">Game Name:</label>
-          <input type="text" name="gamename" id="name" required /> <br />
+          <div class="form-item">
+            <label for="name">Game Name:</label>
+            <input type="text" name="gamename" id="name" required />
+          </div>
 
-          <label for="desc">Description:</label>
-          <textarea name="description" id="desc" rows="10" cols="30"></textarea>
-          <br />
+          <div class="form-item">
+            <label for="desc">Description:</label>
+            <textarea
+              name="description"
+              id="desc"
+              rows="5"
+              cols="50"
+            ></textarea>
+          </div>
 
-          <label for="inst">Instructions:</label>
-          <textarea
-            name="instructions"
-            id="inst"
-            rows="10"
-            cols="30"
-          ></textarea>
-          <br />
+          <div class="form-item">
+            <label for="inst">Instructions:</label>
+            <textarea
+              name="instructions"
+              id="inst"
+              rows="5"
+              cols="50"
+            ></textarea>
+          </div>
 
-          <label for="grades">Grade:</label>
-          <select name="grade" id="grades">
-            <option value="PreSchool">PreSchool</option>
-            <option value="1">1</option>
-            <option value="2">2</option>
-            <option value="3">3</option>
-            <option value="4">4</option>
-            <option value="5">5</option>
-            <option value="6">6</option>
-            <option value="7">7</option>
-            <option value="8">8</option>
-            <option value="9">9</option>
-          </select>
-          <br />
+          <div class="form-item">
+            <label for="grades">Grade:</label>
+            <select name="grade" id="grades">
+              <option value="PreSchool">PreSchool</option>
+              <option value="1">1</option>
+              <option value="2">2</option>
+              <option value="3">3</option>
+              <option value="4">4</option>
+              <option value="5">5</option>
+              <option value="6">6</option>
+              <option value="7">7</option>
+              <option value="8">8</option>
+              <option value="9">9</option>
+            </select>
+          </div>
 
-          <label for="categories">Category:</label>
-          <select name="category" id="categories">
-            <option value="Quiz">Quiz</option>
-            <option value="Puzzel">Puzzel</option>
-          </select>
-          <br />
+          <div class="form-item">
+            <label for="categories">Category:</label>
+            <select name="category" id="categories">
+              <option value="Quiz">Quiz</option>
+              <option value="Puzzel">Puzzel</option>
+            </select>
+          </div>
 
-          <label for="gfile">Game File:</label>
-          <input type="file" name="gamefile" id="gfile" /> <br />
+          <div class="form-item">
+            <label for="gfile">Game File:</label>
+            <input type="file" name="gamefile" id="gfile" />
+          </div>
 
-          <label for="gthumbnail">Thumbnail:</label>
-          <input type="file" name="thumbnail" id="gthumbnail" /> <br />
-          <input
-            type="reset"
-            onclick="return confirm('Your input data will be lost!')"
-          />
-          <input
-            type="submit"
-            value="Add Game"
-            onclick="return confirm('Please confirm!')"
-          />
+          <div class="form-item">
+            <label for="gthumbnail">Thumbnail:</label>
+            <input type="file" name="thumbnail" id="gthumbnail" />
+          </div>
+
+          <div class="ag-buttons">
+            <input
+              type="reset"
+              onclick="return confirm('Your input data will be lost!')"
+            />
+            <input
+              type="submit"
+              value="Add Game"
+              onclick="return confirm('Please confirm!')"
+            />
+          </div>
         </form>
       </div>
     </div>
