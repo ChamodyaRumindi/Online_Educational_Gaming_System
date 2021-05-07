@@ -3,30 +3,7 @@
     include_once 'header.php';
     
 ?>
-<?php
 
-    if (isset($_POST["log"])){
-        
-        $email = $_POST["email"];
-        $password = $_POST["psw"];
-
-        require_once 'database.php';
-        require_once 'functions.php';
-
-        if(emptyInputSignIn($email, $password) !== false) {
-            header("location: ../login.php?error=emptyinput");
-            exit();
-        }
-    }
-
-    else{
-
-        header("location: ../login.php");
-        exit();
-    }
-    
-
-?>
 
 <!DOCTYPE>
 <html>
@@ -35,8 +12,9 @@
     </head>
 
     <body>
+    <section>
         <div class ="login"> 
-            <form id ="login" method ="POST" action ="includes/login.php">  
+            <form id ="login" method ="POST" action ="includes/login.inc.php">  
             <h2>SIGN IN</h2>
             
                 <div class ="form-group">
@@ -51,13 +29,13 @@
                 <div class ="form-group">
                     <label><b>Password</b></label><br>
                     
-                    <input type ="password" name ="psw" id ="psw" placeholder="password" maxlength ="10" required/>
+                    <input type ="password" name ="pwd" id ="pwd" placeholder="password" maxlength ="10" required/>
 
                     <br>
 
                 </div>
                 
-                
+                <input type ="checkbox" name= "remember" id ="remember"/>Remember Me
 
                 <a class ="reset-psw" href ="#">Forgot Password?</a>
                 
@@ -87,6 +65,25 @@
 
             </form>
         </div>
+
+<?php
+
+    /*check whether empty inputs */
+    if (isset($_GET["error"])) {
+        if ($_GET["error"] == "emptyinput") {
+            echo "<p>Fill in all fields!</p>";
+        }
+
+        else if ($_GET["error"] == "wronglogin") {
+            echo "<p>Incorrect login information!</p>";
+        }
+    
+    }
+?>
+
+
+
+    </section> 
     </body>
 
     
