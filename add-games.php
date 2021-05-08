@@ -73,20 +73,12 @@
           </div>
 
           <div class="ag-buttons">
-            <input
-              type="reset"
-              onclick="return confirm('Your input data will be lost!')"
-            />
-            <input
-              type="submit"
-              value="Add Game"
-              onclick="return confirm('Please confirm!')"
-            />
+            <button class="reset-btn" type= "reset" onclick="return confirm('All data will be lost!')">Reset</button>
+            <button class="addgame-btn" type= "submit" onclick="return confirm('Please confirm!')">Add Game</button>
           </div>
         </form>
       </div>
     </div>
   </body>
-
   <?php include('./footer.php'); ?>
 </html>
