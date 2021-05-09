@@ -8,6 +8,13 @@
        <link rel="stylesheet" href="css/payment.css" />
   </head>
   <body>
+
+  <header>
+  <?php include 'header.php'; ?>
+  </header>
+  
+    
+    
     <div class="container">
       <div class="imgDiv">
         <img src="images/payment-methods.png" alt="payment-picture" width="500" />
@@ -28,4 +35,6 @@
       </div>
     </div>
   </body>
+
+  <?php include('./footer.php'); ?>
 </html>

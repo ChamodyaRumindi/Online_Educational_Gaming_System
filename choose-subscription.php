@@ -9,6 +9,10 @@
   </head>
   <body>
 
+  <header>
+  <?php include 'header.php'; ?>
+  </header>
+
 
   	<!--Start content of the page-->
     <div class="containerDiv">
@@ -59,4 +63,6 @@
 
     <!--End content of the page-->
   </body>
+
+  <?php include('./footer.php'); ?>
 </html>
