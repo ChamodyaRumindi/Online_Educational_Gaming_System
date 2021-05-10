@@ -3,7 +3,7 @@
     <div class="footer-container">
       <div>
         <ul class="footer-links">
-          <li class="footer-item"><a href="#">Home</a></li>
+          <li class="footer-item"><a href="/oegplay">Home</a></li>
           <li class="footer-item"><a href="#">Games</a></li>
           <li class="footer-item"><a href="#">Subjects</a></li>
           <li class="footer-item"><a href="#">Pricing</a></li>
