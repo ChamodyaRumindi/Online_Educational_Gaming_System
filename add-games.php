@@ -12,7 +12,7 @@
       <div class="ag-container">
         <h2>- Add a game -</h2>
 
-        <form action="" method="post">
+        <form action="includes/addgame.inc.php" method="post" name="addgamef" onsubmit="return validateForm()" enctype="multipart/form-data" >
           <div class="form-item">
             <label for="name">Game Name:</label>
             <input type="text" name="gamename" id="name" required />
@@ -38,33 +38,93 @@
             ></textarea>
           </div>
 
-          <div class="form-item">
-            <label for="grades">Grade:</label>
-            <select name="grade" id="grades">
-              <option value="PreSchool">PreSchool</option>
-              <option value="1">1</option>
-              <option value="2">2</option>
-              <option value="3">3</option>
-              <option value="4">4</option>
-              <option value="5">5</option>
-              <option value="6">6</option>
-              <option value="7">7</option>
-              <option value="8">8</option>
-              <option value="9">9</option>
-            </select>
-          </div>
+          
+          <?php
+              require 'includes/database.inc.php';
+
+              $sql = "SELECT gradeName FROM Grade";
+              $result = mysqli_query($conn, $sql);
+
+              if (mysqli_num_rows($result) > 0) {
+                echo '<div class="form-item">';
+                echo '<label for="grades">Grade:</label>';
+                echo '<select name="grade" id="grades" required>';
+                echo '<option disabled selected value> -- Select Grade -- </option>';
+                while($row = mysqli_fetch_assoc($result)) {
+                  echo '<option value="'.$row['gradeName'].'" >'.$row["gradeName"].'</option>';  
+                }
+                echo '</select>';
+                echo '</div>';
+              } else {
+                echo "O Grades Found!";
+              }
+
+              $sql = "SELECT categoryName FROM Category";
+              $result = mysqli_query($conn, $sql);
+
+              if (mysqli_num_rows($result) > 0) {
+                echo '<div class="form-item">';
+                echo '<label for="categories">Category:</label>';
+                echo '<select name="category" id="categories" required>';
+                echo '<option disabled selected value> -- Select Category -- </option>';
+                while($row = mysqli_fetch_assoc($result)) {
+                  echo '<option value="'.$row['categoryName'].'" >'.$row["categoryName"].'</option>';
+                }
+                echo '</select>';
+                echo '</div>';
+              } else {
+                echo "O Categories Found!";
+              }
+
+              $sql = "SELECT subjectName FROM Subject";
+              $result = mysqli_query($conn, $sql);
+
+              if (mysqli_num_rows($result) > 0) {
+                echo '<div class="form-item">';
+                echo '<label for="subjects">Subject:</label>';
+                echo '<select name="subject" id="subjects" required>';
+                echo '<option disabled selected value> -- Select Subject -- </option>';
+                while($row = mysqli_fetch_assoc($result)) {
+                  echo '<option value="'.$row['subjectName'].'" >'.$row["subjectName"].'</option>';
+                }
+                echo '</select>';
+                echo '</div>';
+              } else {
+                echo "O Subjects Found!";
+              }
+
+              $sql = "SELECT devID FROM Developer";
+              $result = mysqli_query($conn, $sql);
+
+              if (mysqli_num_rows($result) > 0) {
+                echo '<div class="form-item">';
+                echo '<label for="developers">Developer ID:</label>';
+                echo '<select name="developer" id="developers" required>';
+                echo '<option disabled selected value> -- Select Developer -- </option>';
+                while($row = mysqli_fetch_assoc($result)) {
+                  echo '<option value="'.$row['devID'].'" >'.$row["devID"].'</option>';
+                }
+                echo '</select>';
+                echo '</div>';
+              } else {
+                echo "O Developers Found!";
+              }
+
+              mysqli_close($conn); 
+          ?>
 
           <div class="form-item">
-            <label for="categories">Category:</label>
-            <select name="category" id="categories">
-              <option value="Quiz">Quiz</option>
-              <option value="Puzzel">Puzzel</option>
+            <label for="gaccess">Access Level:</label>'
+            <select name="access" id="gaccess" required>
+                <option disabled selected value> -- Select Access Level -- </option>
+                <option value="Free">Free</option>
+                <option value="Premium">Premium</option>
             </select>
           </div>
 
           <div class="form-item">
             <label for="gfile">Game File:</label>
-            <input type="file" name="gamefile" id="gfile" />
+            <input type="file" name="gamefile" id="gfile" required/>
           </div>
 
           <div class="form-item">
@@ -74,9 +134,18 @@
 
           <div class="ag-buttons">
             <button class="reset-btn" type= "reset" onclick="return confirm('All data will be lost!')">Reset</button>
-            <button class="addgame-btn" type= "submit" onclick="return confirm('Please confirm!')">Add Game</button>
+            <button class="addgame-btn" name = "submit" type= "submit" onclick="return confirm('Please confirm!')">Add Game</button>
           </div>
         </form>
+        <div class= "output">
+        <?php
+          if (isset($_GET["error"])) {
+            if ($_GET["error"] == "none") {
+              echo "<p>Successfully Added!</p>";
+            }
+          }
+          ?>
+      </div>
       </div>
     </div>
   </body>

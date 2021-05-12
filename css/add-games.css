@@ -85,3 +85,9 @@ input[type="file"] {
   cursor: pointer;
   font-family: "Bree Serif", serif;
 }
+
+.output {
+  font-size: 30px;
+  text-align: center;
+  color: green;
+}
