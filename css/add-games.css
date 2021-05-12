@@ -86,8 +86,13 @@ input[type="file"] {
   font-family: "Bree Serif", serif;
 }
 
-.output {
-  font-size: 30px;
+.output h1 {
+  font-size: 50px;
   text-align: center;
   color: green;
+}
+.output p {
+  font-size: 30px;
+  text-align: center;
+  color: red;
 }

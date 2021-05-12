@@ -141,7 +141,25 @@
         <?php
           if (isset($_GET["error"])) {
             if ($_GET["error"] == "none") {
-              echo "<p>Successfully Added!</p>";
+              echo "<h1>Successfully Added!</h1>";
+            }
+            if ($_GET["error"] == "1") {
+              echo "<p>You can not upload a game file of this type!. only js,html are allowd</p>";
+            }
+            if ($_GET["error"] == "2") {
+              echo "<p>There was an error uplaoding game file!</p>";
+            }
+            if ($_GET["error"] == "3") {
+              echo "<p>Game file is too big!</p>";
+            }
+            if ($_GET["error"] == "4") {
+              echo "<p>You can not upload a game file of this type!. only jpg,jpeg and png are allowd</p>";
+            }
+            if ($_GET["error"] == "5") {
+              echo "<p>here was an error uplaoding thumbnail!</p>";
+            }
+            if ($_GET["error"] == "6") {
+              echo "<p>Thumbnail is too big!</p>";
             }
           }
           ?>
