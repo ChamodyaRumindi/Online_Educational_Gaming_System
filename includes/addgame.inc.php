@@ -36,7 +36,7 @@
             exit();
         }
 
-        //Thumbnail
+         //Thumbnail
         $thumbFile = $_FILES['thumbnail'];
 
         $thumbFileName = $_FILES['thumbnail']['name'];
@@ -50,6 +50,7 @@
 
         $thumbAllowed = array('jpg', 'jpeg', 'png');
 
+        if ($thumbFileError !== 4) {
         if(in_array($thumbFileActualExt, $thumbAllowed)){
             if ($thumbFileError === 0) {
                 if ($thumbFileSize < 500000) {
@@ -67,12 +68,7 @@
                 header ("location: ../add-games.php?error=5");
                 exit();
             }
-        }
-        else {
-            header ("location: ../add-games.php?error=4");
-            exit();
-        }
-
+        }}
         
         //Add Game Details to the Database
 

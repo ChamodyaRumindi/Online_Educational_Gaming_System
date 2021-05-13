@@ -153,7 +153,7 @@
               echo "<p>Game file is too big!</p>";
             }
             if ($_GET["error"] == "4") {
-              echo "<p>You can not upload a game file of this type!. only jpg,jpeg and png are allowd</p>";
+              echo "<p>You can not upload a thumbnail of this type!. only jpg,jpeg and png are allowd</p>";
             }
             if ($_GET["error"] == "5") {
               echo "<p>here was an error uplaoding thumbnail!</p>";
