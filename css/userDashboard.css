@@ -1,0 +1,116 @@
+.profile
+{
+    vertical-align: middle;
+    width: 100;
+    height: 100;
+    border-radius: 50%;
+    margin-top: 120px;
+    margin-left: -180px;
+}
+.about
+{
+    text-align: center;
+    text-decoration: none;
+    font-size: 12;
+    margin-left: -1270px;
+}
+#p1
+{
+    font-size: 14;
+}
+.menu
+{
+    list-style-type: none;
+    margin: 0;
+    margin-left: -225px;
+    margin-top: 50px;
+    padding: 0;
+    width: 200px;
+    background-color: brown;
+    border: 1px solid black;
+}
+li a
+{
+    display: block;
+    color: black;
+    padding: 8px 16px;
+    text-decoration: none;
+}
+li
+{
+    text-align: center;
+    border-bottom: 1px solid black;
+}
+li:last-child
+{
+    border-bottom: none;
+}
+li a.active
+{
+    background-color: chocolate;
+    color: black;
+}
+li a:hover:not(.active)
+{
+    background-color: coral;
+    color: black;
+}
+.vl
+{
+    border-left: 2px solid black;
+    height: 500px;
+    position: fixed;
+    left: 50%;
+    margin-left: -500px;
+    top: 120;
+}
+.div1
+{
+    border: 1px solid black;
+    width: 500;
+    height: 400;
+    margin-left: 30px;
+    margin-top: -385;
+    padding: 20px;
+}
+#p2
+{
+    font-size: 12;
+    margin-bottom: 5px;
+}
+.div2
+{
+    border: 1px solid black;
+    width: 150;
+    height: 25;
+    text-align: center; 
+    padding: 4px 4px 0;
+    display: block; 
+    font-size: 20;
+}
+table
+{
+    border-collapse: collapse;
+    border-spacing: 0;
+    empty-cells: show;
+    overflow-x: scroll;
+}
+#row1
+{
+    height: 220;
+}
+.div3
+{
+    border: 1px solid black;
+    width: 300;
+    height: 350;
+    margin-left: 600;
+    margin-top: -400;
+    padding: 20px;
+    
+}
+#p3
+{
+    margin-top: -35;
+    font-size: 20;
+}
