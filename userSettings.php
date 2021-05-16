@@ -7,11 +7,11 @@
     <head>
         <title>Settings</title>
     
-        <link href="userSettings.css" rel="stylesheet" type="text/css">        
+        <link href="css/userSettings.css" rel="stylesheet" type="text/css">        
     </head>
 
     <body>
-        <img src="defaultProfile.png" alt="Default Profile Photo" class="profile">
+        <img src="images/defaultProfile.png" alt="Default Profile Photo" class="profile">
          
         <div class="about">
         <p id="p1"><b>Pasindu Lakshan</b></p>
