@@ -39,7 +39,7 @@
                         <input type ="password" name ="pwdrepeat" placeholder ="confirm password" required/>
                     <br>
 
-                        <p>by submitting this form you agree to our terms of use</p>
+                        <p>by submitting this form you agree to our <a href = "#">terms of use</a></p>
                     <br>    
                         <button type ="submit" name ="submit">SIGN UP</button>
 
@@ -61,7 +61,43 @@
                 </div>
                 </form>
             </div>
+
+
+<?php
+
+    /*check errors in sign up */
+    
+    if (isset($_GET["error"])) {
+        if ($_GET["error"] == "emptyinput") {
+            echo "<p>Fill in all fields!</p>";
+        }
+
+        else if ($_GET["error"] == "invalidemail") {
+            echo "<p>Choose a proper e-mail!</p>";
+        }
+
+        else if ($_GET["error"] == "passwordsdontmatch") {
+            echo "<p>Passwords doesn't match!</p>";
+        }
+
+        else if ($_GET["error"] == "stmtfailed") {
+            echo "<p>Something went wrong, Try again!</p>";
+        }
+
+        else if ($_GET["error"] == "emailtaken") {
+            echo "<p>E-mail already taken!</p>";
+        }
+
+        else if ($_GET["error"] == "none") {
+            echo "<p>You have signed up!</p>";
+        }
+    }
+?>
+
+
         </section>
+
+
     </body>
 </html>
 
