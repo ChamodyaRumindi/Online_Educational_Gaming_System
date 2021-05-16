@@ -1,27 +1,19 @@
-<?php 
-   include 'header.php'; 
-?>
-
 <!DOCTYPE html>
 <html>
-    <head>
-        <title>Dashboard</title>     
-    
-        <link href="css/userDashboard.css" rel="stylesheet" type="text/css">
-    </head>
+  <head>
+    <link rel="styleSheet" href="css/user-db.css" />
+    <link rel="styleSheet" href="css/sidebar.css" />
+    <?php include 'header.php'; ?>
+  </head>
 
-    <body>
-    <?php include 'user-sidebar.php'; ?>
-        <div class="vl"></div>
-
-        <div class="div1">
-           <p id="p2">MY SCORE</p>
-           <div class="div2">
-             <b>123456</b></div>
-             <br><br>
-             <p id="p2">GAME HISTORY(Hide the game history)</p>
-
-           <table style="width: 100%" border="1">
+  <body>
+    <div class="u-container">
+      <?php include 'user-sidebar.php'; ?>
+      <div class="db-container">
+        <div class="history">
+            <p id="p2">MY SCORE</p>
+            <h2>123456</h2>
+            <table style="width: 100%" border="1">
                <tr>
                    <td colspan="3">Clear history</td>
                </tr>
@@ -35,10 +27,10 @@
                  <td></td>
                  <td></td>
                </tr>
-               
-           </table>
-           <div class="div3">
-             <p id="p3">
+            </table>
+        </div>
+        <div class="stats">
+            <p id="p3">
                <center>My Status</center>
             </p>
             Type of subscription :- Premium<br><br>
@@ -46,12 +38,10 @@
             Total time played :- 4:45:34<br><br>
             Number of games played :- 24<br><br>
             Rank :- Gold<br>
-           </div>
         </div>
+      </div>
+    </div>
+  </body>
 
-    </body>
+  <?php include('./footer.php'); ?>
 </html>
-
-<?php 
-    include 'footer.php'; 
-?>

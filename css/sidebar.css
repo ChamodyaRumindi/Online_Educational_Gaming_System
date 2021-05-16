@@ -20,6 +20,8 @@
 .sidemenu-items {
   list-style: none;
   padding: 0;
+  margin-right: 20px;
+  margin-left: 20px;
 }
 
 .sidemenu-items a {
@@ -43,8 +45,6 @@
   white-space: nowrap;
   text-align: center;
   padding: 10px 40px;
-  margin-right: 20px;
-  margin-left: 20px;
   text-transform: uppercase;
 }
 

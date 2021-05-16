@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html>
   <head>
-    <link rel="styleSheet" href="css/admin-sidebar.css" />
+    <link rel="styleSheet" href="css/sidebar.css" />
     <link rel="styleSheet" href="css/all-games.css" />
     <?php include 'header.php'; ?>
   </head>

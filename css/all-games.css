@@ -16,14 +16,14 @@ table {
 .table {
   width: 730px;
   height: 600px;
-  overflow: auto;
+  overflow: scroll;
 }
 
 td,
 th {
   border: 1px solid #dddddd;
   text-align: left;
-  padding: 8px;
+  padding: 4px;
 }
 
 tr:nth-child(even) {
@@ -37,7 +37,7 @@ a {
 .tablebtn {
   background-color: #04aa6d;
   border-radius: 4px;
-  padding: 12px;
+  padding: 8px;
   font-family: "Bree Serif", serif;
   color: white;
   font-size: medium;
@@ -45,10 +45,11 @@ a {
 .tablebtn2 {
   background-color: #ff0000;
   border-radius: 4px;
-  padding: 12px;
+  padding: 8px;
   font-family: "Bree Serif", serif;
   color: white;
   font-size: medium;
+  z-index: -1;
 }
 
 .tablebtn:hover {

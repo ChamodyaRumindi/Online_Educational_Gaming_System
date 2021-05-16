@@ -43,8 +43,8 @@
 			</ul>
             <button>Sign Up for free</button>
           </div>
-        </div>
-		<div class="upgradeCard">
+      </div>
+		  <div class="upgradeCard">
 			<div class="contentDiv">
 			  <h3>Free</h3>
 			  <h3>$0/mon</h3>

@@ -2,7 +2,7 @@
 <html>
   <head>
     <link rel="styleSheet" href="css/admin-db.css" />
-    <link rel="styleSheet" href="css/admin-sidebar.css" />
+    <link rel="styleSheet" href="css/sidebar.css" />
     <?php include 'header.php'; ?>
   </head>
 
