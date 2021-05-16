@@ -11,19 +11,9 @@
     </head>
 
     <body>
-        <img src="images/defaultProfile.png" alt="Default Profile Photo" class="profile">
-         
-        <div class="about">
-        <p id="p1"><b>Pasindu Lakshan</b></p>
-        Premium Member<br>
-        </div>
-
-        <ul class="menu">
-            <li><a class="active" href="#">Dashboard</a></li>
-            <li><a href="choosesubscription.html">Subscription</a></li>
-            <li><a href="usersettings.html">Settings</a></li>
-            <li><a href="">Log out</a></li>
-        </ul>
+        <?php
+           include="/OEGPlay/admin-sidebar.php";
+        ?>
         <div class="vl"></div>
 
         <div class="div1">
