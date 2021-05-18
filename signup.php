@@ -20,9 +20,13 @@
 
                 <form action ="includes/signup.inc.php" method ="POST">
                      <h2>SIGN UP</h2>
-                        <label><b>Full Name</b></label>
+                        <label><b>First Name</b></label>
                     <br>
-                        <input type ="text" name ="fname" placeholder ="full name" required/>
+                        <input type ="text" name ="fname" placeholder ="first name" required/>
+                    <br>
+                        <label><b>Last Name</b></label>
+                    <br>
+                        <input type ="text" name ="lname" placeholder ="last name" required/>
                     <br>
                         <label><b>E-mail</b></label>
                     <br>
@@ -33,7 +37,7 @@
                         <label><b>User Name</b></label>
                     <br>
                     
-                        <input type ="text" name ="username" placeholder ="user name" required/>
+                        <input type ="text" name ="uid" placeholder ="user name" required/>
                     <br>
                         <label id ="character"><b>Password</b></label>
                         
@@ -81,6 +85,10 @@
 
         else if ($_GET["error"] == "invalidemail") {
             echo "<p>Choose a proper e-mail!</p>";
+        }
+
+        else if ($_GET["error"] == "invaliduid") {
+            echo "<p>Choose a proper username!</p>";
         }
 
         else if ($_GET["error"] == "passwordsdontmatch") {
