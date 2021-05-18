@@ -2,45 +2,57 @@
     if (isset($_POST["submit"])) {
         /*echo "It works";*/
 
-        $name = $_POST["fname"];
+        $fname = $_POST["fname"];
+        $lname = $_POST["lname"];
         $email = $_POST["email"];
+        $username = $_POST["uid"];
         $pwd = $_POST["pwd"];
         $pwdRepeat = $_POST["pwdrepeat"];
 
         require_once 'database.inc.php';
         require_once 'functions.inc.php';
 
-
-            /*check whether the inputs are empty*/
-
-        if (emptyInputSignup($name, $email, $pwd, $pwdRepeat) !== false) {
+   
+        /*check whether the inputs are empty*/
+        if (emptyInputSignup($fname, $lname, $email, $username, $pwd, $pwdRepeat) !== false) {
             header ("location: ../signup.php?error=emptyinput");
             exit();
         }
 
-            /*check whether the  e-mail is invalid */
+        /*check whether the user name is invalid */      
+       /* if (invalidUid($username) !== false) {
+            header ("location: ../signup.php?error=invaliduid");
+            exit();
+        }    */
 
+        /*check whether the  e-mail is invalid */
         if (invalidEmail($email) !== false) {
             header ("location: ../signup.php?error=invalidemail");
             exit();
         }
-            /*check whether the passwords does not match */
-
+         
+        /*check whether the passwords does not match */
         if (pwdMatch($pwd, $pwdRepeat) !== false) {
             header ("location: ../signup.php?error=passwordsdontmatch");
             exit();
         }
 
-            /*check whether the email is exist */
+        /*check whether the username is exist */
+        if (uidExists($conn, $username) !== false) {
+            header ("location: ../signup.php?error=usernametaken");
+            exit();
+        }
 
-        if (emailExists( $conn, $email) !== false) {
+        /*check whether the email is exist */
+        if (emailExists($conn, $email) !== false) {
             header ("location: ../signup.php?error=emailtaken");
             exit();
         }
 
-        /*no errors occur, then signup the user into the databse */
 
-        createUser($conn, $name, $email, $pwd);
+        /*no errors occur, then signup the user into the database */
+        createUser($conn, $fname, $lname, $username, $pwd, $email);
+       
     }
 
     else {
