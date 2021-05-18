@@ -3,8 +3,6 @@
 ?>
 
 
-
-
 <link rel="styleSheet" href="css/header.css" />
 <link rel="styleSheet" href="css/footer.css" />
 <nav class= "navbar">

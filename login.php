@@ -7,10 +7,9 @@
 
 <!DOCTYPE>
 <html>
-    <head>  
+    <head>
         <link rel="styleSheet" href="css/login.css" />
     </head>
-
     <body>
     <section>
         <div class ="login"> 
@@ -35,11 +34,13 @@
 
                 </div>
                 
-                <input type ="checkbox" name= "remember" id ="remember"/>Remember Me
-
+                <div class="l-container">
+                    <div class="checkbox">
+                        <label><b>Remember ME</b></label>
+                        <input type ="checkbox" name= "remember" id ="remember"/>
+                    </div>
                 <a class ="reset-psw" href ="#">Forgot Password?</a>
-                
-                <br><br>
+                </div>
 
                 <button type ="submit" class ="login-btn"  name ="log" id ="log">LOG IN</button>
 
