@@ -43,7 +43,7 @@
                   echo '<td>'.$row["adminID"].'</td>';
                   echo '<td>'.$row["devID"].'</td>';
                   echo '<td><a href="modifygame.php?id='.$row['gameID'].'" class="tablebtn">Modify</a></td>';
-                  echo '<td><form action="includes/deletegame.inc.php" name="delete-member" method="get">
+                  echo '<td><form action="includes/deletegame.inc.php" name="delete-game" method="get">
                         <input type="hidden" name="rowid" value="'.$row['gameID'].'">
                         <button class="tablebtn2" type="submit" onClick="return confirm(\'Are you sure?. this operation cannot be undone!\')">Delete</button>
                         </form></td>';
