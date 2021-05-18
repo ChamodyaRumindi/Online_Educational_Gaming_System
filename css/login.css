@@ -1,3 +1,4 @@
+<<<<<<< Updated upstream
 body {
   margin: 0;
   padding: 0;
@@ -43,11 +44,73 @@ h2 {
 }
 
 /*.che label{
+=======
+body{
+    margin: 0;
+    padding: 0;
+    background-color: white;
+    font-family: "Bree Serif", serif;
+}
+
+h2{
+    font-size: 24px;
+    font-family: "Bree Serif", serif;
+    color: black;
+    text-align: center;
+    margin-top: 30px;
+    font-weight: normal;
+}
+
+.login{
+    width: 450px;
+    border-radius: 6px;
+    margin: 50 auto;
+    display: flex;
+	flex-direction: column;
+    padding: 15px 30px 30px;
+    box-sizing: border-box;
+}
+
+.form_group{
+	
+	display: flex;
+	justify-content: center;
+	align-items: center;
+    border: 3px solid black;
+	border-radius: 12px;
+	
+	margin: 30 auto;
+	width: 100%;
+	
+}
+
+.login input{
+	display: block;
+    background-color: white;
+    width: 60%;
+    padding: len;
+    height: 30px;
+    border-radius: 8px;
+    border: 2px solid black;
+    box-sizing: border-box;
+    font-size: 12px;
+	font-family: "Bree Serif", serif;
+    padding-left: 70px;
+	margin-left: 80px;
+}
+
+
+
+label{
+>>>>>>> Stashed changes
     font-size: 15px;
     color: black;
+	font-family: "Bree Serif", serif;
+	margin-left: 80px;
     
-}*/
+}
 
+<<<<<<< Updated upstream
 .login .reset-psw {
   float: right;
   width: 100%;
@@ -56,12 +119,24 @@ h2 {
   font-size: 14px;
   text-align: right;
   margin-top: 11px;
+=======
+.login .reset-psw{
+    float: right;
+    width: 100%;
+    text-decoration: none;
+    color: black;
+    font-size: 14px;
+    text-align: right;
+    margin-top: 11px;
+	margin-left:110px;
+>>>>>>> Stashed changes
 }
 
 .reset-psw:hover {
   color: red;
 }
 
+<<<<<<< Updated upstream
 .login .login-btn {
   background: #45aba6;
   padding: 15px 50px;
@@ -140,3 +215,87 @@ h2 {
   align-items: top;
   justify-content: space-between;
 }
+=======
+.login .login-btn{
+    background: red;
+    padding: 15px 50px;
+    border-color: black;
+    color: white;
+    text-align: center;
+    margin: 0 auto;
+    font-size: 15px;
+    border: 1px;
+    border-radius: 44px;
+	margin-left: 100px;
+	
+    width: 50%;
+    height: 45px;
+    cursor: pointer;
+    
+}
+
+.login button:hover{
+    color: yellow;
+    opacity: 0.9;
+}
+
+hr{
+	margin-top: 30px;
+	width: 100%;
+}
+
+.or{
+	background: white;
+	width: 105px;
+	margin: -19px auto 10px;
+}
+
+
+
+.social{
+    width: 30px;
+    height: 30px;
+    
+}
+
+.btn1{
+    display:inline-block;
+    align-items: center;
+    margin-left: 70px;
+    width:35px; 
+    position:relative;
+    justify-content: center;   
+}
+
+.btn1:hover{
+    transform:scale(0.8);
+    
+}
+
+.checkbox_container{
+	display: inline-flex;
+}
+
+
+#remember{
+	display: inline-block;
+	cursor : pointer;
+    margin-left: 30px;	
+}
+
+.checkbox_container > input{
+	height: 30px;
+	width: 30px;
+	border-radius: 2px;
+    /*white-space: nowrap;*/
+}
+
+span{
+    font-size: 14px;
+    margin-left: 2px;
+	
+}
+
+
+
+>>>>>>> Stashed changes
