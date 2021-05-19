@@ -5,8 +5,7 @@
 <!DOCTYPE html>
 <html>
     <head>
-        <title>Dashboard</title>     
-    
+        <title>Dashboard</title>
         <link href="css/userDashboard.css" rel="stylesheet" type="text/css">
     </head>
 
