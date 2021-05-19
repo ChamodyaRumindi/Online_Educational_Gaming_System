@@ -1,32 +1,23 @@
-<?php
-  include "header.php";
-?>
-
 <!DOCTYPE html>
 <html>
     <head>
         <title>Settings</title>
     
-        <link href="css/userSettings.css" rel="stylesheet" type="text/css">        
+        <link rel="stylesheet" href="css/userSettings.css" />
+        <link rel="styleSheet" href="css/sidebar.css" />
+        <?php include "header.php"; ?>        
     </head>
 
     <body>
-        <img src="images/defaultProfile.png" alt="Default Profile Photo" class="profile">
+         <script language="javascript" type="text/javascript">
          
-        <div class="about">
-        <p id="p1"><b>Pasindu Lakshan</b></p>
-        Premium Member<br>
-        </div>
+         </script>
 
-        <ul class="menu">
-            <li><a href="#">Dashboard</a></li>
-            <li><a href="choosesubscription.php">Subscription</a></li>
-            <li><a class="active" href="usersettings.php">Settings</a></li>
-            <li><a href="">Log out</a></li>
-        </ul>
-        <div class="vl"></div>
+    <div class="st-container">
+        <?php include "user-sidebar.php"; ?>
+        <div class="settings-form>">
 
-       <form class="details" method="POST">
+       <form class="form-details" method="POST">
           Change Profile Picture:
           <input type ="search" id="bsearch" name="bsearch">
           <input type="button" name="browse" value="Browse">
@@ -47,11 +38,16 @@
           <br><br>
           <input type="password" maxlength="8" id="pwd" name="pwd" placeholder="Confirm password">
           <br><br>
+
+          <input type="button" value="Save" >
+          <br><br>
+
+          <label for="delete">Delete account:   </label>
+          <input type="button" value="Delete" >
        </form>
+        </div>
+    </div>
         
     </body>
+    <?php include "footer.php"; ?>
 </html>
-
-<?php
-  include "footer.php";
-?>

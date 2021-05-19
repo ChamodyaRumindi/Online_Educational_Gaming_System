@@ -1,6 +1,9 @@
 <!DOCTYPE html>
 <html>
   <head>
+
+    <title>Dashboard</title>
+
     <link rel="styleSheet" href="css/user-db.css" />
     <link rel="styleSheet" href="css/sidebar.css" />
     <?php include 'header.php'; ?>
@@ -13,26 +16,27 @@
         <div class="history">
             <p id="p2">MY SCORE</p>
             <h2>123456</h2>
-            <table style="width: 100%" border="1">
+            <table style="width: 100%" border="1" >
+               
                <tr>
-                   <td colspan="3">Clear history</td>
+                   <th>Game</th>
+                   <th>Time</th>
+                   <th>Score</th>
                </tr>
-               <tr>
-                   <td>Game</td>
-                   <td>Time</td>
-                   <td>Score</td>
-               </tr>
+
+               <tbody class="table-body">
                <tr id="row1">
                  <td></td>
                  <td></td>
                  <td></td>
                </tr>
+               </tbody>
+
             </table>
         </div>
         <div class="stats">
-            <p id="p3">
-               <center>My Status</center>
-            </p>
+            <p id="p3"><b> My Status </b></p>
+            
             Type of subscription :- Premium<br><br>
             Member since :- 21/01/2021<br><br>
             Total time played :- 4:45:34<br><br>

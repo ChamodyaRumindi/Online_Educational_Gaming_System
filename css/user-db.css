@@ -2,15 +2,6 @@
   display: flex;
 }
 
-.vl {
-  border-left: 2px solid black;
-  height: 500px;
-  position: fixed;
-  left: 50%;
-  margin-left: -500px;
-  top: 120px;
-}
-
 .db-container {
   display: flex;
   justify-content: space-between;
@@ -41,7 +32,10 @@
   border-collapse: collapse;
   border-spacing: 0;
   empty-cells: show;
-  overflow-x: scroll;
+}
+.table-body
+{
+  overflow-y: scroll;
 }
 #row1 {
   height: 220px;
@@ -55,4 +49,5 @@
 #p3 {
   margin-top: -35;
   font-size: 20;
+  text-align: center;
 }

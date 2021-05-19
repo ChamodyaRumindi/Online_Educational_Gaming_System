@@ -6,9 +6,9 @@
         </div>
         <div class = "sidemenu">
             <ul class = "sidemenu-items">
-                <a href="/oegplay/userDashboard.php"><li class="sidemenu-item">Dashboard</li></a>
+                <a href="/OEGPlay/user-db.php"><li class="sidemenu-item">Dashboard</li></a>
                 <a href="#"><li class="sidemenu-item">Subscription</li></a>
-                <a href="#"><li class="sidemenu-item">Settings</li></a>
+                <a href="/OEGPlay/userSettings.php"><li class="sidemenu-item">Settings</li></a>
                 <a href="#"><li class="sidemenu-item">Log out</li></a>
             </ul>
         </div>
