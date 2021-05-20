@@ -1,18 +1,8 @@
-<?php
-
-    include_once 'header.php';
-
+<?php 
+      $title = 'Sign Up';
+      include 'header.php'; 
 ?>
-
-
-<!DOCTYPE>
-
-<html>
-    <head>
         <link rel="styleSheet" href="css/signup.css" />
-    </head>
-
-    <body>
         <section class ="signup_form">
             
 
@@ -111,14 +101,6 @@
 
 
         </section>
-
-
-    </body>
-</html>
-
-
-
-
 <?php
     include_once 'footer.php';
 ?>

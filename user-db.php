@@ -1,12 +1,11 @@
-<!DOCTYPE html>
-<html>
-  <head>
-
     <title>Dashboard</title>
 
     <link rel="styleSheet" href="css/user-db.css" />
     <link rel="styleSheet" href="css/sidebar.css" />
-    <?php include 'header.php'; ?>
+    <?php 
+      $title = 'User Dashboard';
+      include 'header.php'; 
+    ?>
   </head>
 
   <body>

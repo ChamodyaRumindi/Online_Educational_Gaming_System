@@ -1,21 +1,9 @@
-<?php
-
-    include_once 'header.php';
-    
+<?php 
+      $title = 'Log in';
+      include 'header.php'; 
 ?>
+<link rel="styleSheet" href="css/login.css" />
 
-
-<!DOCTYPE>
-<html>
-<<<<<<< Updated upstream
-    <head>
-        <link rel="styleSheet" href="css/login.css" />
-=======
-    <head>  
-    <link rel="styleSheet" href="css/login.css" />
->>>>>>> Stashed changes
-    </head>
-    <body>
     <section class ="login">
         <div class ="form_group"> 
             
@@ -34,16 +22,6 @@
                     <input type ="password" name ="pwd" id ="pwd" placeholder="password" maxlength ="10" required/>
 
                     <br>             
-                
-<<<<<<< Updated upstream
-                <div class="l-container">
-                    <div class="checkbox">
-                        <label><b>Remember ME</b></label>
-                        <input type ="checkbox" name= "remember" id ="remember"/>
-                    </div>
-                <a class ="reset-psw" href ="#">Forgot Password?</a>
-                </div>
-=======
 				
                 <div class ="checkbox_container">
                     <input type ="checkbox" name= "remember" id ="remember"/>
@@ -52,7 +30,6 @@
                     <a class ="reset-psw" href ="#">Forgot Password?</a>
                 </div>
                 <br><br>
->>>>>>> Stashed changes
 
                 <button type ="submit" class ="login-btn"  name ="log" id ="log">LOG IN</button>
 
@@ -98,11 +75,9 @@
 
 
     </section> 
-    </body>
 
     
-    
-</html>
+
 
 <?php
     include_once 'footer.php';

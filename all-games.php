@@ -1,10 +1,9 @@
-<!DOCTYPE html>
-<html>
-  <head>
-    <link rel="styleSheet" href="css/sidebar.css" />
-    <link rel="styleSheet" href="css/all-games.css" />
-    <?php include 'header.php'; ?>
-  </head>
+  <link rel="styleSheet" href="css/sidebar.css" />
+  <link rel="styleSheet" href="css/all-games.css" />
+  <?php 
+      $title = 'All Games';
+      include 'header.php'; 
+  ?>
 
   <body>
     <div class="a-container">
@@ -60,8 +59,6 @@
         </div>
       </div>
     </div>
-  </body>
-  <?php include('./footer.php'); ?>
   <div class= "output">
         <?php
           if (isset($_GET["error"])) {
@@ -92,4 +89,4 @@
           }
           ?>
   </div>
-</html>
+  <?php include('./footer.php'); ?>

@@ -1,16 +1,8 @@
-<!DOCTYPE html>
-<html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Payment Page</title>
-       <link rel="stylesheet" href="css/payment.css" />
-  </head>
-  <body>
-
-  <header>
-  <?php include 'header.php'; ?>
+  <link rel="stylesheet" href="css/payment.css" />
+  <?php 
+      $title = 'Payment';
+      include 'header.php'; 
+  ?>
   </header>
   
     
@@ -34,7 +26,6 @@
         </form>
       </div>
     </div>
-  </body>
 
   <?php include('./footer.php'); ?>
-</html>
+

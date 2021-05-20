@@ -1,12 +1,11 @@
-<!DOCTYPE html>
-<html>
-  <head>
+
     <link rel="styleSheet" href="css/sidebar.css" />
     <link rel="styleSheet" href="css/add-games.css" />
-    <?php include 'header.php'; ?>
-  </head>
-
-  <body>
+    <?php 
+      $title = 'Add Games';
+      include 'header.php'; 
+    ?>
+  
     <div class="a-container">
       <?php include 'admin-sidebar.php'; ?>
       <div class="ag-container">
@@ -166,6 +165,4 @@
       </div>
       </div>
     </div>
-  </body>
-  <?php include('./footer.php'); ?>
-</html>
+<?php include('./footer.php'); ?>

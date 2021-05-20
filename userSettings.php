@@ -1,14 +1,10 @@
-<!DOCTYPE html>
-<html>
-    <head>
-        <title>Settings</title>
-    
         <link rel="stylesheet" href="css/userSettings.css" />
         <link rel="styleSheet" href="css/sidebar.css" />
-        <?php include "header.php"; ?>        
-    </head>
+        <?php 
+            $title = 'Settings';
+            include 'header.php'; 
+        ?>
 
-    <body>
          <script language="javascript" type="text/javascript">
          
          </script>
@@ -47,7 +43,5 @@
        </form>
         </div>
     </div>
-        
-    </body>
+
     <?php include "footer.php"; ?>
-</html>

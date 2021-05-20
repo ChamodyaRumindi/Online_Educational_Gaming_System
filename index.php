@@ -1,8 +1,6 @@
-<!DOCTYPE html>
-<html>
-  <head>
-  <?php include_once 'header.php'; ?>
-  </head>
+<?php 
+      include 'header.php'; 
+?>
   
 
   <body>
@@ -78,7 +76,5 @@
       pellentesque vel ullamcorper non, venenatis cursus sapien. Nulla aliquam
       lacus eget ultrices posuere. Integer elit sapien, vulput
     </p>
-  </body>
 
-  <?php include_once 'footer.php'; ?>
-</html>
+<?php include_once 'footer.php'; ?>

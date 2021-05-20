@@ -1,4 +1,5 @@
 <link rel = "styleSheet" href="css/footer2.css" />
+</body>
 <footer>
     <div class="footer-container">
       <div>
@@ -35,3 +36,4 @@
       <div class="copyright"><p>© 2021 OEGPlay. All Rights Reserved.</p></div>
     </div>
   </footer>
+</html>

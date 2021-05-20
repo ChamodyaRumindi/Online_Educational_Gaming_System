@@ -1,15 +1,8 @@
 <?php 
-   include 'header.php'; 
+      $title = 'User Dashboard';
+      include 'header.php'; 
 ?>
-
-<!DOCTYPE html>
-<html>
-    <head>
-        <title>Dashboard</title>
-        <link href="css/userDashboard.css" rel="stylesheet" type="text/css">
-    </head>
-
-    <body>
+    <link href="css/userDashboard.css" rel="stylesheet" type="text/css">
     <?php include 'user-sidebar.php'; ?>
         <div class="vl"></div>
 
@@ -47,10 +40,6 @@
             Rank :- Gold<br>
            </div>
         </div>
-
-    </body>
-</html>
-
 <?php 
     include 'footer.php'; 
 ?>

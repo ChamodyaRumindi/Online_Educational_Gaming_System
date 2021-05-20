@@ -1,10 +1,8 @@
-<!DOCTYPE html>
-<html>
-  <head>
-  <?php include 'header.php'; ?>
-  </head>
+<?php 
+      $title = 'Game';
+      include 'header.php'; 
+?>
 
-  <body>
       <?php 
         $mid = $_GET['id'];
 
@@ -28,7 +26,6 @@
               // Error MSG
         }
       ?>
-  </body>
 
   <?php include('./footer.php'); ?>
-</html>
+
