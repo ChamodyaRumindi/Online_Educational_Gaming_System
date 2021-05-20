@@ -82,7 +82,7 @@
         $subject = $_POST["subject"];
         $access = $_POST["access"];
         $developerID = $_POST["developer"];
-        $adminID = 1;
+        $adminID = 2;
 
         $sql = "INSERT INTO Game (gameName, gameGrade, gameCategory, gameSubject, gameDescription, gameInstructions, gameAccess, adminID, devID, gFile, gThumbnail)
                 VALUES ('$gameName', '$grade', '$category', '$subject', '$description', '$instructions' , '$access', '$adminID', '$developerID', '$gameFileNameNew', '$thumbFileNameNew')";

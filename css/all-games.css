@@ -10,7 +10,7 @@
 table {
   font-family: arial, sans-serif;
   border-collapse: collapse;
-  width: 150%;
+  width: 200%;
 }
 
 .table {
@@ -36,16 +36,22 @@ a {
 }
 .tablebtn {
   background-color: #04aa6d;
-  border-radius: 4px;
+  color: white;
   padding: 8px;
+  margin: 8px 10px;
+  border: none;
+  border-radius: 4px;
   font-family: "Bree Serif", serif;
   color: white;
   font-size: medium;
 }
 .tablebtn2 {
-  background-color: #ff0000;
-  border-radius: 4px;
+  background-color: red;
+  color: white;
   padding: 8px;
+  margin: 25px 8px 10px 8px;
+  border: none;
+  border-radius: 4px;
   font-family: "Bree Serif", serif;
   color: white;
   font-size: medium;
