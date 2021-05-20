@@ -91,7 +91,7 @@ html {
   background-color: white;
 }
 
-/* Set a style for all buttons */
+/* Set a style for all buttons
 button {
   background-color: #04aa6d;
   color: white;
@@ -105,7 +105,7 @@ button {
 
 button:hover {
   opacity: 1;
-}
+} */
 
 /* Float cancel and delete buttons and add an equal width */
 .cancelbtn,
