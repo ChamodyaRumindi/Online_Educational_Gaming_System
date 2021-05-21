@@ -1,301 +1,121 @@
-<<<<<<< Updated upstream
-body {
-  margin: 0;
-  padding: 0;
-  background-color: white;
-  font-family: "Courier New", Courier, monospace;
+/*Sign up form styles*/
+.main-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin: 40px 20px;
+  /* border-radius: 15px; */
+  /* box-shadow: rgba(0, 0, 0, 0.02) 0px 1px 3px 0px,
+    rgba(27, 31, 35, 0.15) 0px 0px 0px 1px; */
 }
-
-h2 {
-  font-size: 30px;
-  font-family: Verdana, Geneva, Tahoma, sans-serif;
-  color: black;
+.bg-img img {
+  width: 500px;
+  height: 400px;
+  padding: 10px;
+}
+.lg-container {
   text-align: center;
-  margin-bottom: 30px;
-  font-weight: normal;
+  font-family: "Bree Serif", serif;
+  width: 400px;
+  padding: 10px;
 }
 
-.login {
-  background: #fff;
-  width: 450px;
-  border-radius: 6px;
-  margin: 0 auto;
-  display: table;
-  padding: 15px 30px 30px;
-  box-sizing: border-box;
+.lg-container h2 {
+  margin-bottom: 10px;
 }
 
-.form-group {
-  float: center;
-  width: 100%;
-  margin: 0 0 15px;
-  position: relative;
-}
-
-.login input {
-  width: 100%;
-  padding: 5px;
-  height: 30px;
-  border-radius: 74px;
-  border: 1px solid #ccc;
-  box-sizing: border-box;
-  font-size: 12px;
-  padding-left: 75px;
-}
-
-/*.che label{
-=======
-body{
-    margin: 0;
-    padding: 0;
-    background-color: white;
-    font-family: "Bree Serif", serif;
-}
-
-h2{
-    font-size: 24px;
-    font-family: "Bree Serif", serif;
-    color: black;
-    text-align: center;
-    margin-top: 30px;
-    font-weight: normal;
-}
-
-.login{
-    width: 450px;
-    border-radius: 6px;
-    margin: 50 auto;
-    display: flex;
-	flex-direction: column;
-    padding: 15px 30px 30px;
-    box-sizing: border-box;
-}
-
-.form_group{
-	
-	display: flex;
-	justify-content: center;
-	align-items: center;
-    border: 3px solid black;
-	border-radius: 12px;
-	
-	margin: 30 auto;
-	width: 100%;
-	
-}
-
-.login input{
-	display: block;
-    background-color: white;
-    width: 60%;
-    padding: len;
-    height: 30px;
-    border-radius: 8px;
-    border: 2px solid black;
-    box-sizing: border-box;
-    font-size: 12px;
-	font-family: "Bree Serif", serif;
-    padding-left: 70px;
-	margin-left: 80px;
-}
-
-
-
-label{
->>>>>>> Stashed changes
-    font-size: 15px;
-    color: black;
-	font-family: "Bree Serif", serif;
-	margin-left: 80px;
-    
-}
-
-<<<<<<< Updated upstream
-.login .reset-psw {
-  float: right;
-  width: 100%;
+.lg-container a {
   text-decoration: none;
-  color: #45aba6;
-  font-size: 14px;
-  text-align: right;
-  margin-top: 11px;
-=======
-.login .reset-psw{
-    float: right;
-    width: 100%;
-    text-decoration: none;
-    color: black;
-    font-size: 14px;
-    text-align: right;
-    margin-top: 11px;
-	margin-left:110px;
->>>>>>> Stashed changes
+  color: blue;
 }
 
-.reset-psw:hover {
+.lg-container a:hover {
   color: red;
 }
 
-<<<<<<< Updated upstream
-.login .login-btn {
-  background: #45aba6;
-  padding: 15px 50px;
-  border-color: #45aba6;
-  color: white;
-  text-align: center;
-  margin: 0 auto;
-  font-size: 15px;
-  border: 1px solid #45aba6;
-  border-radius: 44px;
-  width: 100%;
-  height: 45px;
-  cursor: pointer;
-}
-
-.login button:hover {
-  color: darkblue;
-  opacity: 0.9;
-}
-
-.seperator {
-  float: left;
-  width: 100%;
-  border-top: 1px solid #ccc;
-  text-align: center;
-  margin: 50px 0 0;
-}
-
-.seperator b {
-  width: 40px;
-  height: 40px;
-  font-size: 15px;
-  text-align: center;
-  line-height: 40px;
-  background: #fff;
-  display: inline-block;
-  border: 1px solid white;
-  position: relative;
-  top: -22px;
-  z-index: 1;
-}
-
-.social {
-  width: 25px;
-  height: 25px;
-  padding: 0px 10px;
+.login {
   display: flex;
-  align-items: center;
+  flex-direction: column;
+  text-align: center;
+  margin-left: auto;
+  margin-right: auto;
 }
 
-.btn1 {
-  display: inline-block;
-  width: 35px;
-  overflow: hidden;
-  position: relative;
+.login-form form {
+  display: flex;
+  flex-direction: column;
   justify-content: center;
+  margin: auto;
+  width: 380px;
 }
 
-.btn1:hover {
-  transform: scale(0.8);
+form input {
+  height: 40px;
+  box-sizing: border-box;
+  padding: 10px 10px 0px 10px;
+  border: none;
+  border-bottom: 2px solid #ebebeb;
+  margin-top: 20px;
+  margin-bottom: 20px;
+  width: 90%;
+  font-size: 16px;
 }
 
-.checkbox {
+form input:hover {
+  border-bottom-color: #dcdcdc;
+}
+
+form input:focus {
+  outline: none;
+  border-bottom-color: red;
+}
+.form-row3 {
   display: flex;
-  align-items: center;
-  width: 150%;
-  white-space: nowrap;
-}
-
-.checkbox input {
-  margin-left: -70px;
-}
-
-.l-container {
-  display: flex;
-  align-items: top;
   justify-content: space-between;
+  align-items: top;
+  width: 80%;
+  margin: auto;
 }
-=======
-.login .login-btn{
-    background: red;
-    padding: 15px 50px;
-    border-color: black;
-    color: white;
-    text-align: center;
-    margin: 0 auto;
-    font-size: 15px;
-    border: 1px;
-    border-radius: 44px;
-	margin-left: 100px;
-	
-    width: 50%;
-    height: 45px;
-    cursor: pointer;
-    
+.checkbox-container {
+  display: flex;
+  justify-content: left;
+  align-items: top;
+  width: 50%;
+  text-align: left;
 }
-
-.login button:hover{
-    color: yellow;
-    opacity: 0.9;
+.checkbox-container input {
+  margin-top: -7.5px;
+  margin-left: -50px;
+  margin-bottom: 0%;
+  padding: 0;
+}
+.checkbox-container span {
+  width: 130%;
 }
 
-hr{
-	margin-top: 30px;
-	width: 100%;
+.submit-btn {
+  width: 70%;
+  margin: auto;
+  background-color: red;
+  padding: 12px 30px;
+  border-radius: 10px;
+  border: none;
+  outline: none;
+  cursor: pointer;
+  box-shadow: inset 0 0 0 2px red;
+  box-shadow: 0px 8px 15px rgba(202, 36, 36, 0.205);
+
+  white-space: nowrap;
+  text-align: center;
+  padding: 10px 20px;
+  color: white;
+  font-size: 15px;
+  font-family: "Bree Serif", serif;
+  margin-top: 10px;
 }
 
-.or{
-	background: white;
-	width: 105px;
-	margin: -19px auto 10px;
+.submit-btn:hover {
+  color: red;
+  box-shadow: inset 0 0 0 2px red;
+  background-color: white;
 }
-
-
-
-.social{
-    width: 30px;
-    height: 30px;
-    
-}
-
-.btn1{
-    display:inline-block;
-    align-items: center;
-    margin-left: 70px;
-    width:35px; 
-    position:relative;
-    justify-content: center;   
-}
-
-.btn1:hover{
-    transform:scale(0.8);
-    
-}
-
-.checkbox_container{
-	display: inline-flex;
-}
-
-
-#remember{
-	display: inline-block;
-	cursor : pointer;
-    margin-left: 30px;	
-}
-
-.checkbox_container > input{
-	height: 30px;
-	width: 30px;
-	border-radius: 2px;
-    /*white-space: nowrap;*/
-}
-
-span{
-    font-size: 14px;
-    margin-left: 2px;
-	
-}
-
-
-
->>>>>>> Stashed changes

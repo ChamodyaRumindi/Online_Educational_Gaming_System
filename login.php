@@ -3,59 +3,39 @@
       include 'header.php'; 
 ?>
 <link rel="styleSheet" href="css/login.css" />
-
-    <section class ="login">
-        <div class ="form_group"> 
-            
-            <form method ="POST" action ="includes/login.inc.php">  
-				<h2>SIGN IN</h2>
-            
-                
-                    <label><b>E-mail or User Name</b></label><br>
-
-                    <input type ="text" name ="username" id ="username" placeholder="e-mail address / user name" required /> 
-                    
-                    <br>
-                
-                    <label><b>Password</b></label><br>
-                    
-                    <input type ="password" name ="pwd" id ="pwd" placeholder="password" maxlength ="10" required/>
-
-                    <br>             
-				
-                <div class ="checkbox_container">
-                    <input type ="checkbox" name= "remember" id ="remember"/>
-					<span>Remember Me</span>
-
-                    <a class ="reset-psw" href ="#">Forgot Password?</a>
-                </div>
-                <br><br>
-
-                <button type ="submit" class ="login-btn"  name ="log" id ="log">LOG IN</button>
-
-                
-            
-                <hr>
-				
-				<p class ="or">Or Sign In With</p>
-
-                <div class ="socialIcon">
-                    <a class ="btn1" href ="#">
-                        <img class ="social" src ="images/Facebook.png"/>
-                    </a>
-
-                    <a class ="btn1" href ="#">  
-                        <img class ="social" src ="images/Twitter.png"/>
-                    </a>
-
-                    <a class ="btn1" href ="#">  
-                        <img class ="social" src ="images/G-mail.png"/>
-                    </a>
-                </div>
-                
-
-            </form>
+<section class="main-container">
+<div class="lg-container">
+  <h2>SIGN IN</h2>
+  <div class="login">
+    <form method="POST" action="includes/login.inc.php">
+      <input
+        type="text"
+        name="username"
+        id="username"
+        placeholder="E-mail or Username..."
+        required
+      />
+      <input
+        type="password"
+        name="pwd"
+        id="pwd"
+        placeholder="Password..."
+        maxlength="10"
+        required
+      />
+      <div class="form-row3">
+        <div class="checkbox-container">
+            <span>Remember Me</span>
+            <input type="checkbox" name="remember" id="remember" />
         </div>
+        <a class="reset-psw" href="#">Forgot Password?</a>
+      </div>
+      <button type="submit" class="submit-btn" name="log" id="log">
+        LOG IN
+      </button>
+    </form>
+  </div>
+  <p>Not a Member yet? <a href="signup.php" class = "formlink2" >Register Now!</a></p>
 
 <?php
 
@@ -71,14 +51,28 @@
     
     }
 ?>
-
-
-
-    </section> 
-
-    
-
+</div>
+<div class="bg-img">
+    <img src="images/login-bg.png" alt="Sign Up">
+</div>
+</section>
 
 <?php
     include_once 'footer.php';
 ?>
+
+<!-- <p class="or">Or Sign In With</p>
+
+      <div class="socialIcon">
+        <a class="btn1" href="#">
+          <img class="social" src="images/Facebook.png" />
+        </a>
+
+        <a class="btn1" href="#">
+          <img class="social" src="images/Twitter.png" />
+        </a>
+
+        <a class="btn1" href="#">
+          <img class="social" src="images/G-mail.png" />
+        </a>
+      </div> -->
