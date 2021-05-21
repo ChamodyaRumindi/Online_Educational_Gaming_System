@@ -33,9 +33,7 @@
 <div class="bg-img">
     <img src="images/signup-bg.png" alt="Sign Up">
 </div>
-</section>
 <?php
-
     /*check errors in sign up */
     
     if (isset($_GET["error"])) {
@@ -68,14 +66,16 @@
         }
     }
 ?>
+</section>
 
 <?php
     include_once 'footer.php';
 ?>
 
-<!-- <div class="seperator"><b>Or</b><b>Sign</b><b>In</b><b>With</b></div> -->
 
-<!-- <div class="socialIcon">
+      <!-- <div class="seperator"><b>Or</b><b>Sign</b><b>In</b><b>With</b></div> -->
+
+      <!-- <div class="socialIcon">
         <a class="btn1" href="#">
           <img class="social" src="images/Facebook.png" />
         </a>

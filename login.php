@@ -38,7 +38,6 @@
   <p>Not a Member yet? <a href="signup.php" class = "formlink2" >Register Now!</a></p>
 
 <?php
-
     /*check whether empty inputs */
     if (isset($_GET["error"])) {
         if ($_GET["error"] == "emptyinput") {
@@ -61,7 +60,8 @@
     include_once 'footer.php';
 ?>
 
-<!-- <p class="or">Or Sign In With</p>
+
+      <!-- <p class="or">Or Sign In With</p>
 
       <div class="socialIcon">
         <a class="btn1" href="#">
