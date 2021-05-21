@@ -12,7 +12,7 @@
         type="text"
         name="username"
         id="username"
-        placeholder="E-mail or Username..."
+        placeholder="Username..."
         required
       />
       <input

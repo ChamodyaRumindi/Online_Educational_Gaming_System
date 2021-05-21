@@ -6,9 +6,7 @@
       $title = 'User Dashboard';
       include 'header.php'; 
     ?>
-  </head>
 
-  <body>
     <div class="u-container">
       <?php include 'user-sidebar.php'; ?>
       <div class="db-container">

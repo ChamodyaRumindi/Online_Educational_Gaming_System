@@ -14,11 +14,11 @@
         <input required placeholder="Last Name..." type="text" name="lname" />
       </div>
       <input required placeholder="Email..." type="text" name="email" />
-      <input required placeholder="Username..." type="text" name="user" />
+      <input required placeholder="Username..." type="text" name="uname" />
       <input required placeholder="Password..." type="password" name="pwd" />
       <input
         required
-        placeholder="Re-Password..."
+        placeholder="Confirm Password..."
         type="password"
         name="repwd"
       />

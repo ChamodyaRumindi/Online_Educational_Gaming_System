@@ -85,9 +85,11 @@ form input:focus {
 }
 .checkbox-container input {
   margin-top: -7.5px;
-  margin-left: -50px;
+  margin-left: -100px;
   margin-bottom: 0%;
   padding: 0;
+  width: 18px;
+  width: 18px;
 }
 .checkbox-container span {
   width: 130%;

@@ -4,6 +4,7 @@
   <?php 
       $title = 'Admin Dashboard';
       include 'header.php'; 
+      // include_once ('./includes/admin-config.inc.php');
   ?>
   
   <div class="a-container">
