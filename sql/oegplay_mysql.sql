@@ -1,0 +1,199 @@
+CREATE DATABASE oeg_play;
+
+/*Type Table*/
+CREATE TABLE Type
+(
+	TID INT NOT NULL AUTO_INCREMENT,
+	mType VARCHAR(30) NOT NULL,
+	price FLOAT NOT NULL,
+	description VARCHAR(500),
+
+	CONSTRAINT PK_Type PRIMARY KEY (TID)
+);
+/*Member Table*/
+CREATE TABLE Member
+(
+	memberID INT NOT NULL AUTO_INCREMENT,
+	username VARCHAR(128) NOT NULL,
+	firstName CHAR(128) NOT NULL,
+	lastName CHAR(128) NOT NULL,
+	m_password VARCHAR(256) NOT NULL,
+	m_rank CHAR(20) NOT NULL DEFAULT 'No Rank',
+	TID INT NOT NULL,
+
+	CONSTRAINT PK_Member PRIMARY KEY (memberID),
+	CONSTRAINT FK_Member FOREIGN KEY (TID) REFERENCES Type (TID)
+);
+CREATE TABLE Member_email 
+(
+	memberID INT NOT NULL,
+	email VARCHAR(128) NOT NULL,
+
+	CONSTRAINT PK_MemberEmail PRIMARY KEY (memberID,email),
+	CONSTRAINT FK_MemberEmail FOREIGN KEY (memberID) REFERENCES Member (memberID)
+);
+
+/*Administrator Table*/
+CREATE TABLE Admin
+(
+	adminID INT NOT NULL AUTO_INCREMENT,
+	username VARCHAR(128) NOT NULL,
+	firstName CHAR(128) NOT NULL,
+	lastName CHAR(128) NOT NULL,
+	a_password VARCHAR(256) NOT NULL,
+
+	CONSTRAINT PK_Administrator PRIMARY KEY (adminID)
+);
+CREATE TABLE Administrator_email
+(
+	adminID INT NOT NULL,
+	email VARCHAR(128) NOT NULL,
+
+	CONSTRAINT PK_AdministratorEmail PRIMARY KEY (adminID,email),
+	CONSTRAINT FK_AdministratorEmail FOREIGN KEY (adminID) REFERENCES Administrator (adminID)
+);
+/*Developer Table*/
+CREATE TABLE Developer
+(
+	devID INT NOT NULL AUTO_INCREMENT,
+	devFirstName CHAR(128) NOT NULL,
+	devLastName CHAR(128) NOT NULL,
+	description VARCHAR(512),
+
+	CONSTRAINT PK_Developer PRIMARY KEY (devID)
+);
+CREATE TABLE Developer_email
+(
+	devID INT NOT NULL,
+	email VARCHAR(128) NOT NULL,
+
+	CONSTRAINT PK_DeveloperEmail PRIMARY KEY (devID,email),
+	CONSTRAINT FK_DeveloperEmail FOREIGN KEY (devID) REFERENCES Developer (devID)
+);
+
+/*Subject Table*/
+CREATE TABLE Subject
+(
+	SID INT NOT NULL AUTO_INCREMENT,
+	subjectName VARCHAR(128) NOT NULL,
+	subjectDescription VARCHAR(512),
+
+	CONSTRAINT PK_Subject PRIMARY KEY (SID)
+);
+
+/*Grade Table*/
+CREATE TABLE Grade
+(
+	GID INT NOT NULL AUTO_INCREMENT,
+	gradeName VARCHAR(128) NOT NULL,
+	gradeDescription VARCHAR(512),
+
+	CONSTRAINT PK_Grade PRIMARY KEY (GID)
+);
+
+/*Category Table*/
+CREATE TABLE Category
+(
+	CID INT NOT NULL AUTO_INCREMENT,
+	categoryName VARCHAR(128) NOT NULL,
+	categoryDescription VARCHAR(512),
+
+	CONSTRAINT PK_Category PRIMARY KEY (CID)
+);
+
+/*Game Table*/
+CREATE TABLE Game
+(
+	gameID INT NOT NULL AUTO_INCREMENT,
+	gameName VARCHAR(128) NOT NULL,
+	gameDescription VARCHAR(1024),
+	gameInstructions VARCHAR(1024),
+	gameAccess CHAR(10) NOT NULL,
+	adminID INT NOT NULL,
+	devID INT NOT NULL,
+	GID INT NOT NULL,
+	CID INT NOT NULL,
+	SID INT NOT NULL,
+	last_modified_date DATE NOT NULL,
+	added_date DATE NOT NULL,
+
+	CONSTRAINT PK_Game PRIMARY KEY (gameID),
+	CONSTRAINT FK_Game1 FOREIGN KEY (GID) REFERENCES Grade (GID),
+	CONSTRAINT FK_Game2 FOREIGN KEY (CID) REFERENCES Category (CID),
+	CONSTRAINT FK_Game3 FOREIGN KEY (SID) REFERENCES Subject (SID),
+	CONSTRAINT FK_Game4 FOREIGN KEY (adminID) REFERENCES Administrator (adminID),
+	CONSTRAINT FK_Game5 FOREIGN KEY (devID) REFERENCES Developer (devID)
+);
+
+/*Membership Table*/
+CREATE TABLE Membership
+(
+	MID INT NOT NULL AUTO_INCREMENT,
+	memberID INT NOT NULL,
+	m_plan VARCHAR(20) NOT NULL,
+	m_status VARCHAR(20) NOT NULL,
+	start_date DATE NOT NULL,
+	renewal_date DATE NOT NULL,
+
+	CONSTRAINT PK_Membership PRIMARY KEY (MID),
+	CONSTRAINT FK_Membership1 FOREIGN KEY (memberID) REFERENCES Member (memberID)
+);
+/*Payment Table*/
+CREATE TABLE Payment
+(
+	PID INT NOT NULL AUTO_INCREMENT,
+	memberID INT NOT NULL,
+	p_datetime DATETIME NOT NULL,
+	amount FLOAT NOT NULL,
+	p_description VARCHAR(128),
+	MID INT NOT NULL,
+
+	CONSTRAINT PK_Payment PRIMARY KEY (PID),
+	CONSTRAINT FK_Payment1 FOREIGN KEY (memberID) REFERENCES Member (memberID),
+	CONSTRAINT FK_Payment2 FOREIGN KEY (MID) REFERENCES Membership (MID)
+);
+
+/*History Table*/
+CREATE TABLE History
+(
+	HID INT NOT NULL AUTO_INCREMENT,
+	memberID INT NOT NULL,
+	gameID INT NOT NULL,
+	h_datetime DATETIME NOT NULL,
+	score INT not NULL,
+
+	CONSTRAINT PK_History PRIMARY KEY (HID),
+	CONSTRAINT FK_History1 FOREIGN KEY (memberID) REFERENCES Member (memberID),
+	CONSTRAINT FK_History2 FOREIGN KEY (gameID) REFERENCES Game (gameID)
+);
+/*Contact Table*/
+CREATE TABLE Contact
+(	
+	contactID INT NOT NULL AUTO_INCREMENT,
+	memberID INT NOT NULL,
+	name CHAR(128) NOT NULL,
+	subject VARCHAR(128) NOT NULL,
+	email VARCHAR(128) NOT NULL,
+	description VARCHAR(1000),
+	c_datetime DATETIME NOT NULL,
+	adminID INT NOT NULL,
+	view_datetime DATETIME NOT NULL,
+
+	CONSTRAINT PK_Contact PRIMARY KEY (ContactID,memberID),
+	CONSTRAINT FK_Contact1 FOREIGN KEY (memberID) REFERENCES Member (memberID),
+	CONSTRAINT FK_Contact2 FOREIGN KEY (adminID) REFERENCES Administrator (adminID)
+);
+
+/*Review Table*/
+CREATE TABLE Review
+(
+	RID INT NOT NULL AUTO_INCREMENT,
+	memberID INT NOT NULL,
+	gameID INT NOT NULL,
+	comment VARCHAR(200),
+	submit_date DATE NOT NULL,
+
+	CONSTRAINT PK_Review PRIMARY KEY (RID,memberID),
+	CONSTRAINT FK_Review1 FOREIGN KEY (memberID) references Member (memberID),
+	CONSTRAINT FK_Review2 FOREIGN KEY (gameID) references Game (gameID)
+);

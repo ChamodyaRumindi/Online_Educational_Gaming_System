@@ -1,0 +1,53 @@
+.u-container {
+  display: flex;
+}
+
+.db-container {
+  display: flex;
+  justify-content: space-between;
+  width: 700px;
+  height: 400px;
+  margin-left: 10px;
+  padding: 20px;
+}
+
+#p2 {
+  font-size: 12;
+  margin-bottom: 5px;
+}
+
+.history {
+  width: 350px;
+}
+.history h2 {
+  border: 1px solid black;
+  width: 150px;
+  height: 25px;
+  text-align: center;
+  padding: 4px 4px 0;
+  display: block;
+  font-size: 20px;
+}
+.history table {
+  border-collapse: collapse;
+  border-spacing: 0;
+  empty-cells: show;
+}
+.table-body
+{
+  overflow-y: scroll;
+}
+#row1 {
+  height: 220px;
+}
+.stats {
+  border: 1px solid black;
+  width: 250px;
+  height: 350px;
+  padding: 20px;
+}
+#p3 {
+  margin-top: -35;
+  font-size: 20;
+  text-align: center;
+}

@@ -1,20 +1,8 @@
-<!DOCTYPE html>
-<html lang="en">
-
-<head>
-  <meta charset="UTF-8" />
-  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <link rel="stylesheet" href="css/choosesubscription.css" />
-  <title>choose subscription page</title>
-</head>
-
-<body>
-
-  <header>
-    <?php include 'header.php'; ?>
-  </header>
-
+  <?php 
+      $title = 'Choose Subscription';
+      include 'header.php'; 
+  ?>
 
   <!--Start content of the page-->
   <div class="containerDiv">
@@ -47,28 +35,40 @@
           <button>Sign Up for free</button>
         </div>
       </div>
-
-      <div class="upgradeCard">
-        <div class="contentDiv">
-          <h3>Free</h3>
-          <h3>$0/mon</h3>
-          <button>Sign Up for free</button>
-          <hr />
-          <ul>
-            <li>Lorem, ipsum dolor sit amet </li>
-            <li>Lorem, ipsum dolor sit amet </li>
-            <li>Lorem, ipsum dolor sit amet </li>
-            <li>Lorem, ipsum dolor sit amet </li>
-          </ul>
-          <button>Sign Up for free</button>
-        </div>
+      <div class="upgradeCardDiv">
+        <div class="upgradeCard">
+          <div class="contentDiv">
+            <h3>Free</h3>
+            <h3>$0/mon</h3>
+            <button>Sign Up for free</button>
+            <hr />
+            <ul>
+				<li>Lorem, ipsum dolor sit amet </li>
+				<li>Lorem, ipsum dolor sit amet </li>
+				<li>Lorem, ipsum dolor sit amet </li>
+				<li>Lorem, ipsum dolor sit amet </li>
+			</ul>
+            <button>Sign Up for free</button>
+          </div>
       </div>
+		  <div class="upgradeCard">
+			<div class="contentDiv">
+			  <h3>Free</h3>
+			  <h3>$0/mon</h3>
+			  <button>Sign Up for free</button>
+			  <hr />
+			  <ul>
+				  <li>Lorem, ipsum dolor sit amet </li>
+				  <li>Lorem, ipsum dolor sit amet </li>
+				  <li>Lorem, ipsum dolor sit amet </li>
+				  <li>Lorem, ipsum dolor sit amet </li>
+			  </ul>
+			  <button>Sign Up for free</button>
+			</div>
+		  </div>
     </div>
   </div>
 
-  <!--End content of the page-->
+    <!--End content of the page-->
+
   <?php include('./footer.php'); ?>
-
-</body>
-
-</html>

@@ -1,9 +1,10 @@
 <link rel = "styleSheet" href="css/footer2.css" />
+</body>
 <footer>
     <div class="footer-container">
       <div>
         <ul class="footer-links">
-          <li class="footer-item"><a href="#">Home</a></li>
+          <li class="footer-item"><a href="/oegplay">Home</a></li>
           <li class="footer-item"><a href="#">Games</a></li>
           <li class="footer-item"><a href="#">Subjects</a></li>
           <li class="footer-item"><a href="#">Pricing</a></li>
@@ -35,3 +36,4 @@
       <div class="copyright"><p>© 2021 OEGPlay. All Rights Reserved.</p></div>
     </div>
   </footer>
+</html>

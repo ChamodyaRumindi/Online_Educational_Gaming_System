@@ -1,13 +1,12 @@
-<!DOCTYPE html>
-<html>
-  <head>
-    <link rel="styleSheet" href="css/admin-db.css" />
-    <link rel="styleSheet" href="css/admin-sidebar.css" />
-    <?php include 'header.php'; ?>
-  </head>
 
-  <body>
-    <div class="a-container">
+  <link rel="styleSheet" href="css/admin-db.css" />
+  <link rel="styleSheet" href="css/sidebar.css" />
+  <?php 
+      $title = 'Admin Dashboard';
+      include 'header.php'; 
+  ?>
+  
+  <div class="a-container">
       <?php include 'admin-sidebar.php'; ?>
       <div class="db-container">
         <div class="in-numbers">
@@ -44,19 +43,8 @@
             <p>400 USD</p>
           </div>
         </div>
-        <div class="graphical">
-          <div class="p-chart">
-            <p>Members</p>
-          </div>
-          <div class="m-chart">
-            <p>Member Registrations - past 6 Months</p>
-          </div>
-          <div class="i-chart">
-            <p>income - past 6 months</p>
-          </div>
-        </div>
       </div>
     </div>
-  </body>
-  <?php include('./footer.php'); ?>
-</html>
+
+<?php include('./footer.php'); ?>
+
