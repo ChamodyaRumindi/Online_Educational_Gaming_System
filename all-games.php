@@ -3,6 +3,7 @@
   <?php 
       $title = 'All Games';
       include 'header.php'; 
+      include_once ('./includes/admin-config.inc.php');
   ?>
 
   <body>

@@ -3,6 +3,7 @@
   <?php 
       $title = 'Add Members';
       include 'header.php'; 
+      include_once ('./includes/admin-config.inc.php');
   ?>
 
 

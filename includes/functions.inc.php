@@ -75,6 +75,31 @@ function uidExists($conn, $username) {
     /*close the prepare statement */
     mysqli_stmt_close($stmt);
 }
+function aidExists($conn, $username) {
+    $sql = "SELECT * FROM Admin WHERE username = ?;";
+    /*initialize new prepare statement */
+    $stmt = mysqli_stmt_init($conn);
+    /*check whether any mistake happens in prepare statement */
+    if (!mysqli_stmt_prepare($stmt, $sql)) {
+        header ("location: ../admin-login.php?error=stmtfailed");
+        exit();
+    }
+
+    /*if no errors, then pass the data from the user */
+    mysqli_stmt_bind_param($stmt, "s", $username);
+    mysqli_stmt_execute($stmt);
+
+    $resultData = mysqli_stmt_get_result($stmt);
+    if ($row = mysqli_fetch_assoc($resultData)) {
+        return $row; /*return all the data from the databse if the user exists inside the database */
+    }
+    else {
+        $result = false;
+        return $result;
+    }
+    /*close the prepare statement */
+    mysqli_stmt_close($stmt);
+}
 
 
 function emailExists($conn, $email) {
@@ -187,6 +212,33 @@ function  loginUser($conn, $username, $pwd) {
         $_SESSION["TID"] = $uidExists["TID"];
         $_SESSION["role"] = 'Member';
         header("location: ../index.php");
+        exit();
+    }        
+}
+
+function  loginAdmin($conn, $username, $pwd) {
+    $aidExists = aidExists( $conn, $username);
+
+    /*check whether the email is already exists */
+    if ($aidExists === false) {
+        header("location: ../admin-login.php?error=wronglogin");
+            exit();
+    }
+    $pwdHashed = $aidExists["a_password"];            //read the encrypted password
+    $checkPwd = password_verify($pwd, $pwdHashed);   //verify the password in the databse
+    /*check whether the encrypted password and entered password are different */
+    if ($checkPwd === false) {
+        header("location: ../admin-login.php?error=wronglogin");
+            exit();
+    }
+    else if ($checkPwd === true) {
+        session_start();
+        $_SESSION["adminID"] = $aidExists["adminID"];
+        $_SESSION["username"] = $aidExists["username"];
+        $_SESSION["firstName"] = $aidExists["firstName"];
+        $_SESSION["lastName"] = $aidExists["lastName"];
+        $_SESSION["role"] = 'Admin';
+        header("location: ../admin-db.php");
         exit();
     }        
 }

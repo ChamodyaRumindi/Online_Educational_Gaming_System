@@ -4,6 +4,7 @@
 <?php 
       $title = 'Modify Games';
       include 'header.php'; 
+      include_once ('./includes/admin-config.inc.php');
 ?>
 
     <div class="a-container">
