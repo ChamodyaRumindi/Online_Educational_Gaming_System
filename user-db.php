@@ -1,14 +1,14 @@
-    <title>Dashboard</title>
+    
 
     <link rel="styleSheet" href="css/user-db.css" />
     <link rel="styleSheet" href="css/sidebar.css" />
     <?php 
-      $title = 'User Dashboard';
+      $title = 'Dashboard';
       include 'header.php'; 
     ?>
-  </head>
+  
 
-  <body>
+  
     <div class="u-container">
       <?php include 'user-sidebar.php'; ?>
       <div class="db-container">
@@ -44,7 +44,7 @@
         </div>
       </div>
     </div>
-  </body>
+ 
 
   <?php include('./footer.php'); ?>
 </html>
