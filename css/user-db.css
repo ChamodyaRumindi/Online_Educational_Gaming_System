@@ -35,7 +35,7 @@
 }
 .table-body
 {
-  overflow-y: scroll;
+  overflow: scroll;
 }
 #row1 {
   height: 220px;

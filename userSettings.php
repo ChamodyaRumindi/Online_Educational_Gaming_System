@@ -11,7 +11,6 @@
 
     <div class="st-container">
         <?php include "user-sidebar.php"; ?>
-        <div class="settings-form>">
 
        <form class="form-details" method="POST">
           Change Profile Picture:
@@ -41,7 +40,7 @@
           <label for="delete">Delete account:   </label>
           <input type="button" value="Delete" >
        </form>
-        </div>
+        
     </div>
 
     <?php include "footer.php"; ?>
