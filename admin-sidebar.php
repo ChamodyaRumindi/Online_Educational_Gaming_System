@@ -1,7 +1,7 @@
 <div class = "admin-sidebar">
         <div class = "profile">
             <img class = "propic" src="images/defaultProfile.png" alt="ProfilePicture">
-            <p class="a-name">Pasindu Lakshan</p>
+            <?php echo '<p class="a-name">'.$_SESSION["firstName"].' '.$_SESSION["lastName"].'</p>'?>
             <h5 class="role">Administrator</h5>
         </div>
         <div class = "sidemenu">

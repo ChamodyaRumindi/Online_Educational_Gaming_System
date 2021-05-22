@@ -77,6 +77,9 @@
             if ($_GET["error"] == "none") {
               echo "<script type='text/javascript'>alert('Member successfully deleted from the database');</script>";
             }
+            if ($_GET["error"] == "mmnone") {
+              echo "<script type='text/javascript'>alert('Member successfully modified');</script>";
+            }
           }
         ?>
   </div>

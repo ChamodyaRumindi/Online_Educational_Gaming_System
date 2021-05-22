@@ -10,7 +10,7 @@
     <div class="a-container">
       <?php include 'admin-sidebar.php'; ?>
       <div class="ag-container">
-        <h2>- Add a game -</h2>
+        <h2>- Modify Game -</h2>
 
         <?php 
           require 'includes/database.inc.php';
@@ -39,7 +39,7 @@
 
           echo '<div class="form-item">
                   <label for="name">Game Name:</label>
-                  <input type="text" name="gamename" id="name" value = "'.$gGrade.'" required/>
+                  <input type="text" name="gamename" id="name" value = "'.$gName.'" required/>
                 </div>';
           echo '<div class="form-item">
                   <label for="desc">Description:</label>
