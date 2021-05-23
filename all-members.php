@@ -3,6 +3,7 @@
   <?php 
       $title = 'Add Members';
       include 'header.php'; 
+      include_once ('./includes/admin-config.inc.php');
   ?>
 
 
@@ -75,6 +76,9 @@
           if (isset($_GET["error"])) {
             if ($_GET["error"] == "none") {
               echo "<script type='text/javascript'>alert('Member successfully deleted from the database');</script>";
+            }
+            if ($_GET["error"] == "mmnone") {
+              echo "<script type='text/javascript'>alert('Member successfully modified');</script>";
             }
           }
         ?>

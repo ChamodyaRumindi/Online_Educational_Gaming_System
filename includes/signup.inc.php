@@ -5,9 +5,9 @@
         $fname = $_POST["fname"];
         $lname = $_POST["lname"];
         $email = $_POST["email"];
-        $username = $_POST["uid"];
+        $username = $_POST["uname"];
         $pwd = $_POST["pwd"];
-        $pwdRepeat = $_POST["pwdrepeat"];
+        $pwdRepeat = $_POST["repwd"];
 
         require_once 'database.inc.php';
         require_once 'functions.inc.php';
@@ -20,10 +20,10 @@
         }
 
         /*check whether the user name is invalid */      
-       /* if (invalidUid($username) !== false) {
-            header ("location: ../signup.php?error=invaliduid");
-            exit();
-        }    */
+        // if (invalidUid($username) !== false) {
+        //     header ("location: ../signup.php?error=invaliduid");
+        //     exit();
+        // }   
 
         /*check whether the  e-mail is invalid */
         if (invalidEmail($email) !== false) {
@@ -49,9 +49,8 @@
             exit();
         }
 
-
         /*no errors occur, then signup the user into the database */
-        createUser($conn, $fname, $lname, $username, $pwd, $email);
+        createUser($conn, $username, $fname, $lname, $pwd, $email);
        
     }
 
