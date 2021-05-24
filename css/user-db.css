@@ -12,7 +12,7 @@
 }
 
 #p2 {
-  font-size: 12;
+  font-size: 12px;
   margin-bottom: 5px;
 }
 
@@ -24,13 +24,13 @@
   width: 150px;
   height: 25px;
   text-align: center;
-  padding: 4px 4px 0;
+  padding: 4px 4px 0px;
   display: block;
   font-size: 20px;
 }
 .history table {
   border-collapse: collapse;
-  border-spacing: 0;
+  border-spacing: 0px;
   empty-cells: show;
 }
 .table-body
@@ -47,7 +47,13 @@
   padding: 20px;
 }
 #p3 {
-  margin-top: -35;
-  font-size: 20;
+  margin-top: -5px;
+  font-size: 20px;
   text-align: center;
+}
+.db-pic
+{
+  height: 150px;
+  width: 120px;
+  margin-left: 65px;
 }

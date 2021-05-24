@@ -40,7 +40,8 @@
             Member since :- 21/01/2021<br><br>
             Total time played :- 4:45:34<br><br>
             Number of games played :- 24<br><br>
-            Rank :- Gold<br>
+            Rank :- Gold<br><br />
+            <img src="images/db_Pic.png" class="db-pic" >
         </div>
       </div>
     </div>

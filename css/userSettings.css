@@ -5,7 +5,12 @@
 
 .form-details
 {
-    margin-top: -400px;
+    margin-top: 20px;
     margin-left: 300px;
-    font-size: 18;
+    font-size: 18 px;
+}
+
+#pwd1
+{
+    margin-left: 20px;
 }
