@@ -1,3 +1,7 @@
+<?php
+  session_start(); 
+?>
+
 <?php 
          //Game File
         $gameFile = $_FILES['gamefile'];
