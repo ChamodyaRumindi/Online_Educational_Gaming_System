@@ -2,18 +2,15 @@
 {
     display: flex;
 }
-.settings-form
-{
-  display: flex;
-  justify-content: space-between;
-  width: 700px;
-  height: 400px;
-  padding: 20px;
-}
 
 .form-details
 {
-    margin-top: -400;
-    margin-left: 300;
-    font-size: 18;
+    margin-top: 20px;
+    margin-left: 300px;
+    font-size: 18 px;
+}
+
+#pwd1
+{
+    margin-left: 20px;
 }

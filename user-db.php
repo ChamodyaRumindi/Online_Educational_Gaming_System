@@ -1,12 +1,14 @@
-    <title>Dashboard</title>
+    
 
     <link rel="styleSheet" href="css/user-db.css" />
     <link rel="styleSheet" href="css/sidebar.css" />
     <?php 
-      $title = 'User Dashboard';
+      $title = 'Dashboard';
       include 'header.php'; 
     ?>
+  
 
+  
     <div class="u-container">
       <?php include 'user-sidebar.php'; ?>
       <div class="db-container">
@@ -38,11 +40,12 @@
             Member since :- 21/01/2021<br><br>
             Total time played :- 4:45:34<br><br>
             Number of games played :- 24<br><br>
-            Rank :- Gold<br>
+            Rank :- Gold<br><br />
+            <img src="images/db_Pic.png" class="db-pic" >
         </div>
       </div>
     </div>
-  </body>
+ 
 
   <?php include('./footer.php'); ?>
 </html>

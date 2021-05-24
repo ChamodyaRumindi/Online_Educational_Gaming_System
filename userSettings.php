@@ -11,7 +11,6 @@
 
     <div class="st-container">
         <?php include "user-sidebar.php"; ?>
-        <div class="settings-form>">
 
        <form class="form-details" method="POST">
           Change Profile Picture:
@@ -30,9 +29,9 @@
           <label for="pwd">Change Password:    </label>
           <input type="password" maxlength="8" id="pwd" name="pwd" placeholder="Current password">
           <br><br>
-          <input type="password" maxlength="8" id="pwd" name="pwd" placeholder="New password">
+          <input type="password" maxlength="8" id="pwd1" name="pwd1" placeholder="New password">
           <br><br>
-          <input type="password" maxlength="8" id="pwd" name="pwd" placeholder="Confirm password">
+          <input type="password" maxlength="8" id="pwd1" name="pwd1" placeholder="Confirm password">
           <br><br>
 
           <input type="button" value="Save" >
@@ -41,7 +40,7 @@
           <label for="delete">Delete account:   </label>
           <input type="button" value="Delete" >
        </form>
-        </div>
+        
     </div>
 
     <?php include "footer.php"; ?>
