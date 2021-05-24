@@ -40,7 +40,6 @@ CREATE TABLE `admin` (
 --
 
 INSERT INTO `admin` (`adminID`, `username`, `firstName`, `lastName`, `a_password`) VALUES
-(2, 'pasindulakshan', 'Pasindu', 'Lakshan', '4abeccbafe94c737a66d81103ae01bfcabfcab77b71c05fac3a3e3b357de450e'),
 (4, 'pasindux', 'Pasindu', 'Lakshan(A)', '$2y$10$1TyN5h8wMoQKKyZYxcGcD.V.20wObOy4PuiksfRIkN.smF96f9o/e');
 
 -- --------------------------------------------------------
@@ -216,11 +215,6 @@ CREATE TABLE `member` (
 --
 
 INSERT INTO `member` (`memberID`, `username`, `firstName`, `lastName`, `m_password`, `m_rank`, `TID`) VALUES
-(3, 'Akila123', 'Akila', 'Liyanage', '91a355d44ca5b322ab6bab66e44bd09c844b9360d75e712b6ed7a7604f7b0413', 'Gold', 2),
-(4, 'Rusiru99', 'Supun', 'Rusiru', 'c8e7e692b396df498b9d6502dada2f8af701570bec5b9adc7a5140ce14bde874', 'Silver', 1),
-(5, 'PramithaWeerasinghe', 'Pramitha', 'Weerasinghe', '48c560a991887fc1509c0d212ae48bd4b5a4ccfcebeb0616e1863257641b9577', 'No Rank', 1),
-(6, 'ThusharaX', 'Thushara', 'Thiwanka', '7ae604db5636d934c69e00a0b1e28b430f1879d43fc8155fc2bfe2e6207d7cb5', 'Platinum', 1),
-(7, 'GaweenKanishka97', 'Gaween', 'Kanishka', 'ea1aca65ee8ad1f8b5a97cbb0a556dfffefa8f460f8b7f4b2944324a3feac862', 'Legend', 1),
 (28, 'PasinduX', 'Pasindu', 'Lakshan', '$2y$10$u1FpoqVNKzAT8q5AIGNjjOxZCrMnZC4KvcubQFpPbgAvs7BfBK0A2', 'No Rank', 1);
 
 -- --------------------------------------------------------

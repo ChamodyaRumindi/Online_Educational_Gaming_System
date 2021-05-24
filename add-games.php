@@ -1,17 +1,19 @@
 
     <link rel="styleSheet" href="css/sidebar.css" />
     <link rel="styleSheet" href="css/add-games.css" />
+    <link rel="styleSheet" href="css/messagebox.css" />
     <?php 
       $title = 'Add Games';
       include 'header.php'; 
     ?>
-  
+
     <div class="a-container">
       <?php include 'admin-sidebar.php'; ?>
       <div class="ag-container">
+      <div id="msgbox-area" class="msgbox-area"></div>
         <h2>- Add a game -</h2>
 
-        <form action="includes/addgame.inc.php" method="post" name="addgamef" onsubmit="return validateForm()" enctype="multipart/form-data" >
+        <form action="includes/addgame.inc.php" method="post" name="addgame" onsubmit="return validateForm()" enctype="multipart/form-data" >
           <div class="form-item">
             <label for="name">Game Name:</label>
             <input type="text" name="gamename" id="name" required />
@@ -136,33 +138,62 @@
             <button class="addgame-btn" name = "submit" type= "submit" onclick="return confirm('Please confirm!')">Add Game</button>
           </div>
         </form>
-        <div class= "output">
-        <?php
+      </div>
+    </div>
+
+<script src="./js/messagebox.js"></script>
+<?php
           if (isset($_GET["error"])) {
             if ($_GET["error"] == "none") {
               echo "<h1>Successfully Added!</h1>";
+              echo '<script>
+                      msgboxbox.show(
+                      "Successfully Added!"
+                    );
+                    </script>';
             }
             if ($_GET["error"] == "1") {
-              echo "<p>You can not upload a game file of this type!. only js,html are allowd</p>";
+              echo '<script>
+                      msgboxbox.show(
+                      "You can not upload a game file of this type!. only js,html are allowd"
+                    );
+                    </script>';
             }
             if ($_GET["error"] == "2") {
-              echo "<p>There was an error uplaoding game file!</p>";
+              echo '<script>
+                      msgboxbox.show(
+                      "There was an error uplaoding game file!"
+                    );
+                    </script>';
             }
             if ($_GET["error"] == "3") {
-              echo "<p>Game file is too big!</p>";
+              echo '<script>
+                      msgboxbox.show(
+                      "Game file is too big!"
+                    );
+                    </script>';
             }
             if ($_GET["error"] == "4") {
-              echo "<p>You can not upload a thumbnail of this type!. only jpg,jpeg and png are allowd</p>";
+              echo '<script>
+                      msgboxbox.show(
+                      "You can not upload a thumbnail of this type!. only jpg,jpeg and png are allowd"
+                    );
+                    </script>';
             }
             if ($_GET["error"] == "5") {
-              echo "<p>here was an error uplaoding thumbnail!</p>";
+              echo '<script>
+                      msgboxbox.show(
+                      "here was an error uplaoding thumbnail!"
+                    );
+                    </script>';
             }
             if ($_GET["error"] == "6") {
-              echo "<p>Thumbnail is too big!</p>";
+              echo '<script>
+                      msgboxbox.show(
+                      "Thumbnail is too big!"
+                    );
+                    </script>';
             }
           }
           ?>
-      </div>
-      </div>
-    </div>
 <?php include('./footer.php'); ?>
