@@ -6,6 +6,37 @@
       include_once ('./includes/admin-config.inc.php');
 ?>
 
+<div id="cbox" class="c-box">
+      <span onclick="document.getElementById('cbox').style.display='none'" class="close" title="Close">×</span>
+      <div class="c-box-content">
+      <div class="content-container">
+      <h2>Cancel Modify</h2>
+      <p>Are you sure you want cancel?</p>
+      <p>unsaved data will be lost!</p>
+      
+      <div class="c-buttons">
+            <button onclick="document.getElementById('cbox').style.display='none'" class="cbtn">Cancel</button>
+            <button onclick="cancelModify()" class="dbtn">Cancel</button>
+      </div>
+      </div>
+      </div>
+</div>
+<div id="cbox2" class="c-box">
+      <span onclick="document.getElementById('cbox2').style.display='none'" class="close" title="Close">×</span>
+      <div class="c-box-content">
+        <div class="content-container">
+          <h2>Save Member</h2>
+          <p>Are you sure you want to save?</p>
+          <p>double check! This operation can not be undone</p>
+        
+          <div class="c-buttons">
+            <button onclick="document.getElementById('cbox2').style.display='none'" class="cbtn">Cancel</button>
+            <button onclick="submitForm()" class="dbtn">Save</button>
+          </div>
+        </div>
+      </div>
+</div>
+
 <div class="a-container">
       <?php include 'admin-sidebar.php'; ?>
       <div class="ag-container">
@@ -134,11 +165,28 @@
           ?>
 
           <div class="ag-buttons">
-            <button class="addgame-btn" name = "submit" type= "submit" onclick="return confirm('Please confirm!')">Save</button>
+            <button class="reset-btn" type="button" onclick="cancelConfirm()">Cancel</button>
+            <button class="addgame-btn" type= "button" onclick="submitConfirm()">Save</button>
+            <button class="submit-btn" id="submit" name="sumbit" type="submit">Save</button>
           </div>
         </form>
       </div>
     </div>
 
+<script>
+  function cancelModify() {
+    window.location = 'all-members.php';
+  }
+  function cancelConfirm() {
+    document.getElementById('cbox').style.display='block'
+  }
+  function submitConfirm() {
+    document.getElementById('cbox2').style.display='block'
+  }
+  function submitForm() {
+    document.getElementById('cbox2').style.display='none'
+    document.getElementById("submit").click();
+  }
+</script>
 
 <?php include('./footer.php'); ?>
