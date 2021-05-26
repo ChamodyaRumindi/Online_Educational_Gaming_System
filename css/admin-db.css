@@ -6,7 +6,9 @@
 }
 
 .in-numbers {
-  margin-left: 20px;
+  margin-top: 50px;
+  margin-left: auto;
+  margin-right: auto;
   display: flex;
   align-items: center;
 }
@@ -66,4 +68,11 @@
 }
 .counter-item {
   font-size: 30px;
+}
+
+.line-graph {
+  border: 1px solid black;
+  margin-left: 25px;
+  margin-bottom: 20px;
+  margin-top: 20px;
 }

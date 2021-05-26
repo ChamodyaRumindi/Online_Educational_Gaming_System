@@ -21,11 +21,6 @@
     $result = mysqli_query($conn, "SELECT COALESCE(SUM(amount),0) FROM Payment WHERE p_datetime BETWEEN NOW() - INTERVAL 30 DAY AND NOW()");
     $totalIncome = mysqli_fetch_array($result);
 
-    echo $totalMembers[0];
-    echo $premiumMembers[0];
-    echo $freeMembers[0];
-    echo $totalIncome[0];
-
     echo '<script>
           document.addEventListener("DOMContentLoaded", () => {
             dbCounter("c1", 0, '.$totalMembers[0].', 2500);
@@ -93,8 +88,87 @@
                 </div>'
           ?>
         </div>
+        <div class="graph">
+          <canvas class="line-graph"></canvas>
+        </div>
       </div>
     </div>
 <script src="./js/admin-db.js"></script>
+<?php 
+  $result = mysqli_query($conn, "SELECT COALESCE(SUM(amount),0) FROM Payment WHERE p_datetime BETWEEN last_day(curdate() - interval 2 month) + INTERVAL 1 DAY AND last_day(curdate() - interval 1 month)");
+  $income1 = mysqli_fetch_array($result);
+
+  $result = mysqli_query($conn, "SELECT COALESCE(SUM(amount),0) FROM Payment WHERE p_datetime BETWEEN last_day(curdate() - interval 3 month) + INTERVAL 1 DAY AND last_day(curdate() - interval 2 month)");
+  $income2 = mysqli_fetch_array($result);
+
+  $result = mysqli_query($conn, "SELECT COALESCE(SUM(amount),0) FROM Payment WHERE p_datetime BETWEEN last_day(curdate() - interval 2 month) + INTERVAL 1 DAY AND last_day(curdate() - interval 3 month)");
+  $income3 = mysqli_fetch_array($result);
+
+  $result = mysqli_query($conn, "SELECT COALESCE(SUM(amount),0) FROM Payment WHERE p_datetime BETWEEN last_day(curdate() - interval 4 month) + INTERVAL 1 DAY AND last_day(curdate() - interval 4 month)");
+  $income4 = mysqli_fetch_array($result);
+  
+  $result = mysqli_query($conn, "SELECT COALESCE(SUM(amount),0) FROM Payment WHERE p_datetime BETWEEN last_day(curdate() - interval 5 month) + INTERVAL 1 DAY AND last_day(curdate() - interval 5 month)");
+  $income5 = mysqli_fetch_array($result);
+
+  $result = mysqli_query($conn, "SELECT COALESCE(SUM(amount),0) FROM Payment WHERE p_datetime BETWEEN last_day(curdate() - interval 6 month) + INTERVAL 1 DAY AND last_day(curdate() - interval 6 month)");
+  $income6 = mysqli_fetch_array($result);
+
+  $result = mysqli_query($conn, "SELECT COALESCE(SUM(amount),0) FROM Payment WHERE p_datetime BETWEEN last_day(curdate() - interval 7 month) + INTERVAL 1 DAY AND last_day(curdate() - interval 7 month)");
+  $income7 = mysqli_fetch_array($result);
+
+  $result = mysqli_query($conn, "SELECT COALESCE(SUM(amount),0) FROM Payment WHERE p_datetime BETWEEN last_day(curdate() - interval 8 month) + INTERVAL 1 DAY AND last_day(curdate() - interval 8 month)");
+  $income8 = mysqli_fetch_array($result);
+
+  $result = mysqli_query($conn, "SELECT COALESCE(SUM(amount),0) FROM Payment WHERE p_datetime BETWEEN last_day(curdate() - interval 9 month) + INTERVAL 1 DAY AND last_day(curdate() - interval 9 month)");
+  $income9 = mysqli_fetch_array($result);
+
+  $result = mysqli_query($conn, "SELECT COALESCE(SUM(amount),0) FROM Payment WHERE p_datetime BETWEEN last_day(curdate() - interval 10 month) + INTERVAL 1 DAY AND last_day(curdate() - interval 10 month)");
+  $income10 = mysqli_fetch_array($result);
+
+  $result = mysqli_query($conn, "SELECT COALESCE(SUM(amount),0) FROM Payment WHERE p_datetime BETWEEN last_day(curdate() - interval 11 month) + INTERVAL 1 DAY AND last_day(curdate() - interval 11 month)");
+  $income11 = mysqli_fetch_array($result);
+
+  $result = mysqli_query($conn, "SELECT COALESCE(SUM(amount),0) FROM Payment WHERE p_datetime BETWEEN last_day(curdate() - interval 12 month) + INTERVAL 1 DAY AND last_day(curdate() - interval 12 month)");
+  $income12 = mysqli_fetch_array($result);
+
+  $dateMonth = 'Month';
+  echo "<script>
+          let graphData = {
+            '".date('Y-m', strtotime(date('Y-m').' -12 month'))."': ".$income12[0].",
+            '".date('Y-m', strtotime(date('Y-m').' -11 month'))."': ".$income11[0].",
+            '".date('Y-m', strtotime(date('Y-m').' -10 month'))."': ".$income10[0].",
+            '".date('Y-m', strtotime(date('Y-m').' -9 month'))."': ".$income9[0].",
+            '".date('Y-m', strtotime(date('Y-m').' -8 month'))."': ".$income8[0].",
+            '".date('Y-m', strtotime(date('Y-m').' -7 month'))."': ".$income7[0].",
+            '".date('Y-m', strtotime(date('Y-m').' -6 month'))."': ".$income6[0].",
+            '".date('Y-m', strtotime(date('Y-m').' -5 month'))."': ".$income5[0].",
+            '".date('Y-m', strtotime(date('Y-m').' -4 month'))."': ".$income4[0].",
+            '".date('Y-m', strtotime(date('Y-m').' -3 month'))."': ".$income3[0].",
+            '".date('Y-m', strtotime(date('Y-m').' -2 month'))."': ".$income2[0].",
+            '".date('Y-m', strtotime(date('Y-m').' -1 month'))."': ".$income1[0].",
+            };
+          const entries = Object.entries(graphData);
+          drawChart(entries);
+        </script>";
+        mysqli_close($conn); 
+?>
+<!-- <script>
+  let graphData = {
+  '01-21': 220,
+  '02-21': 320,
+  '03-21': 700,
+  '04-21': 480,
+  '05-21': 500,
+  '06-21': 820,
+  '07-21': 345,
+  '08-21': 480,
+  '09-21': 540,
+  '10-21': 1000,
+  '11-21': 790,
+  '12-21': 1220,
+  };
+  const entries = Object.entries(graphData);
+  drawChart(entries);
+</script> -->
 <?php include('./footer.php'); ?>
 
