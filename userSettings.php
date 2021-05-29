@@ -8,12 +8,10 @@
          <script language="javascript" type="text/javascript">
          function save()
          {
-             getElementByClass("save-button");
              alert("Saved!!!");
          }
          function delete()
          {
-             getElementByClass("delete-button");
              alert("Your account is successfully deleted!!");
          }
          </script>
