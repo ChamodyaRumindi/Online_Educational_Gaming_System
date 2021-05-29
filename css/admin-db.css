@@ -2,6 +2,15 @@
   padding-left: 10px;
   padding-top: 20px;
   display: flex;
+  flex-direction: column;
+}
+
+.in-numbers {
+  margin-top: 50px;
+  margin-left: auto;
+  margin-right: auto;
+  display: flex;
+  align-items: center;
 }
 
 .in-numbers-item {
@@ -63,7 +72,7 @@
 
 .line-graph {
   border: 1px solid black;
-  margin-left: 20px;
+  margin-left: 25px;
   margin-bottom: 20px;
   margin-top: 20px;
 }

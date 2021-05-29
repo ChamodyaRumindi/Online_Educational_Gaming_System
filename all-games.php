@@ -7,7 +7,21 @@
       include_once ('./includes/admin-config.inc.php');
   ?>
 
-  <body>
+    <div id="cbox" class="c-box">
+      <span onclick="document.getElementById('cbox').style.display='none'" class="close" title="Close">×</span>
+      <div class="c-box-content">
+        <div class="content-container">
+          <h2>Delete Game</h2>
+          <p>Are you sure you want to delete this game?</p>
+        
+          <div class="c-buttons">
+            <button onclick="document.getElementById('cbox').style.display='none'" class="cbtn">Cancel</button>
+            <button onclick="deleteConfirm()" class="dbtn">Delete</button>
+          </div>
+        </div>
+      </div>
+    </div>
+
     <div class="a-container">
       <?php include 'admin-sidebar.php'; ?>
       <div class="alg-container">
@@ -45,10 +59,9 @@
                   echo '<td>'.$row["adminID"].'</td>';
                   echo '<td>'.$row["devID"].'</td>';
                   echo '<td><a href="modifygame.php?id='.$row['gameID'].'" class="tablebtn">Modify</a></td>';
-                  echo '<td><form action="includes/deletegame.inc.php" name="delete-game" method="get">
-                        <input type="hidden" name="rowid" value="'.$row['gameID'].'">
-                        <button class="tablebtn2" type="submit" onClick="return confirm(\'Are you sure?. this operation cannot be undone!\')">Delete</button>
-                        </form></td>';
+                  echo '<td>
+                        <button class="tablebtn2" type="submit" onClick="customConfirm('.$row['gameID'].')">Delete</button>
+                        </td>';
                   echo '</tr>';
                 }
               }
@@ -62,6 +75,23 @@
         </div>
       </div>
     </div>
+
+<script>
+  var deleteID = 0;
+  function customConfirm(gid) {
+    document.getElementById('cbox').style.display='block'
+    deleteID = gid
+  }
+  function deleteConfirm() {
+    window.location = 'includes/deletegame.inc.php?rowid='+deleteID;
+  }
+  var modal = document.getElementById('cbox');
+  window.onclick = function(event) {
+    if (event.target == modal) {
+      modal.style.display = "none";
+    }
+  }
+</script>
 
 <script src="./js/messagebox.js"></script>
 <?php

@@ -6,9 +6,21 @@
       include 'header.php'; 
       include_once ('./includes/admin-config.inc.php');
   ?>
+    <div id="cbox" class="c-box">
+      <span onclick="document.getElementById('cbox').style.display='none'" class="close" title="Close">×</span>
+      <div class="c-box-content">
+        <div class="content-container">
+          <h2>Delete Member</h2>
+          <p>Are you sure you want to delete this member?</p>
+        
+          <div class="c-buttons">
+            <button onclick="document.getElementById('cbox').style.display='none'" class="cbtn">Cancel</button>
+            <button onclick="deleteConfirm()" class="dbtn">Delete</button>
+          </div>
+        </div>
+      </div>
+    </div>
 
-
-  <body>
     <div class="a-container">
       <?php include 'admin-sidebar.php'; ?>
       <div class="alm-container">
@@ -56,10 +68,9 @@
                   echo '<td>'.$row["m_status"].'</td>';
                   echo '<td>'.$row["renewal_date"].'</td>';
                   echo '<td><a href="modifymember.php?id='.$row['memberID'].'" class="tablebtn">Modify</a></td>';
-                  echo '<td><form action="includes/deletemember.inc.php" name="delete-member" method="get">
-                        <input type="hidden" name="rowid" value="'.$row['memberID'].'">
-                        <button class="tablebtn2" type="submit" onClick="return confirm(\'Are you sure?. this operation cannot be undone!\')">Delete</button>
-                        </form></td>';
+                  echo '<td>
+                        <button class="tablebtn2" type="submit" onClick="customConfirm('.$row['memberID'].')">Delete</button>
+                        </td>';
                   echo '</tr>';
                 }
               }
@@ -73,10 +84,25 @@
         </div>
       </div>
     </div>
-  <div class= "output">
-        
-  </div>
-  <script src="./js/messagebox.js"></script>
+
+<script>
+  var deleteID = 0;
+  function customConfirm(mid) {
+    document.getElementById('cbox').style.display='block'
+    deleteID = mid
+  }
+  function deleteConfirm() {
+    window.location = 'includes/deletemember.inc.php?rowid='+deleteID;
+  }
+  var modal = document.getElementById('cbox');
+  window.onclick = function(event) {
+    if (event.target == modal) {
+      modal.style.display = "none";
+    }
+  }
+</script>
+
+<script src="./js/messagebox.js"></script>
 <?php
   if (isset($_GET["error"])) {
     if ($_GET["error"] == "none") {
