@@ -2,6 +2,15 @@
   padding-left: 10px;
   padding-top: 20px;
   display: flex;
+  flex-direction: column;
+}
+
+.in-numbers {
+  margin-top: 50px;
+  margin-left: auto;
+  margin-right: auto;
+  display: flex;
+  align-items: center;
 }
 
 .in-numbers-item {
@@ -29,4 +38,41 @@
 
 .in-numbers-item p {
   font-size: 15px;
+}
+
+.db-counter {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin: 20px auto;
+  width: 750px;
+}
+
+.counter-coulmn {
+  margin: 0px 20px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  font-family: "Bree Serif", serif;
+  border: none;
+  border-radius: 10px;
+  box-shadow: 0 10px 15px rgba(0, 0, 0, 0.65);
+  width: 200px;
+  height: 150px;
+  padding: 10px;
+}
+.counter-coulmn:hover {
+  transform: scale(1.1);
+}
+.counter-item {
+  font-size: 30px;
+}
+
+.line-graph {
+  border: 1px solid black;
+  margin-left: 25px;
+  margin-bottom: 20px;
+  margin-top: 20px;
 }
