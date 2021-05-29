@@ -2,70 +2,38 @@
       $title = 'Sign Up';
       include 'header.php'; 
 ?>
-        <link rel="styleSheet" href="css/signup.css" />
-        <section class ="signup_form">
-            
+<link rel="styleSheet" href="css/signup.css" />
 
-            <div class ="signup-form-form">
-
-                <form action ="includes/signup.inc.php" method ="POST">
-                     <h2>SIGN UP</h2>
-                        <label><b>First Name</b></label>
-                    <br>
-                        <input type ="text" name ="fname" placeholder ="first name" required/>
-                    <br>
-                        <label><b>Last Name</b></label>
-                    <br>
-                        <input type ="text" name ="lname" placeholder ="last name" required/>
-                    <br>
-                        <label><b>E-mail</b></label>
-                    <br>
-
-                        <input type ="email" name ="email" placeholder ="e-mail" required/>
-                    
-                    <br>
-                        <label><b>User Name</b></label>
-                    <br>
-                    
-                        <input type ="text" name ="uid" placeholder ="user name" required/>
-                    <br>
-                        <label id ="character"><b>Password</b></label>
-                        
-                    <br>
-                        <input type ="password" name ="pwd" placeholder ="password" pattern ="(?=.*\d)(?=.*[a-z])(?=.*[A-Z]).{8,}" title ="Must contain at least one number and one uppercase and lowercase letter, and at least 8 or more characters" required/>
-                    <br>
-                        <label><b>Confirm Password</b></label>
-                    <br>
-                       
-                        <input type ="password" name ="pwdrepeat" placeholder ="confirm password" required/>
-                    <br>
-
-                        <p>by submitting this form you agree to our <a href = "#">terms of use</a></p>
-                       
-                        <button type ="submit" name ="submit">SIGN UP</button>
-
-
-                        <div class ="seperator"><b>Or</b><b>Sign</b><b>In</b><b>With</b></div>
-
-                    <div class ="socialIcon">
-                    <a class ="btn1" href ="#">
-                        <img class ="social" src ="images/Facebook.png"/>
-                    </a>
-
-                    <a class ="btn1" href ="#">  
-                        <img class ="social" src ="images/Twitter.png"/>
-                    </a>
-
-                    <a class ="btn1" href ="#">  
-                        <img class ="social" src ="images/G-mail.png"/>
-                    </a>
-                </div>
-                </form>
-            </div>
-
-
+<section class="main-container">
+<div class="su-container">
+  <h1>SIGN UP</h1>
+  <div class="signup-form">
+    <form action="includes/signup.inc.php" method="POST">
+      <div class="form-row">
+        <input required placeholder="First Name..." type="text" name="fname" />
+        <input required placeholder="Last Name..." type="text" name="lname" />
+      </div>
+      <input required placeholder="Email..." type="text" name="email" />
+      <input required placeholder="Username..." type="text" name="uname" />
+      <input required placeholder="Password..." type="password" name="pwd" />
+      <input
+        required
+        placeholder="Confirm Password..."
+        type="password"
+        name="repwd"
+      />
+      <p>
+        by submitting this form you agree to our <a href="#">terms of use</a>
+      </p>
+      <button class="submit-btn" type="submit" name="submit">SIGN UP</button>
+    </form>
+  </div>
+  <p>Already a member ? <a href="login.php">Log In!</a></p>
+</div>
+<div class="bg-img">
+    <img src="images/signup-bg.png" alt="Sign Up">
+</div>
 <?php
-
     /*check errors in sign up */
     
     if (isset($_GET["error"])) {
@@ -98,9 +66,25 @@
         }
     }
 ?>
+</section>
 
-
-        </section>
 <?php
     include_once 'footer.php';
 ?>
+
+
+      <!-- <div class="seperator"><b>Or</b><b>Sign</b><b>In</b><b>With</b></div> -->
+
+      <!-- <div class="socialIcon">
+        <a class="btn1" href="#">
+          <img class="social" src="images/Facebook.png" />
+        </a>
+
+        <a class="btn1" href="#">
+          <img class="social" src="images/Twitter.png" />
+        </a>
+
+        <a class="btn1" href="#">
+          <img class="social" src="images/G-mail.png" />
+        </a>
+      </div> -->

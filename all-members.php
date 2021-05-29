@@ -1,8 +1,10 @@
   <link rel="styleSheet" href="css/sidebar.css" />
   <link rel="styleSheet" href="css/all-members.css" />
+  <link rel="styleSheet" href="css/messagebox.css" />
   <?php 
       $title = 'Add Members';
       include 'header.php'; 
+      include_once ('./includes/admin-config.inc.php');
   ?>
 
 
@@ -10,6 +12,7 @@
     <div class="a-container">
       <?php include 'admin-sidebar.php'; ?>
       <div class="alm-container">
+      <div id="msgbox-area" class="msgbox-area"></div>
         <h2>Members</h2>
         <div class = "table" >
         <table class = "member-table">
@@ -71,14 +74,19 @@
       </div>
     </div>
   <div class= "output">
-        <?php
-          if (isset($_GET["error"])) {
-            if ($_GET["error"] == "none") {
-              echo "<script type='text/javascript'>alert('Member successfully deleted from the database');</script>";
-            }
-          }
-        ?>
+        
   </div>
+  <script src="./js/messagebox.js"></script>
+<?php
+  if (isset($_GET["error"])) {
+    if ($_GET["error"] == "none") {
+      echo '<script> msgboxbox.show("Member successfully deleted from the database"); </script>';
+    }
+    if ($_GET["error"] == "mmnone") {
+      echo '<script> msgboxbox.show("Member successfully modified"); </script>';
+    }
+  }
+?>
 
   <?php include('./footer.php'); ?>
 

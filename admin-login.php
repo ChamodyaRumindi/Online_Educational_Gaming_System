@@ -1,13 +1,13 @@
 <?php 
-      $title = 'Log in';
+      $title = 'Admin Log in';
       include 'header.php'; 
 ?>
 <link rel="styleSheet" href="css/login.css" />
 <section class="main-container">
 <div class="lg-container">
-  <h2>SIGN IN</h2>
+  <h2>ADMIN SIGN IN</h2>
   <div class="login">
-    <form method="POST" action="includes/login.inc.php">
+    <form method="POST" action="includes/admin-login.inc.php">
       <input
         type="text"
         name="username"
@@ -52,27 +52,10 @@
 ?>
 </div>
 <div class="bg-img">
-    <img src="images/login-bg.png" alt="Sign Up">
+    <img src="images/adminlogin-bg.png" alt="Sign Up">
 </div>
 </section>
 
 <?php
     include_once 'footer.php';
 ?>
-
-
-      <!-- <p class="or">Or Sign In With</p>
-
-      <div class="socialIcon">
-        <a class="btn1" href="#">
-          <img class="social" src="images/Facebook.png" />
-        </a>
-
-        <a class="btn1" href="#">
-          <img class="social" src="images/Twitter.png" />
-        </a>
-
-        <a class="btn1" href="#">
-          <img class="social" src="images/G-mail.png" />
-        </a>
-      </div> -->

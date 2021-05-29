@@ -22,19 +22,13 @@ form {
 }
 
 .form-item input[type="text"] {
-  height: 25px;
-}
-
-.form-item input[type="text"],
-textarea {
   width: 450px;
-}
-.form-item input[type="file"],
-select {
-  width: 455px;
+  font-weight: bold;
+  padding: 10px 6px;
 }
 
 select {
+  width: 450px;
   cursor: pointer;
   padding: 10px 5px;
   font-family: "Bree Serif", serif;
@@ -81,7 +75,13 @@ textarea:focus {
   border: 1px solid black;
 }
 
-input[type="file"] {
-  cursor: pointer;
-  font-family: "Bree Serif", serif;
+.output h1 {
+  font-size: 50px;
+  text-align: center;
+  color: green;
+}
+.output p {
+  font-size: 30px;
+  text-align: center;
+  color: red;
 }
