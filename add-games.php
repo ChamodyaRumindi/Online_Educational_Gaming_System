@@ -206,7 +206,7 @@
             if ($_GET["error"] == "1") {
               echo '<script>
                       msgboxbox.show(
-                      "You can not upload a game file of this type!. only js,html are allowd"
+                      "You can not upload a game file of this type!. only js,php are allowd"
                     );
                     </script>';
             }
