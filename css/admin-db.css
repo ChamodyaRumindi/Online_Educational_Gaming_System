@@ -30,3 +30,40 @@
 .in-numbers-item p {
   font-size: 15px;
 }
+
+.db-counter {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin: 20px auto;
+  width: 750px;
+}
+
+.counter-coulmn {
+  margin: 0px 20px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  font-family: "Bree Serif", serif;
+  border: none;
+  border-radius: 10px;
+  box-shadow: 0 10px 15px rgba(0, 0, 0, 0.65);
+  width: 200px;
+  height: 150px;
+  padding: 10px;
+}
+.counter-coulmn:hover {
+  transform: scale(1.1);
+}
+.counter-item {
+  font-size: 30px;
+}
+
+.line-graph {
+  border: 1px solid black;
+  margin-left: 20px;
+  margin-bottom: 20px;
+  margin-top: 20px;
+}
