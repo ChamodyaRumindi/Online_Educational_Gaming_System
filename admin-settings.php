@@ -1,5 +1,6 @@
 <link rel="styleSheet" href="css/sidebar.css" />
 <link rel="styleSheet" href="css/admin-settings.css" />
+<link rel="styleSheet" href="css/messagebox.css" />
 <?php 
       $title = 'Edit Profile';
       include 'header.php'; 
@@ -38,8 +39,9 @@
 
 <div class="a-container">
       <?php include 'admin-sidebar.php'; ?>
-
+    
       <div class="setting-form">
+        <div id="msgbox-area" class="msgbox-area"></div>
         <form action="includes/edit-admin.php" method="post" enctype="multipart/form-data">
           <div class="form-item">
             <label for="profilepic">Change Profile Picture:</label>
@@ -68,13 +70,13 @@
             <button class="psave-btn" id="submit" name="sumbit" type="submit">Save</button>
           </div>
         </form>
-        <form action="change-admin-pass.php" method="post">
+        <form action="includes/change-admin-pass.php" method="post">
           <div class="form-item">
             <label for="change-pass">Change password:</label>
             <div id="change-pass">
-                <input type="password" placeholder="Current Password" name="old-pass" id="old-pass"/>
-                <input type="password" placeholder="New Password" name="new-pass" id="new-pass"/>
-                <input type="password" placeholder="Confirm New Password" name="cnew-pass" id="cnew-pass"/>
+                <input type="password" placeholder="Current Password" name="old-pass" id="old-pass" required/>
+                <input type="password" placeholder="New Password" name="new-pass" id="new-pass" required/>
+                <input type="password" placeholder="Confirm New Password" name="cnew-pass" id="cnew-pass" required/>
             </div>
           </div>
           <div class="as-buttons">
@@ -100,5 +102,67 @@
     document.getElementById("submit2").click();
   }
 </script>
+<script src="./js/messagebox.js"></script>
+
+<?php
+    if (isset($_GET["error"])) {
+        if ($_GET["error"] == "none") {
+            echo '<script>
+                    msgboxbox.show(
+                    "Settings Saved!"
+                );
+                </script>';
+        }
+        if ($_GET["error"] == "passnone") {
+            echo '<script>
+                    msgboxbox.show(
+                    "Password Changed!"
+                );
+                </script>';
+        }
+        if ($_GET["error"] == "emailtaken") {
+            echo '<script>
+                    msgboxbox.show(
+                    "Email is taken!"
+                );
+                </script>';
+        }
+        if ($_GET["error"] == "3") {
+            echo '<script>
+                    msgboxbox.show(
+                    "You can not upload a profile picture of this type!. only jpg,jpeg and png are allowd"
+                );
+                </script>';
+        }
+        if ($_GET["error"] == "2") {
+            echo '<script>
+                    msgboxbox.show(
+                    "here was an error uplaoding profile picture!"
+                );
+                </script>';
+        }
+        if ($_GET["error"] == "1") {
+            echo '<script>
+                    msgboxbox.show(
+                    "Profile picture is too big!"
+                );
+                </script>';
+        }
+        if ($_GET["error"] == "passwordsdontmatch") {
+            echo '<script>
+                    msgboxbox.show(
+                    "New Password and Confirm New password does not match!"
+                );
+                </script>';
+        }
+        if ($_GET["error"] == "wrongpass") {
+            echo '<script>
+                    msgboxbox.show(
+                    "Wrong Password!"
+                );
+                </script>';
+        }
+    }
+?>
 <?php include('./footer.php'); ?>
 

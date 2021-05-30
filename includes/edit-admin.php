@@ -1,6 +1,7 @@
 <?php
   session_start(); 
-  require 'database.inc.php';
+  require_once 'database.inc.php';
+  require_once 'functions.inc.php';
   
   if (isset($_POST["sumbit"])){
     $aid = $_SESSION["adminID"];
@@ -8,6 +9,16 @@
     $fName = $_POST["fname"];
     $lName = $_POST["lname"];
     $email = $_POST["email"];
+
+    $result = mysqli_query($conn, "SELECT email FROM administrator_email WHERE adminID = $aid");
+    $emails = mysqli_fetch_array($result);
+
+    if($email != $emails[0]){
+        if (emailExists($conn, $email) !== false) {
+            header ("location: ../admin-settings.php?error=emailtaken");
+            exit();
+        }
+    }
 
     //Profile Pic
     $profilePic = $_FILES['profilepic'];
