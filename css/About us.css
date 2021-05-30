@@ -1,0 +1,24 @@
+
+#mission
+{
+    margin-left: 450px;
+    text-align: justify;
+}
+#para2
+{
+    margin-left: 450px;
+    text-align: justify;
+}
+.cu-btn
+{
+    margin-left: 350px;
+    background-color: grey;
+    color: black;
+    padding: 10px 15px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    cursor:pointer;
+    bottom: 0;
+}
+

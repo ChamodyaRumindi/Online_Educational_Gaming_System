@@ -8,7 +8,7 @@
          <script language="javascript" type="text/javascript">
          function save()
          {
-             alert("Saved!!!");
+             document.getElementByClass("save-button").innerHTML=alert("Saved!!!");
          }
          function delete()
          {
