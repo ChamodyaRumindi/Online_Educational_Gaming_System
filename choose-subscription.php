@@ -38,9 +38,9 @@
  
       <div class="upgradeCard">
         <div class="contentDiv">
-          <h3>Free</h3>
-          <h3>$0/mon</h3>
-          <button>Sign Up for free</button>
+          <h3>Premium</h3>
+          <h3>$19/mon</h3>
+          <button>Sign Up for Premium</button>
           <hr />
           <ul>
             <li>Lorem, ipsum dolor sit amet </li>
@@ -48,7 +48,7 @@
             <li>Lorem, ipsum dolor sit amet </li>
             <li>Lorem, ipsum dolor sit amet </li>
           </ul>
-          <button>Sign Up for free</button>
+          <button>Sign Up for Premium</button>
         </div>
       </div>
     </div>
