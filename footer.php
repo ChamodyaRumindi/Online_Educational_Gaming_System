@@ -8,8 +8,8 @@
           <li class="footer-item"><a href="#">Games</a></li>
           <li class="footer-item"><a href="#">Subjects</a></li>
           <li class="footer-item"><a href="#">Pricing</a></li>
-          <li class="footer-item"><a href="#">About us</a></li>
-          <li class="footer-item"><a href="#">Contact Us</a></li>
+          <li class="footer-item"><a href="about us.php">About us</a></li>
+          <li class="footer-item"><a href="contact us.php">Contact Us</a></li>
         </ul>
       </div>
       <div class="socialMedia">

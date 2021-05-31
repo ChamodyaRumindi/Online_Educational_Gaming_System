@@ -1,3 +1,7 @@
+<!-- This is a sample game for our site. 
+we got this from codepen(https://codepen.io/phantomesse/pen/YPrqLJ). 
+we have done some necessary changes to suit our requirements. -->
+
 <style>
 .g-container {
   background: darkcyan;
