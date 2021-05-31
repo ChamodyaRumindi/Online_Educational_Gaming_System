@@ -1,86 +1,107 @@
--- phpMyAdmin SQL Dump
--- version 5.1.0
--- https://www.phpmyadmin.net/
+-- MySQL dump 10.13  Distrib 8.0.25, for Win64 (x86_64)
 --
--- Host: 127.0.0.1
--- Generation Time: May 23, 2021 at 10:33 AM
--- Server version: 10.4.18-MariaDB
--- PHP Version: 8.0.3
-
-SET SQL_MODE = "NO_AUTO_VALUE_ON_ZERO";
-START TRANSACTION;
-SET time_zone = "+00:00";
-
+-- Host: us-cdbr-east-03.cleardb.com    Database: heroku_bb9f71dbaf1a90e
+-- ------------------------------------------------------
+-- Server version	5.6.50-log
 
 /*!40101 SET @OLD_CHARACTER_SET_CLIENT=@@CHARACTER_SET_CLIENT */;
 /*!40101 SET @OLD_CHARACTER_SET_RESULTS=@@CHARACTER_SET_RESULTS */;
 /*!40101 SET @OLD_COLLATION_CONNECTION=@@COLLATION_CONNECTION */;
-/*!40101 SET NAMES utf8mb4 */;
-
---
--- Database: `oeg_play`
---
-
--- --------------------------------------------------------
+/*!50503 SET NAMES utf8 */;
+/*!40103 SET @OLD_TIME_ZONE=@@TIME_ZONE */;
+/*!40103 SET TIME_ZONE='+00:00' */;
+/*!40014 SET @OLD_UNIQUE_CHECKS=@@UNIQUE_CHECKS, UNIQUE_CHECKS=0 */;
+/*!40014 SET @OLD_FOREIGN_KEY_CHECKS=@@FOREIGN_KEY_CHECKS, FOREIGN_KEY_CHECKS=0 */;
+/*!40101 SET @OLD_SQL_MODE=@@SQL_MODE, SQL_MODE='NO_AUTO_VALUE_ON_ZERO' */;
+/*!40111 SET @OLD_SQL_NOTES=@@SQL_NOTES, SQL_NOTES=0 */;
 
 --
 -- Table structure for table `admin`
 --
 
+DROP TABLE IF EXISTS `admin`;
+/*!40101 SET @saved_cs_client     = @@character_set_client */;
+/*!50503 SET character_set_client = utf8mb4 */;
 CREATE TABLE `admin` (
-  `adminID` int(11) NOT NULL,
+  `adminID` int(11) NOT NULL AUTO_INCREMENT,
   `username` varchar(128) NOT NULL,
   `firstName` char(128) NOT NULL,
   `lastName` char(128) NOT NULL,
-  `a_password` varchar(256) NOT NULL
-) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
+  `a_password` varchar(256) NOT NULL,
+  `profile_pic` varchar(256) DEFAULT NULL,
+  PRIMARY KEY (`adminID`)
+) ENGINE=InnoDB AUTO_INCREMENT=5 DEFAULT CHARSET=utf8mb4;
+/*!40101 SET character_set_client = @saved_cs_client */;
 
 --
 -- Dumping data for table `admin`
 --
 
-INSERT INTO `admin` (`adminID`, `username`, `firstName`, `lastName`, `a_password`) VALUES
-(4, 'pasindux', 'Pasindu', 'Lakshan(A)', '$2y$10$1TyN5h8wMoQKKyZYxcGcD.V.20wObOy4PuiksfRIkN.smF96f9o/e');
-
--- --------------------------------------------------------
+LOCK TABLES `admin` WRITE;
+/*!40000 ALTER TABLE `admin` DISABLE KEYS */;
+INSERT INTO `admin` VALUES (2,'pasindulakshan','Pasindu','Lakshan','4abeccbafe94c737a66d81103ae01bfcabfcab77b71c05fac3a3e3b357de450e',NULL),(4,'pasindux','Pasindu','Lakshan','$2y$10$GjoMOGzoeOVpk4fRny4JZOwO.i72P8zLcFbVXCwmfeQGjgflJXaqm','pasindux-60b3fe83e91991.87655486.jpg');
+/*!40000 ALTER TABLE `admin` ENABLE KEYS */;
+UNLOCK TABLES;
 
 --
 -- Table structure for table `administrator_email`
 --
 
+DROP TABLE IF EXISTS `administrator_email`;
+/*!40101 SET @saved_cs_client     = @@character_set_client */;
+/*!50503 SET character_set_client = utf8mb4 */;
 CREATE TABLE `administrator_email` (
   `adminID` int(11) NOT NULL,
-  `email` varchar(128) NOT NULL
+  `email` varchar(128) NOT NULL,
+  PRIMARY KEY (`adminID`,`email`),
+  CONSTRAINT `FK_AdministratorEmail` FOREIGN KEY (`adminID`) REFERENCES `admin` (`adminID`)
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
+/*!40101 SET character_set_client = @saved_cs_client */;
 
--- --------------------------------------------------------
+--
+-- Dumping data for table `administrator_email`
+--
+
+LOCK TABLES `administrator_email` WRITE;
+/*!40000 ALTER TABLE `administrator_email` DISABLE KEYS */;
+INSERT INTO `administrator_email` VALUES (4,'it20518578@my.sliit.lk');
+/*!40000 ALTER TABLE `administrator_email` ENABLE KEYS */;
+UNLOCK TABLES;
 
 --
 -- Table structure for table `category`
 --
 
+DROP TABLE IF EXISTS `category`;
+/*!40101 SET @saved_cs_client     = @@character_set_client */;
+/*!50503 SET character_set_client = utf8mb4 */;
 CREATE TABLE `category` (
-  `CID` int(11) NOT NULL,
+  `CID` int(11) NOT NULL AUTO_INCREMENT,
   `categoryName` varchar(128) NOT NULL,
-  `categoryDescription` varchar(512) DEFAULT NULL
-) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
+  `categoryDescription` varchar(512) DEFAULT NULL,
+  PRIMARY KEY (`CID`)
+) ENGINE=InnoDB AUTO_INCREMENT=3 DEFAULT CHARSET=utf8mb4;
+/*!40101 SET character_set_client = @saved_cs_client */;
 
 --
 -- Dumping data for table `category`
 --
 
-INSERT INTO `category` (`CID`, `categoryName`, `categoryDescription`) VALUES
-(1, 'Quiz', 'Quiz games'),
-(2, 'Puzzle', 'Puzzle games');
-
--- --------------------------------------------------------
+LOCK TABLES `category` WRITE;
+/*!40000 ALTER TABLE `category` DISABLE KEYS */;
+INSERT INTO `category` VALUES (1,'Quiz','Quiz games'),(2,'Puzzle','Puzzle games');
+/*!40000 ALTER TABLE `category` ENABLE KEYS */;
+UNLOCK TABLES;
 
 --
 -- Table structure for table `contact`
 --
 
+DROP TABLE IF EXISTS `contact`;
+/*!40101 SET @saved_cs_client     = @@character_set_client */;
+/*!50503 SET character_set_client = utf8mb4 */;
 CREATE TABLE `contact` (
-  `contactID` int(11) NOT NULL,
+  `contactID` int(11) NOT NULL AUTO_INCREMENT,
   `memberID` int(11) NOT NULL,
   `name` char(128) NOT NULL,
   `subject` varchar(128) NOT NULL,
@@ -88,48 +109,83 @@ CREATE TABLE `contact` (
   `description` varchar(1000) DEFAULT NULL,
   `c_datetime` datetime NOT NULL,
   `adminID` int(11) NOT NULL,
-  `view_datetime` datetime NOT NULL
+  `view_datetime` datetime NOT NULL,
+  PRIMARY KEY (`contactID`,`memberID`),
+  KEY `FK_Contact1` (`memberID`),
+  KEY `FK_Contact2` (`adminID`),
+  CONSTRAINT `FK_Contact1` FOREIGN KEY (`memberID`) REFERENCES `member` (`memberID`),
+  CONSTRAINT `FK_Contact2` FOREIGN KEY (`adminID`) REFERENCES `admin` (`adminID`)
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
+/*!40101 SET character_set_client = @saved_cs_client */;
 
--- --------------------------------------------------------
+--
+-- Dumping data for table `contact`
+--
+
+LOCK TABLES `contact` WRITE;
+/*!40000 ALTER TABLE `contact` DISABLE KEYS */;
+/*!40000 ALTER TABLE `contact` ENABLE KEYS */;
+UNLOCK TABLES;
 
 --
 -- Table structure for table `developer`
 --
 
+DROP TABLE IF EXISTS `developer`;
+/*!40101 SET @saved_cs_client     = @@character_set_client */;
+/*!50503 SET character_set_client = utf8mb4 */;
 CREATE TABLE `developer` (
-  `devID` int(11) NOT NULL,
+  `devID` int(11) NOT NULL AUTO_INCREMENT,
   `firstName` char(128) NOT NULL,
   `lastName` char(128) NOT NULL,
-  `devDescription` varchar(200) DEFAULT NULL
-) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
+  `devDescription` varchar(200) DEFAULT NULL,
+  PRIMARY KEY (`devID`)
+) ENGINE=InnoDB AUTO_INCREMENT=2 DEFAULT CHARSET=utf8mb4;
+/*!40101 SET character_set_client = @saved_cs_client */;
 
 --
 -- Dumping data for table `developer`
 --
 
-INSERT INTO `developer` (`devID`, `firstName`, `lastName`, `devDescription`) VALUES
-(1, 'Pasindu', 'Lakshan', 'Game Developer');
-
--- --------------------------------------------------------
+LOCK TABLES `developer` WRITE;
+/*!40000 ALTER TABLE `developer` DISABLE KEYS */;
+INSERT INTO `developer` VALUES (1,'Pasindu','Lakshan','Game Developer');
+/*!40000 ALTER TABLE `developer` ENABLE KEYS */;
+UNLOCK TABLES;
 
 --
 -- Table structure for table `developer_email`
 --
 
+DROP TABLE IF EXISTS `developer_email`;
+/*!40101 SET @saved_cs_client     = @@character_set_client */;
+/*!50503 SET character_set_client = utf8mb4 */;
 CREATE TABLE `developer_email` (
   `devID` int(11) NOT NULL,
-  `email` varchar(128) NOT NULL
+  `email` varchar(128) NOT NULL,
+  PRIMARY KEY (`devID`,`email`),
+  CONSTRAINT `FK_DeveloperEmail` FOREIGN KEY (`devID`) REFERENCES `developer` (`devID`)
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
+/*!40101 SET character_set_client = @saved_cs_client */;
 
--- --------------------------------------------------------
+--
+-- Dumping data for table `developer_email`
+--
+
+LOCK TABLES `developer_email` WRITE;
+/*!40000 ALTER TABLE `developer_email` DISABLE KEYS */;
+/*!40000 ALTER TABLE `developer_email` ENABLE KEYS */;
+UNLOCK TABLES;
 
 --
 -- Table structure for table `game`
 --
 
+DROP TABLE IF EXISTS `game`;
+/*!40101 SET @saved_cs_client     = @@character_set_client */;
+/*!50503 SET character_set_client = utf8mb4 */;
 CREATE TABLE `game` (
-  `gameID` int(11) NOT NULL,
+  `gameID` int(11) NOT NULL AUTO_INCREMENT,
   `gameName` varchar(128) NOT NULL,
   `gameGrade` varchar(128) NOT NULL,
   `gameCategory` varchar(128) NOT NULL,
@@ -142,471 +198,288 @@ CREATE TABLE `game` (
   `gFile` varchar(256) DEFAULT NULL,
   `gThumbnail` varchar(256) DEFAULT NULL,
   `added_date` date NOT NULL,
-  `last_modified_date` date NOT NULL
-) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
+  `last_modified_date` date NOT NULL,
+  PRIMARY KEY (`gameID`),
+  KEY `FK_Game1` (`adminID`),
+  KEY `FK_Game2` (`devID`),
+  CONSTRAINT `FK_Game1` FOREIGN KEY (`adminID`) REFERENCES `admin` (`adminID`),
+  CONSTRAINT `FK_Game2` FOREIGN KEY (`devID`) REFERENCES `developer` (`devID`)
+) ENGINE=InnoDB AUTO_INCREMENT=74 DEFAULT CHARSET=utf8mb4;
+/*!40101 SET character_set_client = @saved_cs_client */;
 
 --
 -- Dumping data for table `game`
 --
 
-INSERT INTO `game` (`gameID`, `gameName`, `gameGrade`, `gameCategory`, `gameSubject`, `gameDescription`, `gameInstructions`, `gameAccess`, `adminID`, `devID`, `gFile`, `gThumbnail`, `added_date`, `last_modified_date`) VALUES
-(29, 'Bingo Additions', 'Grade 3', 'Quiz', 'English', 'test', 'test', 'Free', 2, 1, NULL, NULL, '0000-00-00', '0000-00-00');
-
--- --------------------------------------------------------
+LOCK TABLES `game` WRITE;
+/*!40000 ALTER TABLE `game` DISABLE KEYS */;
+INSERT INTO `game` VALUES (64,'Bingo Additions','Grade 5','Quiz','Mathematics','Bingo Addition Game is a quiz to test your knowledge of additions.','Choose the correct answer from the given answers. and then click the next questions button. after answering all questions you can submit the answers by clicking submit button.','Free',4,1,'60b22b9b033530.99447546.php','60b22b9b5b1a44.82255669.jpg','2021-05-29','2021-05-29');
+/*!40000 ALTER TABLE `game` ENABLE KEYS */;
+UNLOCK TABLES;
 
 --
 -- Table structure for table `grade`
 --
 
+DROP TABLE IF EXISTS `grade`;
+/*!40101 SET @saved_cs_client     = @@character_set_client */;
+/*!50503 SET character_set_client = utf8mb4 */;
 CREATE TABLE `grade` (
-  `GID` int(11) NOT NULL,
+  `GID` int(11) NOT NULL AUTO_INCREMENT,
   `gradeName` varchar(128) NOT NULL,
-  `gradeDescription` varchar(512) DEFAULT NULL
-) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
+  `gradeDescription` varchar(512) DEFAULT NULL,
+  PRIMARY KEY (`GID`)
+) ENGINE=InnoDB AUTO_INCREMENT=11 DEFAULT CHARSET=utf8mb4;
+/*!40101 SET character_set_client = @saved_cs_client */;
 
 --
 -- Dumping data for table `grade`
 --
 
-INSERT INTO `grade` (`GID`, `gradeName`, `gradeDescription`) VALUES
-(1, 'Preschool', 'Games for Preschool kids'),
-(2, 'Grade 1', 'Games for grade 1 students'),
-(3, 'Grade 2', 'Games for grade 2 students'),
-(4, 'Grade 3', 'Games for grade 3 students'),
-(5, 'Grade 4', 'Games for grade 4 students'),
-(6, 'Grade 5', 'Games for grade 5 students'),
-(7, 'Grade 6', 'Games for grade 6 students'),
-(8, 'Grade 7', 'Games for grade 7 students'),
-(9, 'Grade 8', 'Games for grade 8 students'),
-(10, 'Grade 9', 'Games for grade 9 students');
-
--- --------------------------------------------------------
+LOCK TABLES `grade` WRITE;
+/*!40000 ALTER TABLE `grade` DISABLE KEYS */;
+INSERT INTO `grade` VALUES (1,'Preschool','Games for Preschool kids'),(2,'Grade 1','Games for grade 1 students'),(3,'Grade 2','Games for grade 2 students'),(4,'Grade 3','Games for grade 3 students'),(5,'Grade 4','Games for grade 4 students'),(6,'Grade 5','Games for grade 5 students'),(7,'Grade 6','Games for grade 6 students'),(8,'Grade 7','Games for grade 7 students'),(9,'Grade 8','Games for grade 8 students'),(10,'Grade 9','Games for grade 9 students');
+/*!40000 ALTER TABLE `grade` ENABLE KEYS */;
+UNLOCK TABLES;
 
 --
 -- Table structure for table `history`
 --
 
+DROP TABLE IF EXISTS `history`;
+/*!40101 SET @saved_cs_client     = @@character_set_client */;
+/*!50503 SET character_set_client = utf8mb4 */;
 CREATE TABLE `history` (
-  `HID` int(11) NOT NULL,
+  `HID` int(11) NOT NULL AUTO_INCREMENT,
   `memberID` int(11) NOT NULL,
   `gameID` int(11) NOT NULL,
   `h_datetime` datetime NOT NULL,
-  `score` int(11) NOT NULL
-) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
+  `score` int(11) NOT NULL,
+  PRIMARY KEY (`HID`),
+  KEY `FK_History1` (`memberID`),
+  KEY `FK_History2` (`gameID`),
+  CONSTRAINT `FK_History1` FOREIGN KEY (`memberID`) REFERENCES `member` (`memberID`),
+  CONSTRAINT `FK_History2` FOREIGN KEY (`gameID`) REFERENCES `game` (`gameID`)
+) ENGINE=InnoDB AUTO_INCREMENT=74 DEFAULT CHARSET=utf8mb4;
+/*!40101 SET character_set_client = @saved_cs_client */;
 
--- --------------------------------------------------------
+--
+-- Dumping data for table `history`
+--
+
+LOCK TABLES `history` WRITE;
+/*!40000 ALTER TABLE `history` DISABLE KEYS */;
+INSERT INTO `history` VALUES (4,34,64,'2021-05-29 03:39:48',10),(14,34,64,'2021-05-29 02:23:43',100),(24,34,64,'2021-05-29 05:12:23',200),(34,34,64,'2021-05-30 04:34:56',90),(44,34,64,'2021-05-31 05:12:12',70),(54,34,64,'2021-05-31 06:45:42',80),(64,34,64,'2021-05-31 07:46:23',140);
+/*!40000 ALTER TABLE `history` ENABLE KEYS */;
+UNLOCK TABLES;
 
 --
 -- Table structure for table `member`
 --
 
+DROP TABLE IF EXISTS `member`;
+/*!40101 SET @saved_cs_client     = @@character_set_client */;
+/*!50503 SET character_set_client = utf8mb4 */;
 CREATE TABLE `member` (
-  `memberID` int(11) NOT NULL,
+  `memberID` int(11) NOT NULL AUTO_INCREMENT,
   `username` varchar(128) NOT NULL,
   `firstName` char(128) NOT NULL,
   `lastName` char(128) NOT NULL,
   `m_password` varchar(256) NOT NULL,
   `m_rank` char(20) NOT NULL DEFAULT 'No Rank',
-  `TID` int(11) NOT NULL
-) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
+  `TID` int(11) NOT NULL,
+  `profile_pic` varchar(256) DEFAULT NULL,
+  PRIMARY KEY (`memberID`),
+  KEY `FK_Member` (`TID`),
+  CONSTRAINT `FK_Member` FOREIGN KEY (`TID`) REFERENCES `type` (`TID`)
+) ENGINE=InnoDB AUTO_INCREMENT=144 DEFAULT CHARSET=utf8mb4;
+/*!40101 SET character_set_client = @saved_cs_client */;
 
 --
 -- Dumping data for table `member`
 --
 
-INSERT INTO `member` (`memberID`, `username`, `firstName`, `lastName`, `m_password`, `m_rank`, `TID`) VALUES
-(28, 'PasinduX', 'Pasindu', 'Lakshan', '$2y$10$u1FpoqVNKzAT8q5AIGNjjOxZCrMnZC4KvcubQFpPbgAvs7BfBK0A2', 'No Rank', 1);
-
--- --------------------------------------------------------
-
---
--- Table structure for table `membership`
---
-
-CREATE TABLE `membership` (
-  `MID` int(11) NOT NULL,
-  `memberID` int(11) NOT NULL,
-  `m_plan` varchar(20) NOT NULL,
-  `m_status` varchar(20) NOT NULL,
-  `start_date` date NOT NULL,
-  `renewal_date` date NOT NULL
-) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
-
---
--- Dumping data for table `membership`
---
-
-INSERT INTO `membership` (`MID`, `memberID`, `m_plan`, `m_status`, `start_date`, `renewal_date`) VALUES
-(2, 3, ' ', ' ', '2021-02-16', '0000-00-00'),
-(3, 4, 'Monthly', 'Active', '2021-02-16', '2021-05-16'),
-(4, 5, 'Annual', 'Active', '2021-03-21', '2022-03-21'),
-(5, 6, 'Monthly', 'Active', '2021-04-11', '2021-06-11'),
-(6, 7, 'Monthly', 'Active', '2021-03-18', '2021-06-18'),
-(9, 28, '', '', '2021-05-21', '0000-00-00');
-
--- --------------------------------------------------------
+LOCK TABLES `member` WRITE;
+/*!40000 ALTER TABLE `member` DISABLE KEYS */;
+INSERT INTO `member` VALUES (34,'pasindux','Pasindu','Lakshan','$2y$10$/mde2Cm21yzlSeOnZLL/1.2u2jUOmCvUiSdaAHLV6MjTY8c6FP47m','No Rank',2,'pasindux-60b4f25acda595.63732602.jpg'),(44,'rumi','chamodya','rumindi','$2y$10$VvR83FC87gpbVGFQWeCy8etLNE40Z7kBE2JGDSrAA/.UdUcgNfP56','No Rank',2,NULL),(54,'cham','cham','rumindi','$2y$10$Y0PIZZq1Kcf9rPHAbMyiGehUg8LUuLjt3VC6b8rjoj31GMhwzbc06','No Rank',2,NULL),(64,'ruuuu','ruu','chaa','$2y$10$n57EbAFPHRWoVfujy9P53uC4xRmimUzoGzLtx4qQ0IpWsaqCahXy2','No Rank',2,NULL),(74,'kkl','ddss','fff','$2y$10$dr/pPBm6wN5vmD5TEXF1Te79UiEEgUnQYbqPvC5KPduaTqGgJny.S','No Rank',2,NULL),(84,'rumindi','rumi','cham','$2y$10$onBPvlPkJ7iei3ZX1Csc4.5BO0dpsZYbci9u2TWcLOI1KuwZ2L08i','No Rank',2,NULL),(94,'nethu','nethmini','tharuka','$2y$10$AgUUXvcCaS4Bq0G.puNVzOC5GNJ66XR6WI5UwACys7ti8MV58dPQW','No Rank',1,NULL),(104,'chamodya','ruu','mi','$2y$10$SKrOZQMBK.sbl7r9OpGaYOUgPJuuMM7LohsJmB3dafHZc7GjE5Kce','No Rank',2,NULL),(114,'chaa','chaa','ruu','$2y$10$B9mXsGv20zSQgSc5Nkgt3.0vjeuohxBUcOTPYkeyOsA6c1oTGmXl.','No Rank',2,NULL),(124,'qaaa','qqq','qqqq','$2y$10$livZ2Z7/.U3Bc2zLqi5kA.4xoT2qSV/DMAGlq99uqqJ4LjneS7l7q','No Rank',2,NULL),(134,'qqq','mmm','yyy','$2y$10$Bu3VD53PzHw6oRzROhB5cuoNBMvAWyniORd8sIU7CZ1QvIGC58NIe','No Rank',2,NULL);
+/*!40000 ALTER TABLE `member` ENABLE KEYS */;
+UNLOCK TABLES;
 
 --
 -- Table structure for table `member_email`
 --
 
+DROP TABLE IF EXISTS `member_email`;
+/*!40101 SET @saved_cs_client     = @@character_set_client */;
+/*!50503 SET character_set_client = utf8mb4 */;
 CREATE TABLE `member_email` (
   `memberID` int(11) NOT NULL,
   `email` varchar(128) NOT NULL,
-  `emailType` varchar(32) NOT NULL
+  `emailType` varchar(32) NOT NULL,
+  PRIMARY KEY (`memberID`,`email`),
+  CONSTRAINT `FK_MemberEmail` FOREIGN KEY (`memberID`) REFERENCES `member` (`memberID`) ON DELETE CASCADE
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
+/*!40101 SET character_set_client = @saved_cs_client */;
 
 --
 -- Dumping data for table `member_email`
 --
 
-INSERT INTO `member_email` (`memberID`, `email`, `emailType`) VALUES
-(3, 'akilaimalsha@gmail.com', ''),
-(4, 'supunrusiru@gmail.com', ''),
-(5, 'pramitha99@gmail.com', ''),
-(6, 'thusharax@gmail.com', ''),
-(7, 'gaweenkanishka98@gmail.com', ''),
-(28, 'dkp9912@gmail.com', 'Primary');
+LOCK TABLES `member_email` WRITE;
+/*!40000 ALTER TABLE `member_email` DISABLE KEYS */;
+INSERT INTO `member_email` VALUES (34,'dkp9912@gmail.com','Primary'),(44,'rumicham99@gmail.com','Primary'),(54,'aasss@ahana.gmail.com','Primary'),(64,'asss@gmail.com','Primary'),(74,'asg@gmail.com','Primary'),(84,'abc@gamil.com','Primary'),(94,'tharukatharu16@gmail.com','Primary'),(104,'asd@gmail.com','Primary'),(114,'aswdd@gamil.com','Primary'),(124,'awd@gmail.com','Primary'),(134,'sde@gmail.com','Primary');
+/*!40000 ALTER TABLE `member_email` ENABLE KEYS */;
+UNLOCK TABLES;
 
--- --------------------------------------------------------
+--
+-- Table structure for table `membership`
+--
+
+DROP TABLE IF EXISTS `membership`;
+/*!40101 SET @saved_cs_client     = @@character_set_client */;
+/*!50503 SET character_set_client = utf8mb4 */;
+CREATE TABLE `membership` (
+  `MID` int(11) NOT NULL AUTO_INCREMENT,
+  `memberID` int(11) NOT NULL,
+  `m_plan` varchar(20) NOT NULL,
+  `m_status` varchar(20) NOT NULL,
+  `start_date` date NOT NULL,
+  `renewal_date` date NOT NULL,
+  PRIMARY KEY (`MID`),
+  KEY `FK_Membership1` (`memberID`),
+  CONSTRAINT `FK_Membership1` FOREIGN KEY (`memberID`) REFERENCES `member` (`memberID`) ON DELETE CASCADE
+) ENGINE=InnoDB AUTO_INCREMENT=124 DEFAULT CHARSET=utf8mb4;
+/*!40101 SET character_set_client = @saved_cs_client */;
+
+--
+-- Dumping data for table `membership`
+--
+
+LOCK TABLES `membership` WRITE;
+/*!40000 ALTER TABLE `membership` DISABLE KEYS */;
+INSERT INTO `membership` VALUES (14,34,' ',' ','2021-05-24','0000-00-00'),(24,44,'','','2021-05-29','0000-00-00'),(34,54,'','','2021-05-30','0000-00-00'),(44,64,'','','2021-05-30','0000-00-00'),(54,74,'','','2021-05-30','0000-00-00'),(64,84,'','','2021-05-31','0000-00-00'),(74,94,'','','2021-05-31','0000-00-00'),(84,104,'','','2021-05-31','0000-00-00'),(94,114,'','','2021-05-31','0000-00-00'),(104,124,'','','2021-05-31','0000-00-00'),(114,134,'','','2021-05-31','0000-00-00');
+/*!40000 ALTER TABLE `membership` ENABLE KEYS */;
+UNLOCK TABLES;
 
 --
 -- Table structure for table `payment`
 --
 
+DROP TABLE IF EXISTS `payment`;
+/*!40101 SET @saved_cs_client     = @@character_set_client */;
+/*!50503 SET character_set_client = utf8mb4 */;
 CREATE TABLE `payment` (
-  `PID` int(11) NOT NULL,
+  `PID` int(11) NOT NULL AUTO_INCREMENT,
   `memberID` int(11) NOT NULL,
   `p_datetime` datetime NOT NULL,
   `amount` float NOT NULL,
   `p_description` varchar(128) DEFAULT NULL,
-  `MID` int(11) NOT NULL
+  `MID` int(11) NOT NULL,
+  PRIMARY KEY (`PID`),
+  KEY `FK_Payment1` (`memberID`),
+  KEY `FK_Payment2` (`MID`),
+  CONSTRAINT `FK_Payment1` FOREIGN KEY (`memberID`) REFERENCES `member` (`memberID`),
+  CONSTRAINT `FK_Payment2` FOREIGN KEY (`MID`) REFERENCES `membership` (`MID`)
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
+/*!40101 SET character_set_client = @saved_cs_client */;
 
--- --------------------------------------------------------
+--
+-- Dumping data for table `payment`
+--
+
+LOCK TABLES `payment` WRITE;
+/*!40000 ALTER TABLE `payment` DISABLE KEYS */;
+/*!40000 ALTER TABLE `payment` ENABLE KEYS */;
+UNLOCK TABLES;
 
 --
 -- Table structure for table `review`
 --
 
+DROP TABLE IF EXISTS `review`;
+/*!40101 SET @saved_cs_client     = @@character_set_client */;
+/*!50503 SET character_set_client = utf8mb4 */;
 CREATE TABLE `review` (
-  `RID` int(11) NOT NULL,
+  `RID` int(11) NOT NULL AUTO_INCREMENT,
   `memberID` int(11) NOT NULL,
   `gameID` int(11) NOT NULL,
   `comment` varchar(200) DEFAULT NULL,
-  `submit_date` date NOT NULL
+  `submit_date` date NOT NULL,
+  PRIMARY KEY (`RID`,`memberID`),
+  KEY `FK_Review1` (`memberID`),
+  KEY `FK_Review2` (`gameID`),
+  CONSTRAINT `FK_Review1` FOREIGN KEY (`memberID`) REFERENCES `member` (`memberID`),
+  CONSTRAINT `FK_Review2` FOREIGN KEY (`gameID`) REFERENCES `game` (`gameID`)
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
+/*!40101 SET character_set_client = @saved_cs_client */;
 
--- --------------------------------------------------------
+--
+-- Dumping data for table `review`
+--
+
+LOCK TABLES `review` WRITE;
+/*!40000 ALTER TABLE `review` DISABLE KEYS */;
+/*!40000 ALTER TABLE `review` ENABLE KEYS */;
+UNLOCK TABLES;
 
 --
 -- Table structure for table `subject`
 --
 
+DROP TABLE IF EXISTS `subject`;
+/*!40101 SET @saved_cs_client     = @@character_set_client */;
+/*!50503 SET character_set_client = utf8mb4 */;
 CREATE TABLE `subject` (
-  `SID` int(11) NOT NULL,
+  `SID` int(11) NOT NULL AUTO_INCREMENT,
   `subjectName` varchar(128) NOT NULL,
-  `subjectDescription` varchar(512) DEFAULT NULL
-) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
+  `subjectDescription` varchar(512) DEFAULT NULL,
+  PRIMARY KEY (`SID`)
+) ENGINE=InnoDB AUTO_INCREMENT=6 DEFAULT CHARSET=utf8mb4;
+/*!40101 SET character_set_client = @saved_cs_client */;
 
 --
 -- Dumping data for table `subject`
 --
 
-INSERT INTO `subject` (`SID`, `subjectName`, `subjectDescription`) VALUES
-(1, 'English', 'Learn English while playing games'),
-(2, 'Mathematics', 'Our online math games are designed to provide kids with multiple opportunities to understand the power and beauty of math.'),
-(3, 'Science', 'Learn Science while playing these awesome games'),
-(4, 'History', 'Learn History while playing games'),
-(5, 'Environment', 'Learn Environment while playing games.');
-
--- --------------------------------------------------------
+LOCK TABLES `subject` WRITE;
+/*!40000 ALTER TABLE `subject` DISABLE KEYS */;
+INSERT INTO `subject` VALUES (1,'English','Learn English while playing games'),(2,'Mathematics','Our online math games are designed to provide kids with multiple opportunities to understand the power and beauty of math.'),(3,'Science','Learn Science while playing these awesome games'),(4,'History','Learn History while playing games'),(5,'Environment','Learn Environment while playing games.');
+/*!40000 ALTER TABLE `subject` ENABLE KEYS */;
+UNLOCK TABLES;
 
 --
 -- Table structure for table `type`
 --
 
+DROP TABLE IF EXISTS `type`;
+/*!40101 SET @saved_cs_client     = @@character_set_client */;
+/*!50503 SET character_set_client = utf8mb4 */;
 CREATE TABLE `type` (
-  `TID` int(11) NOT NULL,
+  `TID` int(11) NOT NULL AUTO_INCREMENT,
   `mType` varchar(30) NOT NULL,
   `price` float NOT NULL,
-  `description` varchar(500) DEFAULT NULL
-) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
+  `description` varchar(500) DEFAULT NULL,
+  PRIMARY KEY (`TID`)
+) ENGINE=InnoDB AUTO_INCREMENT=5 DEFAULT CHARSET=utf8mb4;
+/*!40101 SET character_set_client = @saved_cs_client */;
 
 --
 -- Dumping data for table `type`
 --
 
-INSERT INTO `type` (`TID`, `mType`, `price`, `description`) VALUES
-(1, 'Premium', 9.99, 'Premium Membership'),
-(2, 'Free', 0, 'Free Membership'),
-(3, 'Premium', 9.99, 'Premium Membership'),
-(4, 'Free', 0, 'Free Membership');
+LOCK TABLES `type` WRITE;
+/*!40000 ALTER TABLE `type` DISABLE KEYS */;
+INSERT INTO `type` VALUES (1,'Premium',9.99,'Premium Membership'),(2,'Free',0,'Free Membership'),(3,'Premium',9.99,'Premium Membership'),(4,'Free',0,'Free Membership');
+/*!40000 ALTER TABLE `type` ENABLE KEYS */;
+UNLOCK TABLES;
+/*!40103 SET TIME_ZONE=@OLD_TIME_ZONE */;
 
---
--- Indexes for dumped tables
---
-
---
--- Indexes for table `admin`
---
-ALTER TABLE `admin`
-  ADD PRIMARY KEY (`adminID`);
-
---
--- Indexes for table `administrator_email`
---
-ALTER TABLE `administrator_email`
-  ADD PRIMARY KEY (`adminID`,`email`);
-
---
--- Indexes for table `category`
---
-ALTER TABLE `category`
-  ADD PRIMARY KEY (`CID`);
-
---
--- Indexes for table `contact`
---
-ALTER TABLE `contact`
-  ADD PRIMARY KEY (`contactID`,`memberID`),
-  ADD KEY `FK_Contact1` (`memberID`),
-  ADD KEY `FK_Contact2` (`adminID`);
-
---
--- Indexes for table `developer`
---
-ALTER TABLE `developer`
-  ADD PRIMARY KEY (`devID`);
-
---
--- Indexes for table `developer_email`
---
-ALTER TABLE `developer_email`
-  ADD PRIMARY KEY (`devID`,`email`);
-
---
--- Indexes for table `game`
---
-ALTER TABLE `game`
-  ADD PRIMARY KEY (`gameID`),
-  ADD KEY `FK_Game1` (`adminID`),
-  ADD KEY `FK_Game2` (`devID`);
-
---
--- Indexes for table `grade`
---
-ALTER TABLE `grade`
-  ADD PRIMARY KEY (`GID`);
-
---
--- Indexes for table `history`
---
-ALTER TABLE `history`
-  ADD PRIMARY KEY (`HID`),
-  ADD KEY `FK_History1` (`memberID`),
-  ADD KEY `FK_History2` (`gameID`);
-
---
--- Indexes for table `member`
---
-ALTER TABLE `member`
-  ADD PRIMARY KEY (`memberID`),
-  ADD KEY `FK_Member` (`TID`);
-
---
--- Indexes for table `membership`
---
-ALTER TABLE `membership`
-  ADD PRIMARY KEY (`MID`),
-  ADD KEY `FK_Membership1` (`memberID`);
-
---
--- Indexes for table `member_email`
---
-ALTER TABLE `member_email`
-  ADD PRIMARY KEY (`memberID`,`email`);
-
---
--- Indexes for table `payment`
---
-ALTER TABLE `payment`
-  ADD PRIMARY KEY (`PID`),
-  ADD KEY `FK_Payment1` (`memberID`),
-  ADD KEY `FK_Payment2` (`MID`);
-
---
--- Indexes for table `review`
---
-ALTER TABLE `review`
-  ADD PRIMARY KEY (`RID`,`memberID`),
-  ADD KEY `FK_Review1` (`memberID`),
-  ADD KEY `FK_Review2` (`gameID`);
-
---
--- Indexes for table `subject`
---
-ALTER TABLE `subject`
-  ADD PRIMARY KEY (`SID`);
-
---
--- Indexes for table `type`
---
-ALTER TABLE `type`
-  ADD PRIMARY KEY (`TID`);
-
---
--- AUTO_INCREMENT for dumped tables
---
-
---
--- AUTO_INCREMENT for table `admin`
---
-ALTER TABLE `admin`
-  MODIFY `adminID` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=5;
-
---
--- AUTO_INCREMENT for table `category`
---
-ALTER TABLE `category`
-  MODIFY `CID` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=3;
-
---
--- AUTO_INCREMENT for table `contact`
---
-ALTER TABLE `contact`
-  MODIFY `contactID` int(11) NOT NULL AUTO_INCREMENT;
-
---
--- AUTO_INCREMENT for table `developer`
---
-ALTER TABLE `developer`
-  MODIFY `devID` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=2;
-
---
--- AUTO_INCREMENT for table `game`
---
-ALTER TABLE `game`
-  MODIFY `gameID` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=30;
-
---
--- AUTO_INCREMENT for table `grade`
---
-ALTER TABLE `grade`
-  MODIFY `GID` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=11;
-
---
--- AUTO_INCREMENT for table `history`
---
-ALTER TABLE `history`
-  MODIFY `HID` int(11) NOT NULL AUTO_INCREMENT;
-
---
--- AUTO_INCREMENT for table `member`
---
-ALTER TABLE `member`
-  MODIFY `memberID` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=29;
-
---
--- AUTO_INCREMENT for table `membership`
---
-ALTER TABLE `membership`
-  MODIFY `MID` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=10;
-
---
--- AUTO_INCREMENT for table `payment`
---
-ALTER TABLE `payment`
-  MODIFY `PID` int(11) NOT NULL AUTO_INCREMENT;
-
---
--- AUTO_INCREMENT for table `review`
---
-ALTER TABLE `review`
-  MODIFY `RID` int(11) NOT NULL AUTO_INCREMENT;
-
---
--- AUTO_INCREMENT for table `subject`
---
-ALTER TABLE `subject`
-  MODIFY `SID` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=6;
-
---
--- AUTO_INCREMENT for table `type`
---
-ALTER TABLE `type`
-  MODIFY `TID` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=5;
-
---
--- Constraints for dumped tables
---
-
---
--- Constraints for table `administrator_email`
---
-ALTER TABLE `administrator_email`
-  ADD CONSTRAINT `FK_AdministratorEmail` FOREIGN KEY (`adminID`) REFERENCES `admin` (`adminID`);
-
---
--- Constraints for table `contact`
---
-ALTER TABLE `contact`
-  ADD CONSTRAINT `FK_Contact1` FOREIGN KEY (`memberID`) REFERENCES `member` (`memberID`),
-  ADD CONSTRAINT `FK_Contact2` FOREIGN KEY (`adminID`) REFERENCES `admin` (`adminID`);
-
---
--- Constraints for table `developer_email`
---
-ALTER TABLE `developer_email`
-  ADD CONSTRAINT `FK_DeveloperEmail` FOREIGN KEY (`devID`) REFERENCES `developer` (`devID`);
-
---
--- Constraints for table `game`
---
-ALTER TABLE `game`
-  ADD CONSTRAINT `FK_Game1` FOREIGN KEY (`adminID`) REFERENCES `admin` (`adminID`),
-  ADD CONSTRAINT `FK_Game2` FOREIGN KEY (`devID`) REFERENCES `developer` (`devID`);
-
---
--- Constraints for table `history`
---
-ALTER TABLE `history`
-  ADD CONSTRAINT `FK_History1` FOREIGN KEY (`memberID`) REFERENCES `member` (`memberID`),
-  ADD CONSTRAINT `FK_History2` FOREIGN KEY (`gameID`) REFERENCES `game` (`gameID`);
-
---
--- Constraints for table `member`
---
-ALTER TABLE `member`
-  ADD CONSTRAINT `FK_Member` FOREIGN KEY (`TID`) REFERENCES `type` (`TID`);
-
---
--- Constraints for table `membership`
---
-ALTER TABLE `membership`
-  ADD CONSTRAINT `FK_Membership1` FOREIGN KEY (`memberID`) REFERENCES `member` (`memberID`) ON DELETE CASCADE;
-
---
--- Constraints for table `member_email`
---
-ALTER TABLE `member_email`
-  ADD CONSTRAINT `FK_MemberEmail` FOREIGN KEY (`memberID`) REFERENCES `member` (`memberID`) ON DELETE CASCADE;
-
---
--- Constraints for table `payment`
---
-ALTER TABLE `payment`
-  ADD CONSTRAINT `FK_Payment1` FOREIGN KEY (`memberID`) REFERENCES `member` (`memberID`),
-  ADD CONSTRAINT `FK_Payment2` FOREIGN KEY (`MID`) REFERENCES `membership` (`MID`);
-
---
--- Constraints for table `review`
---
-ALTER TABLE `review`
-  ADD CONSTRAINT `FK_Review1` FOREIGN KEY (`memberID`) REFERENCES `member` (`memberID`),
-  ADD CONSTRAINT `FK_Review2` FOREIGN KEY (`gameID`) REFERENCES `game` (`gameID`);
-COMMIT;
-
+/*!40101 SET SQL_MODE=@OLD_SQL_MODE */;
+/*!40014 SET FOREIGN_KEY_CHECKS=@OLD_FOREIGN_KEY_CHECKS */;
+/*!40014 SET UNIQUE_CHECKS=@OLD_UNIQUE_CHECKS */;
 /*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;
 /*!40101 SET CHARACTER_SET_RESULTS=@OLD_CHARACTER_SET_RESULTS */;
 /*!40101 SET COLLATION_CONNECTION=@OLD_COLLATION_CONNECTION */;
+/*!40111 SET SQL_NOTES=@OLD_SQL_NOTES */;
+
+-- Dump completed on 2021-05-31 23:21:21
