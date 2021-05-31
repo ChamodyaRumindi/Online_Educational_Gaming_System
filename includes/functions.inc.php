@@ -210,6 +210,7 @@ function  loginUser($conn, $username, $pwd) {
         $_SESSION["firstName"] = $uidExists["firstName"];
         $_SESSION["lastName"] = $uidExists["lastName"];
         $_SESSION["TID"] = $uidExists["TID"];
+        $_SESSION["proPic"] = $uidExists["profile_pic"];
         $_SESSION["role"] = 'Member';
         header("location: ../index.php");
         exit();

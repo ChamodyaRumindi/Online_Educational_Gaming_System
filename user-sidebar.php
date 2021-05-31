@@ -1,8 +1,23 @@
 <div class = "admin-sidebar">
         <div class = "profile">
-            <img class = "propic" src="images/defaultProfile.png" alt="ProfilePicture">
-            <p class="a-name">Anjalee Bimalsha</p>
-            <h5 class="role">Premium Member</h5>
+            <?php 
+                if(!is_null($_SESSION['proPic'])){
+                    echo '<img class = "propic" src="uploads/userpropics/'.$_SESSION['proPic'].'" alt="ProfilePicture">';
+                }
+                else{
+                    echo '<img class = "propic" src="images/defaultProfile.png" alt="ProfilePicture">';
+                }
+                
+                echo '<p class="a-name">'.$_SESSION["firstName"].' '.$_SESSION["lastName"].'</p>';
+            
+                if ($_SESSION['TID'] == 1){
+                    echo '<h5 class="role">Premium Member</h5>';
+                }
+                else if ($_SESSION['TID'] == 2){
+                    echo '<h5 class="role">Free Member</h5>';
+                }
+            
+            ?>
         </div>
         <div class = "sidemenu">
             <ul class = "sidemenu-items">

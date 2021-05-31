@@ -51,7 +51,7 @@
             echo '</div>';
           ?>
           <div class="us-buttons">
-            <button type="submit" class="save-button" onclick="return confirm('Are you sure?')">Save</button>
+            <button type="submit" name="submit" class="save-button" onclick="return confirm('Are you sure?')">Save</button>
           </div>
         </form>
         

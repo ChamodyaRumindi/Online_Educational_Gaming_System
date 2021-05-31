@@ -28,10 +28,15 @@
               echo '<li class="nav-item-profile">';
               echo '<div class="dropdown">
                       <button class="dropbtn">
-                        <p>'.$_SESSION["firstName"].' '.$_SESSION["lastName"].'</p>
-                        <img class ="profile-img" src="images/defaultProfile.png" alt="profile">
-                      </button>
-                      <div class="dropdown-content">
+                        <p>'.$_SESSION["firstName"].' '.$_SESSION["lastName"].'</p>';
+              if(!is_null($_SESSION['proPic'])){
+                  echo '<img class ="profile-img" src="uploads/userpropics/'.$_SESSION['proPic'].'" alt="ProfilePicture">';
+              }
+              else{
+                  echo '<img class ="profile-img" src="images/defaultProfile.png" alt="ProfilePicture">';
+              }
+              echo '</button>
+                    <div class="dropdown-content">
                         <a href="user-db.php?id='.$_SESSION["memberID"].'">My Dashboard</a>
                         <a href="usersettings.php?id='.$_SESSION["memberID"].'">Settings</a>
                         <a href="includes/logout.inc.php">Log Out</a>
