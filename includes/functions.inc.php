@@ -237,6 +237,7 @@ function  loginAdmin($conn, $username, $pwd) {
         $_SESSION["username"] = $aidExists["username"];
         $_SESSION["firstName"] = $aidExists["firstName"];
         $_SESSION["lastName"] = $aidExists["lastName"];
+        $_SESSION["proPic"] = $aidExists["profile_pic"];
         $_SESSION["role"] = 'Admin';
         header("location: ../admin-db.php");
         exit();

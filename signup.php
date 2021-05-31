@@ -22,6 +22,9 @@
         type="password"
         name="repwd"
       />
+
+
+      
       <p>
         by submitting this form you agree to our <a href="#">terms of use</a>
       </p>
@@ -38,32 +41,56 @@
     
     if (isset($_GET["error"])) {
         if ($_GET["error"] == "emptyinput") {
-            echo "<p>Fill in all fields!</p>";
+            /*echo "<p>Fill in all fields!</p>";*/
+            echo '<script language="javascript">';
+            echo 'alert("Fill in all fields!")';
+            echo '</script>';
         }
 
         else if ($_GET["error"] == "invalidemail") {
-            echo "<p>Choose a proper e-mail!</p>";
+            /*echo "<p>Choose a proper e-mail!</p>";*/
+            echo '<script language="javascript">';
+            echo 'alert("Choose a proper e-mail!")';
+            echo '</script>';
         }
 
         else if ($_GET["error"] == "invaliduid") {
-            echo "<p>Choose a proper username!</p>";
+            /*echo "<p>Choose a proper username!</p>";*/
+            echo '<script language="javascript">';
+            echo 'alert("Choose a proper username!")';
+            echo '</script>';
         }
 
         else if ($_GET["error"] == "passwordsdontmatch") {
-            echo "<p>Passwords doesn't match!</p>";
+            
+           /* echo "<p>Passwords doesn't match!</p>";*/
+            echo '<script language="javascript">';
+            echo 'alert("Passwords does not match!")';
+            echo '</script>';
         }
 
         else if ($_GET["error"] == "stmtfailed") {
-            echo "<p>Something went wrong, Try again!</p>";
+            /*echo "<p>Something went wrong, Try again!</p>";*/
+            echo '<script language="javascript">';
+            echo 'alert("Something went wrong, Try again!")';
+            echo '</script>';
         }
 
         else if ($_GET["error"] == "emailtaken") {
-            echo "<p>E-mail already taken!</p>";
+            /*echo "<p>E-mail already taken!</p>";*/
+            echo '<script language="javascript">';
+            echo 'alert("E-mail already taken!")';
+            echo '</script>';
         }
 
         else if ($_GET["error"] == "none") {
-            echo "<p>You have signed up!</p>";
+            /*echo "<p>You have signed up!</p>";*/
+            echo '<script language="javascript">';
+            echo 'alert("You have signed up!")';
+            echo '</script>';
+
         }
+      
     }
 ?>
 </section>
