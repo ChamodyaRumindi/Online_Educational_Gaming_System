@@ -6,7 +6,7 @@ body
 	/*background-image:url("../images/game.png");
 	background-repeat:n;
 	text-decoration: none;*/
-	max-width: 1024px;
+	max-width: 0px;
 }
 
 .shadow1 
@@ -176,9 +176,9 @@ body
 	color: #000;	
 }
 
-/*Sign Up page Css part*/
 
-/*doctor page css*/
+
+/*game display page css*/
 .docbox
 {
 	position: relative;
@@ -282,9 +282,16 @@ width:250px;
 left:0;
 background: #1b1b1b;
 
-
 }
-
+.siderbar .side{
+color: white;
+font-size: 25px;
+font-weight:600 ;
+line-height: 65px;
+text-align: center;
+background: #1e1e1e;
+letter-spacing: 1px;
+}
 
 
 
