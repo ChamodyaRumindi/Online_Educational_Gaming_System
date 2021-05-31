@@ -5,7 +5,7 @@
   ?>
 
   <!--Start content of the page-->
-  <div class="containerDiv">
+  < class="containerDiv">
     <div class="headerTextDiv">
       <h1>Choose Your Subcription</h1>
       <p>You can start for free and Upgrade at anytime</p>
@@ -35,22 +35,7 @@
           <button>Sign Up for free</button>
         </div>
       </div>
-<<<<<<< HEAD
-      <div class="upgradeCardDiv">
-        <div class="upgradeCard">
-          <div class="contentDiv">
-            <h3>Free</h3>
-            <h3>$0/mon</h3>
-            <button>Sign Up for free</button>
-            <hr />
-            <ul>
-				<li>Lorem, ipsum dolor sit amet </li>
-				<li>Lorem, ipsum dolor sit amet </li>
-				<li>Lorem, ipsum dolor sit amet </li>
-				<li>Lorem, ipsum dolor sit amet </li>
-			</ul>
-            <button>Sign Up for free</button>
-          </div>
+      
       </div>
 		  <div class="upgradeCard">
 			<div class="contentDiv">
@@ -67,26 +52,7 @@
 			  <button>Sign Up for free</button>
 			</div>
 		  </div>
-=======
-
-      <div class="upgradeCard">
-        <div class="contentDiv">
-          <h3>Free</h3>
-          <h3>$0/mon</h3>
-          <button>Sign Up for free</button>
-          <hr />
-          <ul>
-            <li>Lorem, ipsum dolor sit amet </li>
-            <li>Lorem, ipsum dolor sit amet </li>
-            <li>Lorem, ipsum dolor sit amet </li>
-            <li>Lorem, ipsum dolor sit amet </li>
-          </ul>
-          <button>Sign Up for free</button>
-        </div>
-      </div>
->>>>>>> 91e01753d79998723c82960bf08a6f58a0472b4e
-    </div>
-  </div>
+    
 
     <!--End content of the page-->
 
