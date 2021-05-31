@@ -3,9 +3,10 @@
 
 body
 {
-	background-image:url("../images/game.png");
+	/*background-image:url("../images/game.png");
 	background-repeat:n;
-	text-decoration: none;
+	text-decoration: none;*/
+	max-width: 1024px;
 }
 
 .shadow1 
