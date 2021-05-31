@@ -101,9 +101,19 @@ function showSlides(n) {
 <hr>
 <!--popular Game-->
 <h2>popular Game</h2>
+<div class="search container">
+    <from action="/search result display page.php">
+        <input type="text" placeholder="search..." name="search">
+        <button type="submit"> <i class="fa fa-serch"></i></button>
+    </form>
+</div>
+
+
+
+
 <div class="box">
 				<div class="bicon">
-					<img src="images/game4.png" class="logbcon">
+					<img src="img/game4.png" class="logbcon">
 				</div>
 				<div class="content">
                 <a href="www.game.lk"><h2>Play</h2></a>
