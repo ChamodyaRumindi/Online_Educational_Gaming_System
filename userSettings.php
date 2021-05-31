@@ -77,7 +77,50 @@
           </div>
        </form>
     </div>
-        
+    <?php
+    /*check errors in user settings page */
+    
+    if (isset($_GET["error"])) {
+        if ($_GET["error"] == "emptyinput") {
+            
+            echo '<script language="javascript">';
+            echo 'alert("Fill in all fields!")';
+            echo '</script>';
+        }
+
+        else if ($_GET["error"] == "invalidemail") {
+            
+            echo '<script language="javascript">';
+
+            echo 'alert("Choose a proper e-mail!")';
+            echo '</script>';
+        }
+
+        else if ($_GET["error"] == "passwordsdontmatch") {
+            
+           
+            echo '<script language="javascript">';
+            echo 'alert("Passwords does not match!")';
+
+            echo '</script>';
+        }
+
+        else if ($_GET["error"] == "stmtfailed") {
+            
+            echo '<script language="javascript">';
+            echo 'alert("Something went wrong, Try again!")';
+            echo '</script>';
+        }
+
+        else if ($_GET["error"] == "emailtaken") {
+            
+            echo '<script language="javascript">';
+            echo 'alert("E-mail already taken!")';
+            echo '</script>';
+        }
+
+    }
+?>     
     </div>
 
 <script>
