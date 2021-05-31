@@ -9,7 +9,7 @@
 
 
 
-.Renew Now-button
+.Renew
 {
     margin-left: 250px;
     padding: 12px 48px;
@@ -22,13 +22,13 @@
     background-color:seagreen;
     margin-top: 15px;
 }
-.Renew Now-button:hover
+.Renew:hover
 {
     background-color:tomato;
 
 }
 
-.Cancel Subscription-button
+.Cancel
 {
     margin-left: 132px;
     padding: 12px 48px;
@@ -40,7 +40,8 @@
     border-radius: 8px;
     cursor: pointer;
 }
-.Cancel Subscription:hover
+.Cancel:hover
 {
     background-color: chocolate;
 
+}
