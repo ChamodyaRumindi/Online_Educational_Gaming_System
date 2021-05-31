@@ -18,10 +18,37 @@ include 'header.php';
 
 <body>
 <!--sidebar-->
-<div class="siderbar">
-      <div class="sid">
+<nav class="siderbar">
+      <div class="side">OEG PLAY</div>
 
-      <a aref="w" class="sid">categore</a>
+	  <ul>
+        <li><a href="#">new</a></li>
+		<li> 
+		      <a href="#">grade</a>
+		     <ul>
+		         <li><a href="#">grade 1</a></li>
+		         <li><a href="#">grade 2</a></li>
+		         <li><a href="#">grade 3</a></li>
+		         <li><a href="#">grade 4</a></li>
+		         <li><a href="#">grade 5</a></li>
+		    </ul>
+		</li>
+		<li>
+		      <a href="#">subject</a>
+		     <ul>
+		         <li><a href="#">subject 1</a></li>
+		         <li><a href="#">subject 2</a></li>
+		         <li><a href="#">subject 3</a></li>
+		         <li><a href="#">subject 4</a></li>
+		         <li><a href="#">subject 5</a></li>
+		    </ul>
+		</li>
+
+
+
+	  </ul>
+</nav>
+
 
 <div class="docbox">
 			<div class="box">
