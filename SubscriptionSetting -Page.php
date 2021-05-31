@@ -32,9 +32,10 @@
         Renewal Date      : 21/03/2021<br></br>
 
         
-  
-        <input type="button" value="Renew Now" class="Renew Now" onClick="Renew Now ()">
-        <input type="button" value="Cancel Subscription" class="Cancel Subscription" onClick="Cancel Subscription()">
+        <div class="buttons">
+          <input type="button" value="Renew Now" class="Renew-Now" onClick="Renew Now ()">
+          <input type="button" value="Cancel Subscription" class="Cancel-Subscription" onClick="Cancel Subscription()">
+        </div>
  
         </div>
 
