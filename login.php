@@ -36,16 +36,22 @@
     </form>
   </div>
   <p>Not a Member yet? <a href="signup.php" class = "formlink2" >Register Now!</a></p>
-
+ 
 <?php
     /*check whether empty inputs */
     if (isset($_GET["error"])) {
         if ($_GET["error"] == "emptyinput") {
-            echo "<p>Fill in all fields!</p>";
+            
+            echo '<script language="javascript">';
+            echo 'alert("Fill in all fields!")';
+            echo '</script>';
         }
-
+ 
         else if ($_GET["error"] == "wronglogin") {
-            echo "<p>Incorrect login information!</p>";
+            
+            echo '<script language="javascript">';
+            echo 'alert("Incorrect login information!")';
+            echo '</script>';
         }
     
     }
@@ -55,23 +61,22 @@
     <img src="images/login-bg.png" alt="Sign Up">
 </div>
 </section>
-
+ 
 <?php
     include_once 'footer.php';
 ?>
-
-
+ 
       <!-- <p class="or">Or Sign In With</p>
-
+ 
       <div class="socialIcon">
         <a class="btn1" href="#">
           <img class="social" src="images/Facebook.png" />
         </a>
-
+ 
         <a class="btn1" href="#">
           <img class="social" src="images/Twitter.png" />
         </a>
-
+ 
         <a class="btn1" href="#">
           <img class="social" src="images/G-mail.png" />
         </a>
