@@ -94,12 +94,13 @@ function showSlides(n) {
 <hr>
 
 <!--popular subject-->
+<h2>popular Subject</h2>
 <button class="button button2">popular subject</button>
 <button class="button button2">view all subject</button>
 
 <hr>
 <!--popular Game-->
-<h2>popular subject</h2>
+<h2>popular Game</h2>
 <div class="box">
 				<div class="bicon">
 					<img src="images/game4.png" class="logbcon">
