@@ -5,6 +5,7 @@
     <?php 
       $title = 'Dashboard';
       include 'header.php'; 
+      include_once ('./includes/user-config.inc.php');
     ?>
   
 
