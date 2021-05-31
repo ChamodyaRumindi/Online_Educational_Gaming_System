@@ -168,8 +168,9 @@ function createUser($conn, $username, $fname, $lname, $pwd , $email) {
     mysqli_stmt_execute($stmt);        //execute the statement
     mysqli_stmt_close($stmt);         //close the statement
 
-    header ("location: ../signup.php?error=none");
+    header ("location: ../login.php?successfully signed up!");
     exit();
+    
 }
 
 
