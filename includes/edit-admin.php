@@ -76,7 +76,12 @@
             else {
                 echo "ERROR: Could not able to execute $sql. " . mysqli_error($conn);
             }
-            
+            $_SESSION["firstName"] = $fName;
+            $_SESSION["lastName"] = $lName;
+
+            if ($profilePicError !== 4){
+                $_SESSION["proPic"] = $profilePicNameNew; 
+            }  
         } 
        else{
             echo "ERROR: Could not able to execute $sql. " . mysqli_error($conn);

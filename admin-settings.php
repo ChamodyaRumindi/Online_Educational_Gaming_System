@@ -45,7 +45,10 @@
         <form action="includes/edit-admin.php" method="post" enctype="multipart/form-data">
           <div class="form-item">
             <label for="profilepic">Change Profile Picture:</label>
-            <input type="file" name="profilepic" id="profilepic"/>
+            <input type="file" name="profilepic" id="profilepic" onchange="previewImage(event)"/>
+          </div>
+          <div class="selected-image">
+            <img id="prevIMG" alt="No Image Selected"/>
           </div>
           <?php
             echo '<div class="form-item">
@@ -101,6 +104,15 @@
     document.getElementById('cbox2').style.display='none'
     document.getElementById("submit2").click();
   }
+  function previewImage(event) {
+    var imageReader = new FileReader();
+    imageReader.onload = function()
+    {
+      var image = document.getElementById('prevIMG');
+      image.src = imageReader.result;
+    }
+    imageReader.readAsDataURL(event.target.files[0]);
+    }
 </script>
 <script src="./js/messagebox.js"></script>
 

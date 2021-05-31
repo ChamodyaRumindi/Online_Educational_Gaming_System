@@ -67,6 +67,14 @@ form {
   border: none;
 }
 
+#prevIMG {
+  width: 100px;
+  height: 100px;
+}
+.selected-image {
+  margin-left: 250px;
+}
+
 .psave-btn {
   display: none;
 }
