@@ -119,6 +119,14 @@
             echo '</script>';
         }
 
+        else if ($_GET["error"] == "none") {
+
+          echo '<script language="javascript">';
+          echo 'alert("Successfully saved your changes!!!")';
+          echo '</script>';
+
+      }
+
     }
 ?>     
     </div>
