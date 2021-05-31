@@ -23,7 +23,7 @@
           <?php 
             if (isset($_SESSION["memberID"])) {
               if ($_SESSION["TID"] == 2){
-                echo '<li class="nav-item"><a href="#">Pricing</a></li>';
+                echo '<li class="nav-item">'.'<a href="pricing.php">Pricing</a>'.'</li>';
               }
               echo '<li class="nav-item-profile">';
               echo '<div class="dropdown">
@@ -65,7 +65,7 @@
               echo '</li>';
             }
             else {
-              echo '<li class="nav-item"><a href="#">Pricing</a></li>';
+              echo '<li class="nav-item"><a href="pricing.php">Pricing</a></li>';
               echo '<li class="nav-item-signin"><a href="login.php">Sign In </a></li>';
               echo '<li class="nav-item-signup"><a href="signup.php">Sign Up </a></li>';
             }
