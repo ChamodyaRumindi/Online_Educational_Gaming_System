@@ -18,25 +18,25 @@
 
 <div class="mySlides fade">
   <div class="numbertext">1 / 2</div>
-  <img src="img/3.jpg" style="width:100%">
+  <img src="images/3.jpg" style="width:100%">
   <div class="text">Play</div>
 </div>
 
 <div class="mySlides fade">
   <div class="numbertext">2 / 3</div>
-  <img src="img/4.jpg" style="width:100%">
+  <img src="images/4.jpg" style="width:100%">
   <div class="text">Play</div>
 </div>
 
 <div class="mySlides fade">
   <div class="numbertext">3/ 4</div>
-  <img src="img/1.jpg" style="width:100%">
+  <img src="images/1.jpg" style="width:100%">
   <div class="text">Play</div>
 </div>   
 
 <div class="mySlides fade">
   <div class="numbertext">4 / 1</div>
-  <img src="img/2.jpg" style="width:100%">
+  <img src="images/2.jpg" style="width:100%">
   <div class="text">Play</div>
 </div>
 
@@ -100,20 +100,43 @@ function showSlides(n) {
 
 <hr>
 <!--popular Game-->
-<h2>popular Game</h2>
+
 <div class="search container">
+<h2>popular Game</h2>
     <from action="/search result display page.php">
         <input type="text" placeholder="search..." name="search">
         <button type="submit"> <i class="fa fa-serch"></i></button>
     </form>
 </div>
-
+<br><br>
 
 
 
 <div class="box">
 				<div class="bicon">
-					<img src="img/game4.png" class="logbcon">
+					<img src="images/game4.png" class="logbcon">
+				</div>
+				<div class="content">
+                <a href="www.game.lk"><h2>Play</h2></a>
+                <p>Quize(Grade-4/game-1)</p>
+				</div>
+			</div>
+      
+
+      <div class="box">
+				<div class="bicon">
+					<img src="images/game4.png" class="logbcon">
+				</div>
+				<div class="content">
+                <a href="www.game.lk"><h2>Play</h2></a>
+                <p>Quize(Grade-4/game-1)</p>
+				</div>
+			</div>
+
+
+      <div class="box">
+				<div class="bicon">
+					<img src="images/game4.png" class="logbcon">
 				</div>
 				<div class="content">
                 <a href="www.game.lk"><h2>Play</h2></a>
