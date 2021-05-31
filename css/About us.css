@@ -1,4 +1,10 @@
-
+.abt-pic
+{
+    height: 200px;
+    width: 280px;
+    margin-top: -150px;
+    margin-left: 600px;
+}
 #mission
 {
     margin-left: 450px;
@@ -8,6 +14,19 @@
 {
     margin-left: 450px;
     text-align: justify;
+}
+.mission-pic
+{
+    height: 250px;
+    width: 400px;
+    margin-top: -200px;
+}
+.team-pic
+{
+    height: 180px;
+    width: 280px;
+    margin-top: -180px;
+    margin-left: 500px;
 }
 .cu-btn
 {
