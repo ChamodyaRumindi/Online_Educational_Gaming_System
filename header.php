@@ -17,8 +17,8 @@
       <div class="nav-container">
         <ul class="nav-links">
           <li class="nav-item"><a href="index.php">Home</a></li>
-          <li class="nav-item"><a href="#">Games</a></li>
-          <li class="nav-item"><a href="#">Subjects</a></li>
+          <li class="nav-item"><a href="games.php">Games</a></li>
+          <li class="nav-item"><a href="subjects.php">Subjects</a></li>
 
           <?php 
             if (isset($_SESSION["memberID"])) {

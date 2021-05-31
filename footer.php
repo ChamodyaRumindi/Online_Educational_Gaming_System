@@ -5,8 +5,8 @@
       <div>
         <ul class="footer-links">
           <li class="footer-item"><a href="/oegplay">Home</a></li>
-          <li class="footer-item"><a href="#">Games</a></li>
-          <li class="footer-item"><a href="#">Subjects</a></li>
+          <li class="footer-item"><a href="games.php">Games</a></li>
+          <li class="footer-item"><a href="subjects.php">Subjects</a></li>
           <li class="footer-item"><a href="#">Pricing</a></li>
           <li class="footer-item"><a href="about us.php">About us</a></li>
           <li class="footer-item"><a href="contact us.php">Contact Us</a></li>
