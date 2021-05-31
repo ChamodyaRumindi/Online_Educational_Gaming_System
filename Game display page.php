@@ -10,7 +10,7 @@ include 'header.php';
 <HEAD>
 		<!--css link part-->
         <link rel="stylesheet" type="text/css" href="css/Style1.css">
-			<script src="js/Js1.js"></script>
+	
         
 			
 		
@@ -44,7 +44,7 @@ include 'header.php';
 		    </ul>
 		</li>
 
-
+    </div>
 
 	  </ul>
 </nav>

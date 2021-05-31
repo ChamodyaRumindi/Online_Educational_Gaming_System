@@ -269,7 +269,21 @@ body
 	text-align: center;
 
 }
-/*fotter social icons css part*/
+
+.siderbar
+{
+margin:0;
+padding:o;
+user-select: none;
+color: #fff;
+box-sizing: border-box;
+position:fixed;
+width:250px;
+left:0;
+background: #1b1b1b;
+
+
+}
 
 
 
