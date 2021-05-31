@@ -7,6 +7,7 @@
       include_once ('./includes/admin-config.inc.php');
 ?>
 
+<!-- Confirm Box -->
 <div id="cbox" class="c-box">
     <span onclick="document.getElementById('cbox').style.display='none'" class="close" title="Close">×</span>
     <div class="c-box-content">
