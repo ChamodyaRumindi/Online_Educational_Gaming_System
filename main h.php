@@ -7,8 +7,9 @@
       include 'header.php'; 
     ?>
 <meta name="viewport" content="width=device-width, initial-scale=1">
-
+<!--css link part-->
 <link rel="stylesheet" type="text/css" href="css/h.css">
+<link rel="stylesheet" type="text/css" href="css/Style1.css">
 </head>
 <body>
 
@@ -98,8 +99,16 @@ function showSlides(n) {
 
 <hr>
 <!--popular Game-->
-
-
+<h2>popular subject</h2>
+<div class="box">
+				<div class="bicon">
+					<img src="images/game4.png" class="logbcon">
+				</div>
+				<div class="content">
+                <a href="www.game.lk"><h2>Play</h2></a>
+                <p>Quize(Grade-4/game-1)</p>
+				</div>
+			</div>
 </body>
 
 
