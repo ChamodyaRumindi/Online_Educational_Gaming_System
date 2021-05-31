@@ -33,6 +33,7 @@
 
             </table>
         </div>
+        <br /> <br /> 
         <div class="stats">
             <p id="p3"><b> My Status </b></p>
             
@@ -48,4 +49,3 @@
  
 
   <?php include('./footer.php'); ?>
-</html>
