@@ -33,8 +33,8 @@
 
         
         <div class="buttons">
-          <input type="button" value="Renew Now" class="Renew-Now" onClick="Renew Now ()">
-          <input type="button" value="Cancel Subscription" class="Cancel-Subscription" onClick="Cancel Subscription()">
+          <input type="button" value="Renew Now" class="Renew-Now" onClick="RenewNow()">
+          <input type="button" value="Cancel Subscription" class="Cancel-Subscription" onClick="CancelSubscription()">
         </div>
  
         </div>
