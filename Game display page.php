@@ -17,6 +17,12 @@ include 'header.php';
 	</HEAD>
 
 <body>
+
+<form method="post">
+<label>Search</label>
+<input type="text" name="Search">
+<input type="submit" name="submit">	
+<br><br>
 <!--sidebar-->
 <nav class="siderbar">
       <div class="side">OEG PLAY</div>

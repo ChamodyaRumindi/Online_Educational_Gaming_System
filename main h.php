@@ -100,14 +100,12 @@ function showSlides(n) {
 
 <hr>
 <!--popular Game-->
-
-<div class="search container">
-<h2>popular Game</h2>
-    <from action="/search result display page.php">
-        <input type="text" placeholder="search..." name="search">
-        <button type="submit"> <i class="fa fa-serch"></i></button>
-    </form>
-</div>
+<h2><u>popular Game</u></h2>
+<h2>View AllGames</h2>
+<form method="post">
+<label>Search Games</label>
+<input type="text" name="Search">
+<input type="submit" name="submit">	
 <br><br>
 
 
@@ -121,7 +119,7 @@ function showSlides(n) {
                 <p>Quize(Grade-4/game-1)</p>
 				</div>
 			</div>
-      
+
 
       <div class="box">
 				<div class="bicon">

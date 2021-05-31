@@ -269,7 +269,7 @@ body
 	text-align: center;
 
 }
-
+/*sider bar css*/
 .siderbar
 {
 margin:0;
@@ -292,10 +292,104 @@ text-align: center;
 background: #1e1e1e;
 letter-spacing: 1px;
 }
+nav ul {
+ background: #1b1b1b;
+height: 100%;
+width: 100%;
+list-style: none;
+}
+/*subject display page css*/
 
+.gbox
+{
+	position: relative;
+	width: 100px;
+	height: 500px;
+	margin: 0px auto;
+}
+.gbox .fox
+{
+	position: relative;
+	width: calc(400px - 30px);
+	height: calc(300px - 30px);
+	background: #ff9900;
+	float:right;
+	margin: 12px;
+	box-sizing: border-box;
+	overflow: hidden;
+	border-radius: 15px;
+}
 
+.gbox .fox .been
+{
+	position: absolute;
+	top: 0;
+	left: 0;
+	width: 100%;
+	height: 100%;
+	background: #00FF00;
+	transition: 0.8s;
+	z-index: 1;
+}
+.gbox .fox:hover .been
+{
+	top: 20px;
+	left: calc(50% - 40px);
+	width: 80px;
+	height: 80px;
+	border-radius: 50%;
+}
+.gbox .fox .been .logs
+{
+	width: 150px;
+	height: 150px;
+	border-radius: 50%;
+	position: absolute;
+	top: 50%;
+	left: 50%;
+	transform: translate(-50%,-50%);
+	transition: 0.8s;
+}
+.gbox .fox:hover .been .logs
+{
+	width: 70px;
+	height: 70px;	
+}
+.gbox .fox .con
+{
+	position: absolute;
+	top: 100%;
+	height: calc(100% - 100px); 
+	text-align: center;
+	padding: 20px;
+	box-sizing: border-box;
+	transition: 0.8s;
+	opacity: 0;
+	color: #ffff;
 
+}
+.gbox .fox:hover .con
+{
+	top: 100px;
+	opacity: 1;
+	text-align: center;
+}
+.gbox .fox .con h3
+{
+	margin: 0 0 10px;
+	padding: 0;
+	color: #fff;
+	font-size: 10px;
+	text-align: center;
+}
+.gbox .fox .con p
+{
+	margin: 0;
+	padding: 0;
+	color: #fff;
+	text-align: center;
 
+}
 
 
 
