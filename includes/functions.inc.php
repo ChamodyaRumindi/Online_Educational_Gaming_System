@@ -130,7 +130,7 @@ function emailExists($conn, $email) {
 
 function createUser($conn, $username, $fname, $lname, $pwd , $email) {
     /*insert data into the datbase */
-    $sql = "INSERT INTO Member (username, firstName, lastName, m_password, TID) VALUES (?, ?, ?, ?, 1);";
+    $sql = "INSERT INTO Member (username, firstName, lastName, m_password, TID) VALUES (?, ?, ?, ?, 2);";
     $stmt = mysqli_stmt_init($conn);
     /*check whether any mistake happens in prepare statement */
     if (!mysqli_stmt_prepare($stmt, $sql)) {
@@ -237,6 +237,7 @@ function  loginAdmin($conn, $username, $pwd) {
         $_SESSION["username"] = $aidExists["username"];
         $_SESSION["firstName"] = $aidExists["firstName"];
         $_SESSION["lastName"] = $aidExists["lastName"];
+        $_SESSION["proPic"] = $aidExists["profile_pic"];
         $_SESSION["role"] = 'Admin';
         header("location: ../admin-db.php");
         exit();

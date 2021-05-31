@@ -21,7 +21,7 @@
     $gameFileExt = explode('.', $gameFileName);
     $gameFileActualExt = strtolower(end($gameFileExt));
 
-    $gameAllowed = array('js', 'html');
+    $gameAllowed = array('js', 'php');
     if ($gameFileError !== 4) {
         $gameFile = "SELECT gFile FROM Game WHERE gameID= $mid";
         $result = mysqli_query($conn, $gameFile);
@@ -101,12 +101,17 @@
             mysqli_close($conn);
             exit();
         }}
-
+    if ($gameFileError !== 4 && $thumbFileError !== 4) {
     $sql = "UPDATE Game SET gameName = '$gameName', gameGrade = '$grade', gameCategory = '$category', gameSubject = '$subject', 
             gameDescription = '$description', gameInstructions = '$instructions', gameAccess = '$access', devID = '$developerID',
             gFile = '$gameFileNameNew', gThumbnail = '$thumbFileNameNew'
             WHERE gameID= $mid";
-
+    }
+    else {
+    $sql = "UPDATE Game SET gameName = '$gameName', gameGrade = '$grade', gameCategory = '$category', gameSubject = '$subject', 
+        gameDescription = '$description', gameInstructions = '$instructions', gameAccess = '$access', devID = '$developerID'
+        WHERE gameID= $mid";    
+    }
     if(mysqli_query($conn, $sql)){
     header ("location: ../all-games.php?error=gmnone");
     } else{

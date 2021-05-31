@@ -1,17 +1,52 @@
 
     <link rel="styleSheet" href="css/sidebar.css" />
     <link rel="styleSheet" href="css/add-games.css" />
+    <link rel="styleSheet" href="css/messagebox.css" />
     <?php 
       $title = 'Add Games';
       include 'header.php'; 
+      include_once ('./includes/admin-config.inc.php');
     ?>
-  
+
+    <div id="cbox" class="c-box">
+      <span onclick="document.getElementById('cbox').style.display='none'" class="close" title="Close">×</span>
+      <div class="c-box-content">
+        <div class="content-container">
+          <h2>Reset Form</h2>
+          <p>Are you sure you want to reset?</p>
+          <p>existing data will be lost!</p>
+        
+          <div class="c-buttons">
+            <button onclick="document.getElementById('cbox').style.display='none'" class="cbtn">Cancel</button>
+            <button onclick="resetForm()" class="dbtn">Reset</button>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div id="cbox2" class="c-box">
+      <span onclick="document.getElementById('cbox2').style.display='none'" class="close" title="Close">×</span>
+      <div class="c-box-content">
+        <div class="content-container">
+          <h2>Add Game</h2>
+          <p>Are you sure you want to add this game?</p>
+          <p>double check!</p>
+        
+          <div class="c-buttons">
+            <button onclick="document.getElementById('cbox2').style.display='none'" class="cbtn">Cancel</button>
+            <button onclick="submitForm()" class="dbtn">Add game</button>
+          </div>
+        </div>
+      </div>
+    </div>
+
     <div class="a-container">
       <?php include 'admin-sidebar.php'; ?>
       <div class="ag-container">
+      <div id="msgbox-area" class="msgbox-area"></div>
         <h2>- Add a game -</h2>
 
-        <form action="includes/addgame.inc.php" method="post" name="addgamef" onsubmit="return validateForm()" enctype="multipart/form-data" >
+        <form action="includes/addgame.inc.php" method="post" id="addgame" name="addgame" enctype="multipart/form-data" >
           <div class="form-item">
             <label for="name">Game Name:</label>
             <input type="text" name="gamename" id="name" required />
@@ -132,37 +167,83 @@
           </div>
 
           <div class="ag-buttons">
-            <button class="reset-btn" type= "reset" onclick="return confirm('All data will be lost!')">Reset</button>
-            <button class="addgame-btn" name = "submit" type= "submit" onclick="return confirm('Please confirm!')">Add Game</button>
+            <button class="reset-btn" type="button" onclick="resetConfirm()">Reset</button>
+            <button class="addgame-btn" type= "button" onclick="submitConfirm()">Add Game</button>
+            <button class="submit-btn" id="submit" name="sumbit" type="submit">Add Game</button>
           </div>
         </form>
-        <div class= "output">
-        <?php
+      </div>
+    </div>
+
+<script>
+  function resetForm() {
+    document.getElementById("addgame").reset();
+    document.getElementById('cbox').style.display='none'
+  }
+  function resetConfirm() {
+    document.getElementById('cbox').style.display='block'
+  }
+  function submitConfirm() {
+    document.getElementById('cbox2').style.display='block'
+  }
+  function submitForm() {
+    document.getElementById('cbox2').style.display='none'
+    document.getElementById("submit").click();
+  }
+</script>
+
+<script src="./js/messagebox.js"></script>
+<?php
           if (isset($_GET["error"])) {
             if ($_GET["error"] == "none") {
-              echo "<h1>Successfully Added!</h1>";
+              echo '<script>
+                      msgboxbox.show(
+                      "Successfully Added!"
+                    );
+                    </script>';
             }
             if ($_GET["error"] == "1") {
-              echo "<p>You can not upload a game file of this type!. only js,html are allowd</p>";
+              echo '<script>
+                      msgboxbox.show(
+                      "You can not upload a game file of this type!. only js,php are allowd"
+                    );
+                    </script>';
             }
             if ($_GET["error"] == "2") {
-              echo "<p>There was an error uplaoding game file!</p>";
+              echo '<script>
+                      msgboxbox.show(
+                      "There was an error uplaoding game file!"
+                    );
+                    </script>';
             }
             if ($_GET["error"] == "3") {
-              echo "<p>Game file is too big!</p>";
+              echo '<script>
+                      msgboxbox.show(
+                      "Game file is too big!"
+                    );
+                    </script>';
             }
             if ($_GET["error"] == "4") {
-              echo "<p>You can not upload a thumbnail of this type!. only jpg,jpeg and png are allowd</p>";
+              echo '<script>
+                      msgboxbox.show(
+                      "You can not upload a thumbnail of this type!. only jpg,jpeg and png are allowd"
+                    );
+                    </script>';
             }
             if ($_GET["error"] == "5") {
-              echo "<p>here was an error uplaoding thumbnail!</p>";
+              echo '<script>
+                      msgboxbox.show(
+                      "here was an error uplaoding thumbnail!"
+                    );
+                    </script>';
             }
             if ($_GET["error"] == "6") {
-              echo "<p>Thumbnail is too big!</p>";
+              echo '<script>
+                      msgboxbox.show(
+                      "Thumbnail is too big!"
+                    );
+                    </script>';
             }
           }
           ?>
-      </div>
-      </div>
-    </div>
 <?php include('./footer.php'); ?>

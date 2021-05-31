@@ -28,17 +28,38 @@
               if ($_SESSION["TID"] == 2){
                 echo '<li class="nav-item">'.'<a href="pricing.php">Pricing</a>'.'</li>';
               }
-              echo '<li class="nav-item"><a href="includes/logout.inc.php">Log Out</a></li>';
               echo '<li class="nav-item-profile">';
-              echo '<a href="user-db.php?id='.$_SESSION["memberID"].'">'.$_SESSION["firstName"].' '.$_SESSION["lastName"].'</a>';
-              echo '<img class ="profile-img" src="images/defaultProfile.png" alt="profile">';
+              echo '<div class="dropdown">
+                      <button class="dropbtn">
+                        <p>'.$_SESSION["firstName"].' '.$_SESSION["lastName"].'</p>
+                        <img class ="profile-img" src="images/defaultProfile.png" alt="profile">
+                      </button>
+                      <div class="dropdown-content">
+                        <a href="user-db.php?id='.$_SESSION["memberID"].'">My Dashboard</a>
+                        <a href="usersettings.php?id='.$_SESSION["memberID"].'">Settings</a>
+                        <a href="includes/logout.inc.php">Log Out</a>
+                      </div>
+                    </div>';
               echo '</li>';
             }
             else if (isset($_SESSION["adminID"])) {
-              echo '<li class="nav-item"><a href="includes/logout.inc.php">Log Out</a></li>';
               echo '<li class="nav-item-profile">';
-              echo '<a href="admin-db.php?id='.$_SESSION["adminID"].'">'.$_SESSION["firstName"].' '.$_SESSION["lastName"].'</a>';
-              echo '<img class ="profile-img" src="images/defaultProfile.png" alt="profile">';
+              echo '<div class="dropdown">
+                      <button class="dropbtn">
+                        <p>'.$_SESSION["firstName"].' '.$_SESSION["lastName"].'</p>';
+              if(!is_null($_SESSION['proPic'])){
+                  echo '<img class ="profile-img" src="uploads/adminpropics/'.$_SESSION['proPic'].'" alt="ProfilePicture">';
+              }
+              else{
+                  echo '<img class ="profile-img" src="images/defaultProfile.png" alt="ProfilePicture">';
+              }
+              echo '</button>
+                      <div class="dropdown-content">
+                        <a href="admin-db.php?id='.$_SESSION["adminID"].'">My Dashboard</a>
+                        <a href="admin-settings.php?id='.$_SESSION["adminID"].'">Settings</a>
+                        <a href="includes/logout.inc.php">Log Out</a>
+                      </div>
+                    </div>';
               echo '</li>';
             }
             else {

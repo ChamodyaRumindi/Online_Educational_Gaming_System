@@ -1,8 +1,10 @@
-.u-container {
+.u-container 
+{
   display: flex;
 }
 
-.db-container {
+.db-container 
+{
   display: flex;
   justify-content: space-between;
   width: 700px;
@@ -11,43 +13,56 @@
   padding: 20px;
 }
 
-#p2 {
-  font-size: 12;
+#p2 
+{
+  font-size: 12px;
   margin-bottom: 5px;
 }
 
-.history {
+.history 
+{
   width: 350px;
 }
-.history h2 {
+.history h2 
+{
   border: 1px solid black;
   width: 150px;
   height: 25px;
   text-align: center;
-  padding: 4px 4px 0;
+  padding: 4px 4px 0px;
   display: block;
   font-size: 20px;
 }
-.history table {
+.history table 
+{
   border-collapse: collapse;
-  border-spacing: 0;
+  border-spacing: 0px;
   empty-cells: show;
 }
 .table-body
 {
-  overflow-y: scroll;
+  overflow: scroll;
 }
-#row1 {
+#row1 
+{
   height: 220px;
 }
-.stats {
+.stats
+{
   border: 1px solid black;
   width: 250px;
   height: 350px;
   padding: 20px;
 }
-#p3 {
-  margin-top: -35;
-  font-size: 20;
+#p3 
+{
+  margin-top: -5px;
+  font-size: 20px;
   text-align: center;
+}
+.db-pic
+{
+  height: 150px;
+  width: 120px;
+  margin-left: 65px;
 }
