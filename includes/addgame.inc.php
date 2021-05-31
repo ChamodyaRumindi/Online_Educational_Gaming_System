@@ -1,3 +1,7 @@
+<?php
+  session_start(); 
+?>
+
 <?php 
          //Game File
         $gameFile = $_FILES['gamefile'];
@@ -11,7 +15,7 @@
         $gameFileExt = explode('.', $gameFileName);
         $gameFileActualExt = strtolower(end($gameFileExt));
 
-        $gameAllowed = array('js', 'html');
+        $gameAllowed = array('js', 'php');
 
         if(in_array($gameFileActualExt, $gameAllowed)){
             if ($gameFileError === 0) {
@@ -83,9 +87,10 @@
         $access = $_POST["access"];
         $developerID = $_POST["developer"];
         $adminID = $_SESSION["adminID"];
+        $aDate = date("Y-m-d");
 
-        $sql = "INSERT INTO Game (gameName, gameGrade, gameCategory, gameSubject, gameDescription, gameInstructions, gameAccess, adminID, devID, gFile, gThumbnail)
-                VALUES ('$gameName', '$grade', '$category', '$subject', '$description', '$instructions' , '$access', '$adminID', '$developerID', '$gameFileNameNew', '$thumbFileNameNew')";
+        $sql = "INSERT INTO Game (gameName, gameGrade, gameCategory, gameSubject, gameDescription, gameInstructions, gameAccess, adminID, devID, gFile, gThumbnail, added_date, last_modified_date)
+                VALUES ('$gameName', '$grade', '$category', '$subject', '$description', '$instructions' , '$access', '$adminID', '$developerID', '$gameFileNameNew', '$thumbFileNameNew', '$aDate', '$aDate')";
         
         if(mysqli_query($conn, $sql)){
             header ("location: ../add-games.php?error=none");
