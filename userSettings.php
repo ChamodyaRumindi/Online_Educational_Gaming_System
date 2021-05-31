@@ -8,11 +8,11 @@
          <script language="javascript" type="text/javascript">
          function save()
          {
-             document.getElementByClass("save-button").innerHTML=alert("Saved!!!");
+             
          }
          function delete()
          {
-             alert("Your account is successfully deleted!!");
+             
          }
          </script>
 
