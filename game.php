@@ -17,7 +17,7 @@
         $gCategory = $row['gameCategory'];
     }
     else {
-        header ("location: ../all-games.php");
+        header ("location: ./games.php");
     }
 
     $title = $gName;
