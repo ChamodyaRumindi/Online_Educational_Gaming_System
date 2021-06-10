@@ -107,7 +107,6 @@
   $result = mysqli_query($conn, "SELECT COALESCE(SUM(amount),0) FROM Payment WHERE p_datetime BETWEEN last_day(curdate() - interval 5 month) + INTERVAL 1 DAY AND last_day(curdate() - interval 4 month)");
   $income4 = mysqli_fetch_array($result);
   
-  $result = mysqli_query($conn, "SELECT COALESCE(SUM(amount),0) FROM Payment WHERE p_datetime BETWEEN last_day(curdate() - interval 5 month) + INTERVAL 1 DAY AND last_day(curdate() - interval 5 month)");
   $result = mysqli_query($conn, "SELECT COALESCE(SUM(amount),0) FROM Payment WHERE p_datetime BETWEEN last_day(curdate() - interval 6 month) + INTERVAL 1 DAY AND last_day(curdate() - interval 5 month)");
   $income5 = mysqli_fetch_array($result);
 
