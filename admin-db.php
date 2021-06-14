@@ -89,7 +89,9 @@
           ?>
         </div>
         <div class="graph">
-          <canvas class="line-graph"></canvas>
+          <h3>Monthly Income (Past 12 Months)</h3>
+          <canvas class="line-graph">
+          </canvas>
         </div>
       </div>
     </div>
