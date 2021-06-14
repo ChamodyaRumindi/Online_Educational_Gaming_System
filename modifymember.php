@@ -16,7 +16,7 @@
       
       <div class="c-buttons">
             <button onclick="document.getElementById('cbox').style.display='none'" class="cbtn">Cancel</button>
-            <button onclick="cancelModify()" class="dbtn">Cancel</button>
+            <button onclick="cancelModify()" class="dbtn">Confirm</button>
       </div>
       </div>
       </div>
