@@ -6,9 +6,8 @@
     
     <!--content of the page-->
 
-    <center>
-    <h3>If you have questions or just want to get in touch,<br> use the form below</h3>
-    </center>
+    <h3 id="heading1">If you have questions or just want to get in touch,<br> use the form below</h3>
+   
     <br>
 
     <!--Add a form-->
@@ -31,6 +30,34 @@
       <input type="button"  class="btn1" name="reset" value="Reset">
       <input type="button" class="btn1" name="submit" value="Submit">
     </form>
+
+    <?php
+    /*check errors in contact us page */
+    
+    if (isset($_GET["error"])) {
+        if ($_GET["error"] == "emptyinput") {
+            
+            echo '<script language="javascript">';
+            echo 'alert("Fill in all fields!")';
+            echo '</script>';
+        }
+
+        else if ($_GET["error"] == "invalidemail") {
+            
+            echo '<script language="javascript">';
+            echo 'alert("Choose a proper e-mail!")';
+            echo '</script>';
+        }
+
+        else if ($_GET["error"] == "stmtfailed") {
+            
+            echo '<script language="javascript">';
+            echo 'alert("Something went wrong, Try again!")';
+            echo '</script>';
+        }
+    }
+?>
+
     </div>
 
     <?php include('./footer.php'); ?>
