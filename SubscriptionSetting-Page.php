@@ -1,4 +1,5 @@
 <link rel="stylesheet" href="css/SubscriptionSetting -Page.css" />
+<link rel="stylesheet" href="css/sidebar.css" />
 
 <?php
 
@@ -9,21 +10,9 @@
 <div class="main-div">
   <div class="sub-div1">
 
-     <img src="./images/defaultProfile.png" alt="user-profile"width="200px"/>
-     <h4>Nethmini Tharuka</h4>
-     <p><small>Premium Member</small></p>
-
-     <div class="user-div">
-       
-       <ul>
-       <li class="select-div">Dashboard</li>
-       <li class="select-div" id="active">Subsription</li>
-       <li class="select-div">Settings</li>
-       <li class="select-div">Log Out</li>
-       </ul>
-     </div>
-
-
+     <?php
+    include 'user-sidebar.php';
+    ?>
   </div>
 
   
