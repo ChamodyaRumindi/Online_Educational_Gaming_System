@@ -2,9 +2,9 @@
 <link rel="stylesheet" href="css/sidebar.css" />
 
 <?php
-
  $title = 'SubscriptionSetting -Page';
  include 'header.php';
+ include_once ('./includes/user-config.inc.php');
 ?>
 
 <div class="main-div">
