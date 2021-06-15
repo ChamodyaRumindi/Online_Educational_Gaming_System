@@ -1,0 +1,43 @@
+.abt-pic
+{
+    height: 200px;
+    width: 280px;
+    margin-top: -150px;
+    margin-left: 600px;
+}
+#mission
+{
+    margin-left: 450px;
+    text-align: justify;
+}
+#para2
+{
+    margin-left: 450px;
+    text-align: justify;
+}
+.mission-pic
+{
+    height: 250px;
+    width: 400px;
+    margin-top: -200px;
+}
+.team-pic
+{
+    height: 180px;
+    width: 280px;
+    margin-top: -180px;
+    margin-left: 500px;
+}
+.cu-btn
+{
+    margin-left: 350px;
+    background-color: grey;
+    color: black;
+    padding: 10px 15px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    cursor:pointer;
+    bottom: 0;
+}
+

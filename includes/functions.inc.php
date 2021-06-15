@@ -168,8 +168,9 @@ function createUser($conn, $username, $fname, $lname, $pwd , $email) {
     mysqli_stmt_execute($stmt);        //execute the statement
     mysqli_stmt_close($stmt);         //close the statement
 
-    header ("location: ../signup.php?error=none");
+    header ("location: ../login.php?successfully signed up!");
     exit();
+    
 }
 
 
@@ -210,6 +211,7 @@ function  loginUser($conn, $username, $pwd) {
         $_SESSION["firstName"] = $uidExists["firstName"];
         $_SESSION["lastName"] = $uidExists["lastName"];
         $_SESSION["TID"] = $uidExists["TID"];
+        $_SESSION["proPic"] = $uidExists["profile_pic"];
         $_SESSION["role"] = 'Member';
         header("location: ../index.php");
         exit();
@@ -237,6 +239,7 @@ function  loginAdmin($conn, $username, $pwd) {
         $_SESSION["username"] = $aidExists["username"];
         $_SESSION["firstName"] = $aidExists["firstName"];
         $_SESSION["lastName"] = $aidExists["lastName"];
+        $_SESSION["proPic"] = $aidExists["profile_pic"];
         $_SESSION["role"] = 'Admin';
         header("location: ../admin-db.php");
         exit();

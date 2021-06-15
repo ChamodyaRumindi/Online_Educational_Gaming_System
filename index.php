@@ -1,80 +1,150 @@
+<!DOCTYPE html>
+<html>
+
+<head>
 <?php 
+      $title = 'Home';
       include 'header.php'; 
-?>
-  
+    ?>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<!--css link part-->
+<link rel="stylesheet" type="text/css" href="css/h.css">
+<link rel="stylesheet" type="text/css" href="css/Style1.css">
+</head>
+<body>
 
-  <body>
-    <p>
-      Lorem ipsum dolor sit amet, consectetur adipiscing elit. Mauris ut augue
-      purus. Quisque sit amet vestibulum felis. Sed id odio aliquet, placerat
-      lacus sed, accumsan ligula. Duis tempor sollicitudin lorem, at rhoncus
-      neque convallis venenatis. Vestibulum ante ipsum primis in faucibus orci
-      luctus et ultrices posuere cubilia curae; Nunc ornare semper odio eget
-      semper. Aliquam iaculis interdum quam a cursus. Donec consectetur congue
-      consectetur. Nullam ante metus, vulputate rutrum lectus id, iaculis
-      consectetur urna. Aenean sit amet porttitor metus. Etiam aliquam mollis
-      turpis, ut iaculis massa sagittis non. Sed nibh ipsum, dictum ut porttitor
-      nec, efficitur quis diam. Duis suscipit facilisis nisl vehicula pulvinar.
-      Aenean pharetra eu magna vitae gravida. Integer aliquet, risus nec iaculis
-      tempus, lectus odio auctor mauris, sed finibus ipsum orci vel turpis.
-      Suspendisse fringilla feugiat risus id varius. Cras eu euismod ligula, in
-      bibendum turpis. Nunc eget sodales magna, non feugiat magna. Nullam
-      porttitor ullamcorper quam quis dictum. Ut dignissim diam at lorem
-      vehicula dignissim. Duis at mauris orci. Vivamus dictum hendrerit nisi ac
-      viverra. Proin in enim tortor. Pellentesque tempor elementum luctus. Nunc
-      convallis, est non scelerisque accumsan, elit diam placerat risus, vitae
-      blandit sapien nisi sit amet orci. Pellentesque rutrum consequat
-      fermentum. Aliquam maximus ante finibus nunc rhoncus consequat. Nulla elit
-      massa, posuere at quam at, mollis iaculis massa. Nunc erat tellus,
-      placerat eget elit at, imperdiet tempus nisi. Nunc accumsan tempor
-      bibendum. Integer condimentum hendrerit nulla, nec interdum odio porttitor
-      a. Praesent molestie imperdiet varius. Sed viverra commodo viverra. Nam
-      sollicitudin euismod neque sit amet sagittis. Maecenas in lacinia justo.
-      Quisque non consequat odio, eget luctus justo. Pellentesque faucibus
-      sodales aliquam. Curabitur feugiat lorem orci, at molestie velit
-      scelerisque ac. Integer aliquam auctor libero, quis consequat nunc mollis
-      ultricies. Ut convallis erat vel dolor facilisis, sit amet dapibus arcu
-      interdum. Praesent porttitor bibendum purus non ultrices. In ipsum elit,
-      gravida vitae sodales non, lacinia vel ex. Donec lobortis nibh nec
-      lobortis faucibus. Cras malesuada eros ligula, ornare sollicitudin felis
-      feugiat id. Maecenas mattis dapibus ex tincidunt vestibulum. In mi eros,
-      pellentesque vel ullamcorper non, venenatis cursus sapien. Nulla aliquam
-      lacus eget ultrices posuere. Integer elit sapien, vulput
-      Lorem ipsum dolor sit amet, consectetur adipiscing elit. Mauris ut augue
-      purus. Quisque sit amet vestibulum felis. Sed id odio aliquet, placerat
-      lacus sed, accumsan ligula. Duis tempor sollicitudin lorem, at rhoncus
-      neque convallis venenatis. Vestibulum ante ipsum primis in faucibus orci
-      luctus et ultrices posuere cubilia curae; Nunc ornare semper odio eget
-      semper. Aliquam iaculis interdum quam a cursus. Donec consectetur congue
-      consectetur. Nullam ante metus, vulputate rutrum lectus id, iaculis
-      consectetur urna. Aenean sit amet porttitor metus. Etiam aliquam mollis
-      turpis, ut iaculis massa sagittis non. Sed nibh ipsum, dictum ut porttitor
-      nec, efficitur quis diam. Duis suscipit facilisis nisl vehicula pulvinar.
-      Aenean pharetra eu magna vitae gravida. Integer aliquet, risus nec iaculis
-      tempus, lectus odio auctor mauris, sed finibus ipsum orci vel turpis.
-      Suspendisse fringilla feugiat risus id varius. Cras eu euismod ligula, in
-      bibendum turpis. Nunc eget sodales magna, non feugiat magna. Nullam
-      porttitor ullamcorper quam quis dictum. Ut dignissim diam at lorem
-      vehicula dignissim. Duis at mauris orci. Vivamus dictum hendrerit nisi ac
-      viverra. Proin in enim tortor. Pellentesque tempor elementum luctus. Nunc
-      convallis, est non scelerisque accumsan, elit diam placerat risus, vitae
-      blandit sapien nisi sit amet orci. Pellentesque rutrum consequat
-      fermentum. Aliquam maximus ante finibus nunc rhoncus consequat. Nulla elit
-      massa, posuere at quam at, mollis iaculis massa. Nunc erat tellus,
-      placerat eget elit at, imperdiet tempus nisi. Nunc accumsan tempor
-      bibendum. Integer condimentum hendrerit nulla, nec interdum odio porttitor
-      a. Praesent molestie imperdiet varius. Sed viverra commodo viverra. Nam
-      sollicitudin euismod neque sit amet sagittis. Maecenas in lacinia justo.
-      Quisque non consequat odio, eget luctus justo. Pellentesque faucibus
-      sodales aliquam. Curabitur feugiat lorem orci, at molestie velit
-      scelerisque ac. Integer aliquam auctor libero, quis consequat nunc mollis
-      ultricies. Ut convallis erat vel dolor facilisis, sit amet dapibus arcu
-      interdum. Praesent porttitor bibendum purus non ultrices. In ipsum elit,
-      gravida vitae sodales non, lacinia vel ex. Donec lobortis nibh nec
-      lobortis faucibus. Cras malesuada eros ligula, ornare sollicitudin felis
-      feugiat id. Maecenas mattis dapibus ex tincidunt vestibulum. In mi eros,
-      pellentesque vel ullamcorper non, venenatis cursus sapien. Nulla aliquam
-      lacus eget ultrices posuere. Integer elit sapien, vulput
-    </p>
 
-<?php include_once 'footer.php'; ?>
+<div class="slideshow-container">
+
+<div class="mySlides fade">
+  <div class="numbertext">1 / 2</div>
+  <img src="images/3.jpg" style="width:100%">
+  <div class="text">Play</div>
+</div>
+
+<div class="mySlides fade">
+  <div class="numbertext">2 / 3</div>
+  <img src="images/4.jpg" style="width:100%">
+  <div class="text">Play</div>
+</div>
+
+<div class="mySlides fade">
+  <div class="numbertext">3/ 4</div>
+  <img src="images/1.jpg" style="width:100%">
+  <div class="text">Play</div>
+</div>   
+
+<div class="mySlides fade">
+  <div class="numbertext">4 / 1</div>
+  <img src="images/2.jpg" style="width:100%">
+  <div class="text">Play</div>
+</div>
+
+<a class="prev" onclick="plusSlides(-1)">&#10094;</a>
+<a class="next" onclick="plusSlides(1)">&#10095;</a>
+
+</div>
+<br>
+
+<div style="text-align:center">
+  <span class="dot" onclick="currentSlide(1)"></span> 
+  <span class="dot" onclick="currentSlide(2)"></span> 
+  <span class="dot" onclick="currentSlide(3)"></span> 
+  <span class="dot" onclick="currentSlide(4)"></span> 
+</div>
+
+<script>
+var slideIndex = 1;
+showSlides(slideIndex);
+
+function plusSlides(n) {
+  showSlides(slideIndex += n);
+}
+
+function currentSlide(n) {
+  showSlides(slideIndex = n);
+}
+
+function showSlides(n) {
+  var i;
+  var slides = document.getElementsByClassName("mySlides");
+  var dots = document.getElementsByClassName("dot");
+  if (n > slides.length) {slideIndex = 1}    
+  if (n < 1) {slideIndex = slides.length}
+  for (i = 0; i < slides.length; i++) {
+      slides[i].style.display = "none";  
+  }
+  for (i = 0; i < dots.length; i++) {
+      dots[i].className = dots[i].className.replace(" active", "");
+  }
+  slides[slideIndex-1].style.display = "block";  
+  dots[slideIndex-1].className += " active";
+}
+</script>
+<!--brows by grade-->
+<div class="container">
+<h2>Brows by Grade</h2>
+<p>
+<button class="but-black ">perschool</button>
+<button class="button button2">number1</button>
+<button class="button button2">number2</button>
+<button class="button button2">number3</button>
+<button class="button button2">number4</button>
+<button class="button button2">number5</button>
+<hr>
+
+<!--popular subject-->
+<h2>popular Subject</h2>
+<button class="button button2">popular subject</button>
+<button class="button button2">view all subject</button>
+
+<hr>
+<!--popular Game-->
+<h2><u>popular Game</u></h2>
+<h2>View AllGames</h2>
+<form method="post">
+<label>Search Games</label>
+<input type="text" name="Search">
+<input type="submit" name="submit">	
+<br><br>
+
+
+
+<div class="box">
+				<div class="bicon">
+					<img src="images/game4.png" class="logbcon">
+				</div>
+				<div class="content">
+                <a href="www.game.lk"><h2>Play</h2></a>
+                <p>Quize(Grade-4/game-1)</p>
+				</div>
+			</div>
+
+
+      <div class="box">
+				<div class="bicon">
+					<img src="images/game4.png" class="logbcon">
+				</div>
+				<div class="content">
+                <a href="www.game.lk"><h2>Play</h2></a>
+                <p>Quize(Grade-4/game-1)</p>
+				</div>
+			</div>
+
+
+      <div class="box">
+				<div class="bicon">
+					<img src="images/game4.png" class="logbcon">
+				</div>
+				<div class="content">
+                <a href="www.game.lk"><h2>Play</h2></a>
+                <p>Quize(Grade-4/game-1)</p>
+				</div>
+			</div>
+</body>
+
+
+  <?php
+  include('./footer.php'); 
+  ?>
+</html>
