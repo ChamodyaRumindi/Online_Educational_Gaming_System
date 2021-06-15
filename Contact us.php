@@ -5,14 +5,13 @@
     ?>
     
     <!--content of the page-->
-
     <h3 id="heading1">If you have questions or just want to get in touch,<br> use the form below</h3>
    
     <br>
 
     <!--Add a form-->
     <div class="cu-body">
-    <form method="post">
+    <form action="includes/contact.inc.php" method="post">
       <label for="email">Your e-mail address</label></br>
       <input type="email" class="fields" id="email" name="email" required></br>
 
@@ -27,39 +26,23 @@
 
       we will respond as soon as possible
       <br><br />
-      <input type="button"  class="btn1" name="reset" value="Reset">
-      <input type="button" class="btn1" name="submit" value="Submit">
+      <input type="reset"  class="btn1" name="reset" value="Reset" onclick="return confirm('Are you sure?')">
+      <input type="submit" class="btn2" name="submit" value="Submit" onclick="return confirm('Are you sure?')">
     </form>
+    </div>
 
+    <?php include('./footer.php'); ?>
+    
     <?php
     /*check errors in contact us page */
     
     if (isset($_GET["error"])) {
-        if ($_GET["error"] == "emptyinput") {
+        if ($_GET["error"] == "none") {
             
             echo '<script language="javascript">';
-            echo 'alert("Fill in all fields!")';
-            echo '</script>';
-        }
-
-        else if ($_GET["error"] == "invalidemail") {
-            
-            echo '<script language="javascript">';
-            echo 'alert("Choose a proper e-mail!")';
-            echo '</script>';
-        }
-
-        else if ($_GET["error"] == "stmtfailed") {
-            
-            echo '<script language="javascript">';
-            echo 'alert("Something went wrong, Try again!")';
+            echo 'alert("")';
             echo '</script>';
         }
     }
-?>
-
-    </div>
-
-    <?php include('./footer.php'); ?>
-  
+    ?>
 
