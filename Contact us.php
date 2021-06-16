@@ -40,7 +40,7 @@
         if ($_GET["error"] == "none") {
             
             echo '<script language="javascript">';
-            echo 'alert("")';
+            echo 'alert("Successfully done")';
             echo '</script>';
         }
     }
