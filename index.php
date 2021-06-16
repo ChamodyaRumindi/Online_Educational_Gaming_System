@@ -105,7 +105,7 @@ function showSlides() {
 <hr>
 
 <!--popular Game-->
-<h2><u>popular Game</u></h2>
+<h1>popular Game</h1>
 <h2>View AllGames</h2>
 <form method="post">
 <label>Search Games</label>
