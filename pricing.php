@@ -22,29 +22,27 @@ include 'header.php';
     <div class="upgradeCard">
       <div class="contentDiv">
         <h3>Free</h3>
-        <h3>$0/mon</h3>
-        <button class="btnFree">Sign Up for free</button>
+        <h3>$0</h3>
+        <a href="signup.php"><button class="btnFree">Sign Up for Free</button></a>
         <hr />
         <ul>
-          <li>Lorem, ipsum dolor sit amet </li>
-          <li>Lorem, ipsum dolor sit amet </li>
-          <li>Lorem, ipsum dolor sit amet </li>
-          <li>Lorem, ipsum dolor sit amet </li>
+          <li>Play Free Games </li><br>
+          <li>Limited Support </li><br>
+          <br>
         </ul>
-        <button class="btnFree">Sign Up for Free</button>
+        <a href="signup.php"><button class="btnFree">Sign Up for Free</button></a>
       </div>
     </div>
     <div class="upgradeCard">
       <div class="contentDiv">
         <h3>Free</h3>
-        <h3 id="value">$150/mon</h3>
+        <h3 id="value">$9/mon</h3>
         <button class="btnPremium">Sign Up for Premium</button>
         <hr />
         <ul>
-          <li>Lorem, ipsum dolor sit amet </li>
-          <li>Lorem, ipsum dolor sit amet </li>
-          <li>Lorem, ipsum dolor sit amet </li>
-          <li>Lorem, ipsum dolor sit amet </li>
+          <li>Play Free Games</li><br>
+          <li>Play Premium  Games</li><br>
+          <li>24/7 Support</li>
         </ul>
         <button class="btnPremium">Sign Up for Premium</button>
       </div>
