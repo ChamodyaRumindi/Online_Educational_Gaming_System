@@ -2,6 +2,7 @@
   <?php 
       $title = 'Payment';
       include 'header.php'; 
+      include_once ('./includes/user-config.inc.php');
   ?>
   </header>
   
