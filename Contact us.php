@@ -18,11 +18,11 @@
       <label for="name">Full name</label></br>
       <input type="text" class="fields" id="name" name="name" required></br>
 
-      <label for="sub">Subject</label></br>
+      <label for="subject">Subject</label></br>
       <input type="text" class="fields" id="subject" name="subject" required></br>
 
-      <label for="descr">Description</label></br>
-      <textarea id="description" name="description" required></textarea></br>
+      <label for="description">Description</label></br>
+      <textarea id="descr" name="description" required></textarea></br>
 
       we will respond as soon as possible
       <br><br />
