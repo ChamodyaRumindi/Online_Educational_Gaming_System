@@ -107,52 +107,34 @@ function showSlides() {
   <a href="games.php">
     <button class="butt"><span>View AllGames </span></button>
   </a>
-  <form method="post">
+  <form action="search.php" method="get">
   <label>Search Games</label>
-  <input type="text" name="Search">
-  <input type="submit" name="submit">
+  <input type="text" name="search">
+  <input type="submit" value="Search">
 </div>
 
 <div class="game-container">
-<div class="box">
-				<div class="bicon">
-					<img src="images/game1.png" class="logbcon">
-				</div>
-				<div class="content">
-                <a href="www.game.lk"><h2>Play</h2></a>
-                <p>Quize(Grade-3/game-1)</p>
-				</div>
-			</div>
-
-      <div class="box">
-				<div class="bicon">
-					<img src="images/game2.png" class="logbcon">
-				</div>
-				<div class="content">
-                <a href="www.game.lk"><h2>Play</h2></a>
-                <p>Quize(Grade-2/game-1)</p>
-				</div>
-			</div>
-
-      <div class="box">
-				<div class="bicon">
-					<img src="images/game4.png" class="logbcon">
-				</div>
-				<div class="content">
-                <a href="www.game.lk"><h2>Play</h2></a>
-                <p>Quize(Grade-5/game-1)</p>
-				</div>
-			</div>
-
-      <div class="box">
-				<div class="bicon">
-					<img src="images/game3.png" class="logbcon">
-				</div>
-				<div class="content">
-                <a href="www.game.lk"><h2>Play</h2></a>
-                <p>Quize(Grade-4/game-1)</p>
-				</div>
-			</div>
+<?php 
+  require 'includes/database.inc.php';
+  $count = 1;
+  $sql = "SELECT gameID, gameName, gameGrade, gameCategory, gameSubject, gameAccess, gThumbnail FROM Game";
+  $result = mysqli_query($conn, $sql);
+  while($row = mysqli_fetch_assoc($result)) {
+    if($count < 5){
+    echo '<div class="box">
+          <div class="bicon">
+          <img src="games/thumbnails/'.$row["gThumbnail"].'" class="logbcon">
+          </div>
+          <h3>'.$row["gameName"].'</h3>
+          <button class="playBTN">
+          <a href="game.php?gameID='.$row["gameID"].'">Play 🎮</a></button>
+          <h4>'.$row["gameCategory"].'/'.$row["gameGrade"].'</h4>
+          
+          </div>';
+      $count = $count + 1;
+    }
+  }
+?>
 </div>
 
 </body>
