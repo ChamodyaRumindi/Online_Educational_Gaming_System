@@ -74,7 +74,7 @@ function showSlides() {
 
 <!--brows by grade-->
 
-<h1>Brows by grade</h1>
+<h1>Browse by Grade</h1>
 
 <div class="btn-group">
   <button>Grade-1</button>
@@ -82,18 +82,20 @@ function showSlides() {
   <button>Grade-3</button>
   <button>Grade-4</button>
   <button>Grade-5</button>
+  <button>Grade-6</button>
 </div>
 <hr>
 
   <!--popular subject-->
 
-  <h1>popular subject</h1>
-  
+  <h1>Popular Subjects</h1>
+<div class="subjects-btn">
   <button class="bon">Mathematics</button>
   <button class="bon">Science</button>
   <button class="bon">English</button>
   <button class="bon">History</button>
   <button class="bon">Health</button>
+</div> 
 
 <br><br><br>
 
@@ -101,10 +103,10 @@ function showSlides() {
 
 <!--popular Game-->
 <div class="game-header">
-  <h1>popular Game</h1>
-
-  <button class="butt"><span>View AllGames </span></button>
-
+  <h1>Popular Games</h1>
+  <a href="games.php">
+    <button class="butt"><span>View AllGames </span></button>
+  </a>
   <form method="post">
   <label>Search Games</label>
   <input type="text" name="Search">
