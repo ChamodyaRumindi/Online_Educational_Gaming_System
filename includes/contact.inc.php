@@ -12,12 +12,12 @@
         $email = $_POST["email"];
         $description = $_POST["description"];
 
-        if(isset($_POST["memberID"]))
+        if(isset($_SESSION["memberID"]))
         {
-          $sql = "INSERT INTO contact(memberID, name, subject, email, description, c_datetime) VALUES($mid, $name, $subject, $email, $description, now())";
+          $sql = "INSERT INTO contact(memberID, name, subject, email, description, c_datetime) VALUES('$mid', '$name', '$subject', '$email', '$description', now())";
         }
         else{
-          $sql = "INSERT INTO contact(name, subject, email, description, c_datetime) VALUES($name, $subject, $email, $description, now())";
+          $sql = "INSERT INTO contact(name, subject, email, description, c_datetime) VALUES('$name', '$subject', '$email', '$description', now())";
         }
 
         if(mysqli_query($conn, $sql)){
