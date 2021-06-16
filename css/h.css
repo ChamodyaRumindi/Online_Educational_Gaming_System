@@ -165,7 +165,9 @@ img {
 .game-container {
   width: 100%;
   display: flex;
-  justify-content: space-between;
+  flex-wrap: wrap;
+  justify-content: space-around;
+  margin-bottom: 25px;
 }
 .game-container img {
   margin-top: 20px;
@@ -176,18 +178,20 @@ img {
   display: flex;
   justify-content: space-between;
   align-items: center;
+  width: 99%;
 }
 .subjects-btn {
   display: flex;
-  justify-content: space-between;
+  justify-content: space-around;
   align-items: center;
 }
 .btn-group {
   display: flex;
-  justify-content: space-between;
+  justify-content: space-around;
   align-items: center;
 }
 .box {
+  width: 250px;
   text-align: center;
 }
 .playBTN {

@@ -1,7 +1,3 @@
-<!DOCTYPE html>
-<html>
-
-<head>
 <?php 
       $title = 'Home';
       include 'header.php'; 
@@ -9,9 +5,6 @@
 <!--css link part-->
 <link rel="stylesheet" type="text/css" href="css/h.css">
 <!--<link rel="stylesheet" type="text/css" href="css/Style1.css">-->
-
-</head>
-<body>
 <script src ="index.js"></script>
 <div class="slideshow-container">
 
@@ -84,6 +77,7 @@ function showSlides() {
   <button>Grade-5</button>
   <button>Grade-6</button>
 </div>
+<br><br>
 <hr>
 
   <!--popular subject-->
@@ -120,7 +114,7 @@ function showSlides() {
   $sql = "SELECT gameID, gameName, gameGrade, gameCategory, gameSubject, gameAccess, gThumbnail FROM Game";
   $result = mysqli_query($conn, $sql);
   while($row = mysqli_fetch_assoc($result)) {
-    if($count < 5){
+    // if($count < 5){
     echo '<div class="box">
           <div class="bicon">
           <img src="games/thumbnails/'.$row["gThumbnail"].'" class="logbcon">
@@ -131,13 +125,11 @@ function showSlides() {
           <h4>'.$row["gameCategory"].'/'.$row["gameGrade"].'</h4>
           
           </div>';
-      $count = $count + 1;
-    }
+    //   $count = $count + 1;
+    // }
   }
 ?>
 </div>
-
-</body>
 <?php
 include 'footer.php';
 ?>
