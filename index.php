@@ -35,7 +35,7 @@
 
 
 <div class="mySlides fade">
-  <div class="numbertext">3 / 3</div>
+  <div class="numbertext">3 / 4</div>
   <img src="images/2.jpg" style="width:100%">
   <div class="text">Play</div>
 </div>
