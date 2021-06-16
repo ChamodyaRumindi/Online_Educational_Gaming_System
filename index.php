@@ -89,11 +89,11 @@ function showSlides() {
   <h1>popular subject</h1>
   
   <button class="btt">view all subject</button>
-<div class="dropdown">
+<div class="dropdown1">
   <button class="btt" style="border-left:1px solid navy">
     <i class="fa fa-caret-down"></i>
   </button>
-  <div class="dropdown-content">
+  <div class="dropdown1-content">
     <a href="#">Mathas</a>
     <a href="#">English</a>
     <a href="#">Tamil</a>
@@ -113,6 +113,7 @@ function showSlides() {
 <input type="submit" name="submit">	
 <br><br>
 
+<div class="game-container">
 <div class="box">
 				<div class="bicon">
 					<img src="images/game1.png" class="logbcon">
@@ -152,7 +153,7 @@ function showSlides() {
                 <p>Quize(Grade-4/game-1)</p>
 				</div>
 			</div>
-<hr>
+</div>
 
 </body>
 <?php
