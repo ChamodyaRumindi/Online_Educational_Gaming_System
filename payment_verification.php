@@ -19,23 +19,6 @@
 
 
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-   <!--End content of the page-->
+<!--End content of the page-->
 
    <?php include('./footer.php'); ?>

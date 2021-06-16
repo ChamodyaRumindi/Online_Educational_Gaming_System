@@ -1,0 +1,38 @@
+.crdSystem {
+    text-align: center;
+    margin-bottom: 5px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+  }
+  
+  .cancel-button {
+    margin-left: 250px;
+    padding: 12px 48px;
+    display: inline-block;
+    text-align: center;
+    color: black;
+    cursor: pointer;
+    border: none;
+    border-radius: 8px;
+    background-color: green;
+  }
+  .cancel-button:hover {
+    background-color: chartreuse;
+  }
+  .pay-button {
+    margin-left: 132px;
+    padding: 12px 48px;
+    display: inline-block;
+    text-align: center;
+    background-color: red;
+    color: black;
+    border: none;
+    border-radius: 8px;
+    cursor: pointer;
+  }
+  .pay-button:hover {
+    background-color: chocolate;
+  }
+ 
