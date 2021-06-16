@@ -12,8 +12,8 @@
     </div>
     <div class="toggleSwithDiv">
       <p>Monthly</p>
-      <label class="switch">
-        <input type="checkbox" />
+      <label class="switch" >
+        <input type="checkbox" id="btnSwitch" />
         <span class="slider round"></span>
       </label>
       <p>Annually (Save 20%)</p>

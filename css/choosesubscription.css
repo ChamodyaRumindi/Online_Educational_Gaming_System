@@ -112,10 +112,22 @@ input:checked + .slider:before {
   text-align: left;
 }
  
-.upgradeCard button {
+/* .upgradeCard button {
   border-radius: 5px !important;
   background-color: #ffffff !important;
   border-color: black !important;
   margin-bottom: 10px !important;
-}
+} */
 
+.upgradeCard button 
+{
+    width: 160px;
+    height: 40px;
+    background-color: white;
+    border: none;
+    box-shadow: 0 3px 5px rgba(167, 167, 167, 0.471);
+    margin-top: 20px;
+    font-size: 15px;
+    font-weight:bold ;
+    cursor: pointer;
+}

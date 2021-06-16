@@ -8,6 +8,15 @@ btnPremium2.addEventListener("click", function (){
     document.location.href = "payment.php";
 });
 
+var btnSwitch = document.getElementById("btnSwitch").cheked;
+console.log(btnSwitch);
+var Switch = document.getElementById("btnSwitch");
+
+Switch.addEventListener("click", function (){
+
+    console.log(btnSwitch);
+    
+});
 
 
 
