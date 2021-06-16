@@ -16,13 +16,13 @@
       <input type="email" class="fields" id="email" name="email" required></br>
 
       <label for="name">Full name</label></br>
-      <input type="text" class="fields" id="name" name="fullname" required></br>
+      <input type="text" class="fields" id="name" name="name" required></br>
 
       <label for="sub">Subject</label></br>
-      <input type="text" class="fields" id="sub" name="sub" required></br>
+      <input type="text" class="fields" id="subject" name="subject" required></br>
 
       <label for="descr">Description</label></br>
-      <textarea id="descr" name="descr" required></textarea></br>
+      <textarea id="description" name="description" required></textarea></br>
 
       we will respond as soon as possible
       <br><br />
