@@ -1,6 +1,5 @@
 <link rel="styleSheet" href="css/game-page.css" />
 <?php 
-    include_once ('./includes/user-config.inc.php');
     if (isset($_GET["gameID"])) {
         $gID = $_GET["gameID"];
         require 'includes/database.inc.php';
@@ -23,6 +22,7 @@
 
     $title = $gName;
     include 'header.php';
+    include ('includes/user-config.inc.php');
 
     echo '<div class="game-container">';
     echo '<h1 class="game-name">'.$gName.'<h2>';
