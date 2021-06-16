@@ -1,109 +1,23 @@
-<!DOCTYPE html>
-<html>
-<head>
 <?php 
       $title = 'Home';
       include 'header.php'; 
-    ?>
+?>
+<link rel="stylesheet"  href="css/subjects.css">
+<?php 
+	require 'includes/database.inc.php';
+	$sql = "SELECT * FROM Subject;";
+	$result = mysqli_query($conn, $sql);
 
-
-<link rel="stylesheet"  href="css/Style1.css">
-</head>
-<body>
-
-
-        <div class="gbox">
-			<div class="fox">
-				<div class="been">
-					<img src="images/game1.png" class="logs">
-				</div>
-				<div class="con"> 
-                <a href="www.game.lk"><h2>subject 1</h2></a>
-                
-				</div>
-			</div>
-            <div class="gbox">
-			<div class="fox">
-				<div class="been">
-					<img src="images/game1.png" class="logs">
-				</div>
-				<div class="con"> 
-                <a href="www.game.lk"><h2>subject 1</h2></a>
-                
-				</div>
-			</div>
-            <div class="gbox">
-			<div class="fox">
-				<div class="been">
-					<img src="images/game1.png" class="logs">
-				</div>
-				<div class="con"> 
-                <a href="www.game.lk"><h2>subject 1</h2></a>
-                
-				</div>
-			</div>
-            <div class="gbox">
-			<div class="fox">
-				<div class="been">
-					<img src="images/game1.png" class="logs">
-				</div>
-				<div class="con"> 
-                <a href="www.game.lk"><h2>subject 1</h2></a>
-                
-				</div>
-			</div><div class="gbox">
-			<div class="fox">
-				<div class="been">
-					<img src="images/game1.png" class="logs">
-				</div>
-				<div class="con"> 
-                <a href="www.game.lk"><h2>subject 1</h2></a>
-                
-				</div>
-			</div>
-
-            <div class="gbox">
-			<div class="fox">
-				<div class="been">
-					<img src="images/game1.png" class="logs">
-				</div>
-				<div class="con"> 
-                <a href="www.game.lk"><h2>subject 2</h2></a>
-                </div>
-			</div>
-
-
-
-
-
-            <div class="gbox">
-			<div class="fox">
-				<div class="been">
-					<img src="images/game1.png" class="logs">
-				</div>
-				<div class="con"> 
-                <a href="www.game.lk"><h2>subject 3</h2></a> 
-				</div>
-			</div>
-
-
-
-
-            <div class="gbox">
-			<div class="fox">
-				<div class="been">
-					<img src="images/game1.png" class="logs">
-				</div>
-				<div class="con"> 
-                <a href="www.game.lk"><h2>subject 4</h2></a>
-				</div>
-			</div>
-
-    </body>
-
-      
-
-<br><br><br>
+	echo '<div class="subject-container">';
+	while($row = mysqli_fetch_assoc($result)) {
+		echo '<div class="gbox">
+			  <img src="images/'.$row["subjectName"].'.jpg" alt="'.$row["subjectName"].'">
+			  <a href="games.php?subject='.$row["SID"].'"><h2>'.$row["subjectName"].'</h2></a>
+			  </div>';
+	}
+	echo '</div>';
+	mysqli_close($conn);
+?>
 <?php
   include('./footer.php'); 
-  ?>
+?>
