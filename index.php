@@ -105,13 +105,14 @@ function showSlides() {
 <hr>
 
 <!--popular Game-->
-<h1>popular Game</h1>
-<h2>View AllGames</h2>
-<form method="post">
-<label>Search Games</label>
-<input type="text" name="Search">
-<input type="submit" name="submit">	
-<br><br>
+<div class="game-header">
+  <h2><u>popular Game</u></h2>
+  <h2>View AllGames</h2>
+  <form method="post">
+  <label>Search Games</label>
+  <input type="text" name="Search">
+  <input type="submit" name="submit">
+</div>
 
 <div class="game-container">
 <div class="box">
