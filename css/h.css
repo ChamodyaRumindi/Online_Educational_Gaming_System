@@ -82,7 +82,7 @@ img {
   background-color: #046fb6; /* Green background */
   border: 1px solid rgb(201, 250, 201); /* Green border */
   color: white; /* White text */
-  padding: 10px 24px; /* Some padding */
+  padding: 20px 30px; /* Some padding */
   cursor: pointer; /* Pointer/hand icon */
   float: left; /* Float the buttons side by side */
 }
@@ -105,63 +105,65 @@ img {
 
 /*popular subject*/
 
-.btt {
-  background-color: #2196f3;
-  color: rgb(0, 0, 0);
-  padding: 16px;
-  font-size: 16px;
-  border: none;
-  outline: aqua;
+/*view all subject*/
+.bon {
+  padding: 15px 25px;
+  font-size: 24px;
   text-align: center;
-}
-
-.dropdown1 {
-  position: absolute;
-  display: inline-block;
-}
-
-.dropdown1-content {
-  display: none;
-  position: absolute;
-  background-color: #ffffff;
-  min-width: 160px;
-  z-index: 1;
-}
-
-.dropdown1-content a {
+  cursor: pointer;
+  outline: none;
   color: rgb(0, 0, 0);
-  padding: 16px 20px;
-  text-decoration: none;
-  display: block;
+  background-color: #dcf500;
+  border: none;
+  border-radius: 15px;
+  box-shadow: 0 9px #999;
 }
 
-.dropdown1-content a:hover {
-  background-color: #ddd;
+.bon:hover {background-color: #00ff08}
+
+.bon:active {
+  background-color: #3e8e41;
+  box-shadow: 0 5px #666;
+  transform: translateY(4px);
 }
 
-.dropdown1:hover .dropdown1-content {
-  display: block;
+
+/* View AllGames*/
+.butt {
+  border-radius: 4px;
+  background-color: #f3754e;
+  border: none;
+  color: #FFFFFF;
+  text-align: center;
+  font-size: 20px;
+  padding: 15px;
+  width: 200px;
+  transition: all 0.5s;
+  cursor: pointer;
+  margin: 5px;
 }
 
-.btt:hover,
-.dropdown1:hover .btn {
-  background-color: #0b7dda;
+.butt span {
+  cursor: pointer;
+  display: inline-block;
+  position: relative;
+  transition: 0.5s;
 }
 
-.game-container {
-  width: 100%;
-  display: flex;
-  justify-content: space-evenly;
-  flex-wrap: wrap;
-}
-.box img {
-  width: 100px;
-  height: 100px;
+.butt span:after {
+  content: '\00bb';
+  position: absolute;
+  opacity: 0;
+  top: 0;
+  right: -20px;
+  transition: 0.5s;
 }
 
-.game-header {
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  margin-bottom: 20px;
+.butt:hover span {
+  padding-right: 25px;
+}
+
+.butt:hover span:after {
+  opacity: 1;
+  right: 0;
 }

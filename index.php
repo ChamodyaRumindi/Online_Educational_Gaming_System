@@ -86,28 +86,25 @@ function showSlides() {
 <hr>
 
   <!--popular subject-->
+
   <h1>popular subject</h1>
   
-  <button class="btt">view all subject</button>
-<div class="dropdown1">
-  <button class="btt" style="border-left:1px solid navy">
-    <i class="fa fa-caret-down"></i>
-  </button>
-  <div class="dropdown1-content">
-    <a href="#">Mathas</a>
-    <a href="#">English</a>
-    <a href="#">Tamil</a>
-    <a href="#">Environment</a>
-    <a href="#">Health</a>
-  </div>
-</div>
+  <button class="bon">Mathematics</button>
+  <button class="bon">Science</button>
+  <button class="bon">English</button>
+  <button class="bon">History</button>
+  <button class="bon">Health</button>
+
+<br><br><br>
 
 <hr>
 
 <!--popular Game-->
 <div class="game-header">
-  <h2><u>popular Game</u></h2>
-  <h2>View AllGames</h2>
+  <h1>popular Game</h1>
+
+  <button class="butt"><span>View AllGames </span></button>
+
   <form method="post">
   <label>Search Games</label>
   <input type="text" name="Search">
