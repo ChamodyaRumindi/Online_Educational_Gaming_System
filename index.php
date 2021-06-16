@@ -6,19 +6,18 @@
       $title = 'Home';
       include 'header.php'; 
     ?>
-<meta name="viewport" content="width=device-width, initial-scale=1">
 <!--css link part-->
 <link rel="stylesheet" type="text/css" href="css/h.css">
-<link rel="stylesheet" type="text/css" href="css/Style1.css">
+<!--<link rel="stylesheet" type="text/css" href="css/Style1.css">-->
+
 </head>
 <body>
-
-
+<script src ="index.js"></script>
 <div class="slideshow-container">
 
 <div class="mySlides fade">
-  <div class="numbertext">1 / 2</div>
-  <img src="images/3.jpg" style="width:100%">
+  <div class="numbertext">1 / 3</div>
+  <img src="images/1.jpg" style="width:100%">
   <div class="text">Play</div>
 </div>
 
@@ -29,122 +28,79 @@
 </div>
 
 <div class="mySlides fade">
-  <div class="numbertext">3/ 4</div>
-  <img src="images/1.jpg" style="width:100%">
-  <div class="text">Play</div>
-</div>   
-
-<div class="mySlides fade">
-  <div class="numbertext">4 / 1</div>
-  <img src="images/2.jpg" style="width:100%">
+  <div class="numbertext">3 / 3</div>
+  <img src="images/3.jpg" style="width:100%">
   <div class="text">Play</div>
 </div>
 
-<a class="prev" onclick="plusSlides(-1)">&#10094;</a>
-<a class="next" onclick="plusSlides(1)">&#10095;</a>
+
+<div class="mySlides fade">
+  <div class="numbertext">3 / 3</div>
+  <img src="images/2.jpg" style="width:100%">
+  <div class="text">Play</div>
+</div>
 
 </div>
 <br>
 
 <div style="text-align:center">
-  <span class="dot" onclick="currentSlide(1)"></span> 
-  <span class="dot" onclick="currentSlide(2)"></span> 
-  <span class="dot" onclick="currentSlide(3)"></span> 
-  <span class="dot" onclick="currentSlide(4)"></span> 
+  <span class="dot"></span> 
+  <span class="dot"></span> 
+  <span class="dot"></span> 
+  <span class="dot"></span>
 </div>
 
 <script>
-var slideIndex = 1;
-showSlides(slideIndex);
+var slideIndex = 0;
+showSlides();
 
-function plusSlides(n) {
-  showSlides(slideIndex += n);
-}
-
-function currentSlide(n) {
-  showSlides(slideIndex = n);
-}
-
-function showSlides(n) {
+function showSlides() {
   var i;
   var slides = document.getElementsByClassName("mySlides");
   var dots = document.getElementsByClassName("dot");
-  if (n > slides.length) {slideIndex = 1}    
-  if (n < 1) {slideIndex = slides.length}
   for (i = 0; i < slides.length; i++) {
-      slides[i].style.display = "none";  
+    slides[i].style.display = "none";  
   }
+  slideIndex++;
+  if (slideIndex > slides.length) {slideIndex = 1}    
   for (i = 0; i < dots.length; i++) {
-      dots[i].className = dots[i].className.replace(" active", "");
+    dots[i].className = dots[i].className.replace(" active", "");
   }
   slides[slideIndex-1].style.display = "block";  
   dots[slideIndex-1].className += " active";
+  setTimeout(showSlides, 2000); // Change image every 2 seconds
 }
 </script>
+
 <!--brows by grade-->
-<div class="container">
-<h2>Brows by Grade</h2>
-<p>
-<button class="but-black ">perschool</button>
-<button class="button button2">number1</button>
-<button class="button button2">number2</button>
-<button class="button button2">number3</button>
-<button class="button button2">number4</button>
-<button class="button button2">number5</button>
+
+<h1>Brows by grade</h1>
+
+<div class="btn-group">
+  <button>Grade-1</button>
+  <button>Grade-2</button>
+  <button>Grade-3</button>
+  <button>Grade-4</button>
+  <button>Grade-5</button>
+</div>
 <hr>
 
-<!--popular subject-->
-<h2>popular Subject</h2>
-<button class="button button2">popular subject</button>
-<button class="button button2">view all subject</button>
-
+  <!--popular subject-->
+  <h1>popular subject</h1>
+  
+  <div class="dropdown">
+    <button class="dropbtn">Dropdown 
+      <i class="fa fa-caret-down"></i>
+    </button>
+    <div class="dropdown-content">
+      <a href="#">Link 1</a>
+      <a href="#">Link 2</a>
+      <a href="#">Link 3</a>
+    </div>
+  </div>
 <hr>
-<!--popular Game-->
-<h2><u>popular Game</u></h2>
-<h2>View AllGames</h2>
-<form method="post">
-<label>Search Games</label>
-<input type="text" name="Search">
-<input type="submit" name="submit">	
-<br><br>
 
-
-
-<div class="box">
-				<div class="bicon">
-					<img src="images/game4.png" class="logbcon">
-				</div>
-				<div class="content">
-                <a href="www.game.lk"><h2>Play</h2></a>
-                <p>Quize(Grade-4/game-1)</p>
-				</div>
-			</div>
-
-
-      <div class="box">
-				<div class="bicon">
-					<img src="images/game4.png" class="logbcon">
-				</div>
-				<div class="content">
-                <a href="www.game.lk"><h2>Play</h2></a>
-                <p>Quize(Grade-4/game-1)</p>
-				</div>
-			</div>
-
-
-      <div class="box">
-				<div class="bicon">
-					<img src="images/game4.png" class="logbcon">
-				</div>
-				<div class="content">
-                <a href="www.game.lk"><h2>Play</h2></a>
-                <p>Quize(Grade-4/game-1)</p>
-				</div>
-			</div>
 </body>
-
-
-  <?php
-  include('./footer.php'); 
-  ?>
-</html>
+<?php
+include 'footer.php';
+?>

@@ -1,41 +1,13 @@
-{box-sizing: border-box}
-body {font-family: Verdana, sans-serif; margin:0}
-.mySlides {display: none}
-img {vertical-align: middle;}
+ /* * {box-sizing: border-box;}*/
+body {font-family: Verdana, sans-serif;}
+.mySlides {display: none;}
+img {vertical-align:middle;}
 
 /* Slideshow container */
 .slideshow-container {
-  max-width: 1024px;
+  max-width: 1000px;
   position: relative;
   margin: auto;
-}
-
-/* Next & previous buttons */
-.prev, .next {
-  cursor: pointer;
-  position: absolute;
-  top: 50%;
-  width: auto;
-  padding: 16px;
-  margin-top: -22px;
-  color: white;
-  font-weight: bold;
-  font-size: 18px;
-  transition: 0.5s ease;
-  border-radius: 0 3px 3px 0;
-  user-select: none;
-  animation: slider 20s infinite linear;/*name,duration,how many time,transaction*/
-}
-
-/* Position the "next button" to the right */
-.next {
-  right: 0;
-  border-radius: 3px 0 0 3px;
-}
-
-/* On hover, add a black background color with a little bit see-through */
-.prev:hover, .next:hover {
-  background-color: rgba(0,0,0,0.8);
 }
 
 /* Caption text */
@@ -60,7 +32,6 @@ img {vertical-align: middle;}
 
 /* The dots/bullets/indicators */
 .dot {
-  cursor: pointer;
   height: 15px;
   width: 15px;
   margin: 0 2px;
@@ -68,21 +39,18 @@ img {vertical-align: middle;}
   border-radius: 50%;
   display: inline-block;
   transition: background-color 0.6s ease;
-  animation: slider 20s infinite linear;/*name,duration,how many time,transaction*/
-}
 }
 
-.active, .dot:hover {
+.active {
   background-color: #717171;
 }
 
 /* Fading animation */
 .fade {
   -webkit-animation-name: fade;
-  -webkit-animation-duration: 0.5s;
+  -webkit-animation-duration: 1.5s;
   animation-name: fade;
-  animation-duration: 0.5s;
-  animation: slider 20s infinite linear;/*name,duration,how many time,transaction*/
+  animation-duration: 1.5s;
 }
 
 @-webkit-keyframes fade {
@@ -95,7 +63,78 @@ img {vertical-align: middle;}
   to {opacity: 1}
 }
 
-/* On smaller screens, decrease text size */
-@media only screen and (max-width: 300px) {
-  .prev, .next,.text {font-size: 11px}
+/*brows by grade */
+.btn-group button {
+  background-color: #046fb6; /* Green background */
+  border: 1px solid rgb(201, 250, 201); /* Green border */
+  color: white; /* White text */
+  padding: 10px 24px; /* Some padding */
+  cursor: pointer; /* Pointer/hand icon */
+  float: left; /* Float the buttons side by side */
 }
+
+/* Clear floats (clearfix hack) */
+.btn-group:after {
+  content: "";
+  clear: both;
+  display: table;
+}
+
+.btn-group button:not(:last-child) {
+  border-right: none; /* Prevent double borders */
+}
+
+/* Add a background color on hover */
+.btn-group button:hover {
+  background-color: #06ff0e;
+}
+
+/*popular subject*/
+
+.dropdown {
+  float: left;
+  overflow: hidden;
+}
+
+.dropdown .dropbtn {
+  font-size: 16px;  
+  border: none;
+  outline: none;
+  color: white;
+  padding: 14px 16px;
+  background-color: inherit;
+  font-family: inherit;
+  margin: 0;
+}
+
+.navbar a:hover, .dropdown:hover .dropbtn {
+  background-color: red;
+}
+
+.dropdown-content {
+  display: none;
+  position: absolute;
+  background-color: #f9f9f9;
+  min-width: 160px;
+  box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+  z-index: 1;
+}
+
+.dropdown-content a {
+  float: none;
+  color: black;
+  padding: 12px 16px;
+  text-decoration: none;
+  display: block;
+  text-align: left;
+}
+
+.dropdown-content a:hover {
+  background-color: #ddd;
+}
+
+.dropdown:hover .dropdown-content {
+  display: block;
+}
+
+
