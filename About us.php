@@ -1,10 +1,9 @@
 <link rel="styleSheet" href="css/About us.css" />
-    <?php 
-      $title = 'About Us';
-      include 'header.php'; 
-    ?>
-
-    <body>
+<?php 
+  $title = 'About Us';
+  include 'header.php'; 
+?>
+    <div class="c-container">
         <h2>About Us</h2>
         <p id="para1">OEGPlay is an online educational games website which provides <br>
            a virtual platform for kids. We provide the best games according to<br>
@@ -21,7 +20,7 @@
                       in providing a very user-friendly interface for kids.</p>
         <img src="images/mission.png" class="mission-pic">
         
-        <h2>Our Team</h2>
+        <h2 id="team">Our Team</h2>
         <p>Lakshan D.K.A.P.R<br>
            Gayashan K.L<br>
            Hettiarachchi A.B<br>
@@ -29,8 +28,8 @@
            Kumari K.T.C.R</P>
         <img src="images/team.jpeg" class="team-pic">
 
-    <button class="cu-btn">Contact Us</button>
-    <br><br>
-    </body>
+        <button class="cu-btn">Contact Us</button>
+        <br><br>
+    </div>
 
-    <?php include('./footer.php'); ?>
+<?php include('./footer.php'); ?>
