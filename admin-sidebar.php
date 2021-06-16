@@ -1,6 +1,13 @@
 <div class = "admin-sidebar">
         <div class = "profile">
-            <img class = "propic" src="images/defaultProfile.png" alt="ProfilePicture">
+            <?php 
+                if(!is_null($_SESSION['proPic'])){
+                    echo '<img class = "propic" src="uploads/adminpropics/'.$_SESSION['proPic'].'" alt="ProfilePicture">';
+                }
+                else{
+                    echo '<img class = "propic" src="images/defaultProfile.png" alt="ProfilePicture">';
+                }
+            ?>         
             <?php echo '<p class="a-name">'.$_SESSION["firstName"].' '.$_SESSION["lastName"].'</p>'?>
             <h5 class="role">Administrator</h5>
         </div>

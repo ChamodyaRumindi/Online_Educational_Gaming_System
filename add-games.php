@@ -196,7 +196,6 @@
 <?php
           if (isset($_GET["error"])) {
             if ($_GET["error"] == "none") {
-              echo "<h1>Successfully Added!</h1>";
               echo '<script>
                       msgboxbox.show(
                       "Successfully Added!"

@@ -1,5 +1,6 @@
 <link rel="styleSheet" href="css/game-page.css" />
 <?php 
+    include_once ('./includes/user-config.inc.php');
     if (isset($_GET["gameID"])) {
         $gID = $_GET["gameID"];
         require 'includes/database.inc.php';
@@ -17,7 +18,7 @@
         $gCategory = $row['gameCategory'];
     }
     else {
-        header ("location: ../all-games.php");
+        header ("location: ./games.php");
     }
 
     $title = $gName;
