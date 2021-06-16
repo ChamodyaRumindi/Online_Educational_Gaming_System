@@ -10,50 +10,69 @@ include 'header.php';
 <HEAD>
 		<!--css link part-->
         <link rel="stylesheet" type="text/css" href="css/Style1.css">
-	
-        
-			
-		
 	</HEAD>
 
 <body>
 
-<form method="post">
-<label>Search</label>
-<input type="text" name="Search">
-<input type="submit" name="submit">	
-<br><br>
+<br><br><br><br>
+
+
 <!--sidebar-->
-<nav class="siderbar">
-      <div class="side">OEG PLAY</div>
+ 
+      <div class="sidenav"><h2>Sort by</h2></div>
+	        <div class="sidenav">
+			<form method="post">
+             <label>Search</label>
+              <input type="text" name="Search">
+             <input type="submit" name="submit">	
 
-	  <ul>
-        <li><a href="#">new</a></li>
-		<li> 
-		      <a href="#">grade</a>
-		     <ul>
-		         <li><a href="#">grade 1</a></li>
-		         <li><a href="#">grade 2</a></li>
-		         <li><a href="#">grade 3</a></li>
-		         <li><a href="#">grade 4</a></li>
-		         <li><a href="#">grade 5</a></li>
-		    </ul>
-		</li>
-		<li>
-		      <a href="#">subject</a>
-		     <ul>
-		         <li><a href="#">subject 1</a></li>
-		         <li><a href="#">subject 2</a></li>
-		         <li><a href="#">subject 3</a></li>
-		         <li><a href="#">subject 4</a></li>
-		         <li><a href="#">subject 5</a></li>
-		    </ul>
-		</li>
+			 <br><br>
+              <h2>Sort By</h2>
 
-    </div>
+			  <div class="boo-group">
+			  <button class="btn success">Popularity</button>
+			  <button class="btn success">Recently Added</button> 
+             </div>
+    
+			 <h2>Filter By</h2> <hr>
 
-	  </ul>
-</nav>
+			 <button class="hht">Category All</button>
+              <div class="dropdown">
+                 <button class="hht">
+                   <i class="fa fa-caret-down"></i>
+                          </button>
+                    <div class="dropdown-content">
+                        <a href="#">Grade</a>
+                          <a href="#">Subject</a>
+                    </div>
+                  </div>
+
+				  <h2>Grade</h2> <hr>
+
+
+				  <h2>subject</h2> <hr>
+            
+         </div>
+	    
+    </div>            
+					
+
+
+
+			 
+	
+	
+	
+	
+			</div>
+
+ <!--filter by-->
+  
+
+
+
+
+
 
 
 <div class="docbox">

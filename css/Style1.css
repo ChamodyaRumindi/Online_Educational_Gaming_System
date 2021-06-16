@@ -1,4 +1,4 @@
-@charset "utf-8";
+
 /* CSS Document */
 
 body
@@ -6,10 +6,17 @@ body
 	/*background-image:url("../images/game.png");
 	background-repeat:n;
 	text-decoration: none;*/
-	max-width: 0px;
+	/*max-width: 0px;*/
 }
 
+
+
+
+  /*filter by*/
+  
 /*game display page css*/
+
+
 .docbox
 {
 	position: relative;
@@ -17,6 +24,7 @@ body
 	height: 1100px;
 	margin: 0px auto;
 }
+
 .docbox .box
 {
 	position: relative;
@@ -41,6 +49,7 @@ body
 	transition: 0.8s;
 	z-index: 1;
 }
+
 .docbox .box:hover .bicon
 {
 	top: 20px;
@@ -101,45 +110,95 @@ body
 
 }
 
-.siderbar
-{
-margin:0;
-padding:o;
-user-select: none;
-color: #fff;
-box-sizing: border-box;
-position:fixed;
-width:250px;
-left:160px;
-background: #ffffff;
+/*side barr*/
 
-}
-.siderbar .side{
-color: white;
-font-size: 25px;
-font-weight:600 ;
-line-height: 65px;
-text-align: center;
-background: #1e1e1e;
-letter-spacing: 1px;
-}
-<<<<<<< Updated upstream
-=======
-nav ul {
- background: #ffffff;
-height: 100%;
-width: 100%;
-list-style: none;
-}
+.sidenav {
+	width: 120px;
+	position: fixed;
+	z-index: 2;
+	top: 100px;
+	left: 150px;
+	background: rgb(255, 111, 111);
+	overflow-x: hidden;
+	padding: 100px;
+  }
+  /*
+  .sidenav a {
+	padding: 6px 8px 6px 16px;
+	text-decoration: none;
+	font-size: 25px;
+	color: #2196F3;
+	display: block;
+  }
+  
+  .sidenav a:hover {
+	color: #064579;
+  }
+  */
+  /*
+  .main {
+	margin-left:
+	font-size: 28px; 
+	padding: 0px 10px;*/
+  
+  
+  @media screen and (max-height: 450px) {
+	.sidenav {padding-top: 20px;}
+	/*.sidenav a {font-size: 18px;}*/
+  }
 
 
+  .btn {
+	border: none; /* Remove borders */
+	color: white; /* Add a text color */
+	padding: 14px 28px; /* Add some padding */
+	cursor: pointer; /* Add a pointer cursor on mouse-over */
+  }
+  
+  .success {background-color: #04AA6D;} /* Green */
+  .success:hover {background-color: #46a049;}
+  
 
-/*subject display page css*/
->>>>>>> Stashed changes
 
-
-
-
+  .hht {
+	background-color: #2196F3;
+	color: white;
+	padding: 16px;
+	font-size: 16px;
+	border: none;
+	outline: none;
+  }
+  
+  .dropdown {
+	position: absolute;
+	display: inline-block;
+  }
+  
+  .dropdown-content {
+	display: none;
+	position: absolute;
+	background-color: #f1f1f1;
+	min-width: 160px;
+	z-index: 1;
+  }
+  
+  .dropdown-content a {
+	color: black;
+	padding: 12px 16px;
+	text-decoration: none;
+	display: block;
+  }
+  
+  .dropdown-content a:hover {background-color: #ddd}
+  
+  .dropdown:hover .dropdown-content {
+	display: block;
+  }
+  
+  .hht:hover, .dropdown:hover .btn {
+	background-color: #0b7dda;
+  }
+  
 
 
 
