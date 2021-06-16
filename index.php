@@ -88,16 +88,70 @@ function showSlides() {
   <!--popular subject-->
   <h1>popular subject</h1>
   
-  <div class="dropdown">
-    <button class="dropbtn">Dropdown 
-      <i class="fa fa-caret-down"></i>
-    </button>
-    <div class="dropdown-content">
-      <a href="#">Link 1</a>
-      <a href="#">Link 2</a>
-      <a href="#">Link 3</a>
-    </div>
+  <button class="btt">view all subject</button>
+<div class="dropdown">
+  <button class="btt" style="border-left:1px solid navy">
+    <i class="fa fa-caret-down"></i>
+  </button>
+  <div class="dropdown-content">
+    <a href="#">Mathas</a>
+    <a href="#">English</a>
+    <a href="#">Tamil</a>
+    <a href="#">Environment</a>
+    <a href="#">Health</a>
   </div>
+</div>
+
+<hr>
+
+<!--popular Game-->
+<h2><u>popular Game</u></h2>
+<h2>View AllGames</h2>
+<form method="post">
+<label>Search Games</label>
+<input type="text" name="Search">
+<input type="submit" name="submit">	
+<br><br>
+
+<div class="box">
+				<div class="bicon">
+					<img src="images/game1.png" class="logbcon">
+				</div>
+				<div class="content">
+                <a href="www.game.lk"><h2>Play</h2></a>
+                <p>Quize(Grade-3/game-1)</p>
+				</div>
+			</div>
+
+      <div class="box">
+				<div class="bicon">
+					<img src="images/game2.png" class="logbcon">
+				</div>
+				<div class="content">
+                <a href="www.game.lk"><h2>Play</h2></a>
+                <p>Quize(Grade-2/game-1)</p>
+				</div>
+			</div>
+
+      <div class="box">
+				<div class="bicon">
+					<img src="images/game4.png" class="logbcon">
+				</div>
+				<div class="content">
+                <a href="www.game.lk"><h2>Play</h2></a>
+                <p>Quize(Grade-5/game-1)</p>
+				</div>
+			</div>
+
+      <div class="box">
+				<div class="bicon">
+					<img src="images/game3.png" class="logbcon">
+				</div>
+				<div class="content">
+                <a href="www.game.lk"><h2>Play</h2></a>
+                <p>Quize(Grade-4/game-1)</p>
+				</div>
+			</div>
 <hr>
 
 </body>
