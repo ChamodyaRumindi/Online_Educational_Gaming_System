@@ -16,7 +16,7 @@ include 'header.php';
 
 <br><br><br><br>
 
-
+<label>Search</label>
 <!--sidebar-->
  
       <div class="sidenav"><h2>Sort by</h2></div>

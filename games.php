@@ -17,43 +17,75 @@ include 'header.php';
 	</HEAD>
 
 <body>
-
+<!--sidebar-->
+<br><br><br><br>
 <form method="post">
 <label>Search</label>
 <input type="text" name="Search">
-<input type="submit" name="submit">	
 <br><br>
-<!--sidebar-->
-<nav class="siderbar">
-      <div class="side">OEG PLAY</div>
 
-	  <ul>
-        <li><a href="#">new</a></li>
-		<li> 
-		      <a href="#">grade</a>
-		     <ul>
-		         <li><a href="#">grade 1</a></li>
-		         <li><a href="#">grade 2</a></li>
-		         <li><a href="#">grade 3</a></li>
-		         <li><a href="#">grade 4</a></li>
-		         <li><a href="#">grade 5</a></li>
-		    </ul>
-		</li>
-		<li>
-		      <a href="#">subject</a>
-		     <ul>
-		         <li><a href="#">subject 1</a></li>
-		         <li><a href="#">subject 2</a></li>
-		         <li><a href="#">subject 3</a></li>
-		         <li><a href="#">subject 4</a></li>
-		         <li><a href="#">subject 5</a></li>
-		    </ul>
-		</li>
+<br><br>
+              <h2>Sort By</h2>
 
-    </div>
+			  <div class="boo-group">
+			  <button class="btn success">Popularity</button>
+			  <button class="btn success">Recently Added</button> 
+             </div>
 
-	  </ul>
-</nav>
+
+
+
+			 <h2>Filter By</h2> 
+
+			 <button class="hht">Category All</button>
+              <div class="dropdown">
+                 <button class="hht">
+                   <i class="fa fa-caret-down"></i>
+                          </button>
+                    <div class="dropdown-content">
+                        <a href="#">Grade</a>
+                          <a href="#">Subject</a>
+                    </div>
+                  </div>
+
+
+				  <h2>Grade</h2> 
+
+			 <button class="hht"> All Grade</button>
+              <div class="dropdown">
+                 <button class="hht">
+                   <i class="fa fa-caret-down"></i>
+                          </button>
+                    <div class="dropdown-content">
+                        <a href="#">Grade-1</a>
+                          <a href="#">Grade-2</a>
+						  <a href="#">Grade-3</a>
+						  <a href="#">Grade-4</a>
+						  <a href="#">Grade-5</a>
+                    </div>
+                  </div>
+
+
+				  <h2>Subject</h2> 
+
+			 <button class="hht"> All Subject</button>
+              <div class="dropdown">
+                 <button class="hht">
+                   <i class="fa fa-caret-down"></i>
+                          </button>
+                    <div class="dropdown-content">
+                          <a href="#">Subject-1</a>
+                          <a href="#">Subject-2</a>
+						  <a href="#">Subject-3</a>
+						  <a href="#">Subject-4</a>
+						  <a href="#">Subject-5</a>
+                    </div>
+                  </div>
+
+				  
+
+				  
+
 
 
 <div class="docbox">
