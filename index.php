@@ -5,7 +5,6 @@
 <!--css link part-->
 <link rel="stylesheet" type="text/css" href="css/h.css">
 <!--<link rel="stylesheet" type="text/css" href="css/Style1.css">-->
-<script src ="index.js"></script>
 <div class="slideshow-container">
 
 <div class="mySlides fade">
