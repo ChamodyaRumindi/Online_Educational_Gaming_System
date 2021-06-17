@@ -22,16 +22,20 @@
                  <input disabled type="text" name="userName" id="name" value = "'.$_SESSION["firstName"].' '.$_SESSION["lastName"].'"/><br />';
            echo '<label for="email">Email:</label>
                 <input disabled type="email" name="email" id="email" value="'.$emails[0].'"/>';
-           mysqli_close($conn);
+            header("location:crdSystem_page.php");
+                mysqli_close($conn);
           ?>
           <br />
           <p>Membership:Premium</p>
           <p>Plan:Monthly Subcription</p>
           <p>Amount:$19.00</p>
-          <button type="submit">Pay Now</button>
+          <button type="submit" class="btnPay">Pay Now</button>
+          
         </form>
       </div>
     </div>
+
+    <script src="/OEGplay/js/payment.js"></script>
 
   <?php include('./footer.php'); ?>
 

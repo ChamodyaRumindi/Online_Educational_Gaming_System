@@ -99,6 +99,7 @@
     border: 2px solid #eeee;
     text-align: center;
     justify-content: center;
+    
   }
   
   .upgradeCard ul {
@@ -113,8 +114,45 @@
   
   .upgradeCard button {
     border-radius: 5px !important;
-    background-color: #ffffff !important;
-    border-color: black !important;
     margin-bottom: 10px !important;
+    border:none;
+
   }
+
+  .btnFree{
+    padding: 6px;
+    background-color: slateblue;
+    box-shadow: 0 3px 5px rgba(167, 167, 167, 0.471);
+    color: white;
+
+
+  }
+
+  .btnPremium{
+    padding: 6px;
+    background-color: rgb(90, 205, 128);
+    box-shadow: 0 3px 5px rgba(167, 167, 167, 0.471);
+    color: white;
+
+  }
+
+  .btnFree:hover{
+    padding: 8px;
+    background-color: darkblue;
+    box-shadow: 0 3px 5px rgba(167, 167, 167, 0.471);
+    color: white;
+    border:none;
+
+
+  }
+
+  .btnPremium:hover{
+    padding: 8px;
+    background-color: darkgreen;
+    box-shadow: 0 3px 5px rgba(167, 167, 167, 0.471);
+    color: white;
+    border:none;
+
+  }
+  
   
