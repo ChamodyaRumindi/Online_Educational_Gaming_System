@@ -96,11 +96,6 @@ html {
 
 .profile-img {
   border-radius: 50%;
-<<<<<<< HEAD
-  width: 40px;
-  height: 40px;
-  margin-left: 10px;
-=======
   width: 35px;
   height: 35px;
   margin-left: 10px;
@@ -152,7 +147,6 @@ html {
 
 .dropdown:hover .dropdown-content {
   display: block;
->>>>>>> 91e01753d79998723c82960bf08a6f58a0472b4e
 }
 
 .dropdown:hover .dropbtn {

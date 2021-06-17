@@ -1,6 +1,7 @@
 <?php 
       $title = 'User Dashboard';
       include 'header.php'; 
+      include_once ('./includes/user-config.inc.php');
 ?>
     <link href="css/userDashboard.css" rel="stylesheet" type="text/css">
     <?php include 'user-sidebar.php'; ?>

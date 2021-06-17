@@ -1,24 +1,16 @@
-<!DOCTYPE html>
-<html>
-
-<head>
 <?php 
       $title = 'Home';
       include 'header.php'; 
     ?>
-<meta name="viewport" content="width=device-width, initial-scale=1">
 <!--css link part-->
 <link rel="stylesheet" type="text/css" href="css/h.css">
-<link rel="stylesheet" type="text/css" href="css/Style1.css">
-</head>
-<body>
-
-
+<!--<link rel="stylesheet" type="text/css" href="css/Style1.css">-->
+<script src ="index.js"></script>
 <div class="slideshow-container">
 
 <div class="mySlides fade">
-  <div class="numbertext">1 / 2</div>
-  <img src="images/3.jpg" style="width:100%">
+  <div class="numbertext">1 / 3</div>
+  <img src="images/1.jpg" style="width:100%">
   <div class="text">Play</div>
 </div>
 
@@ -29,122 +21,115 @@
 </div>
 
 <div class="mySlides fade">
-  <div class="numbertext">3/ 4</div>
-  <img src="images/1.jpg" style="width:100%">
-  <div class="text">Play</div>
-</div>   
-
-<div class="mySlides fade">
-  <div class="numbertext">4 / 1</div>
-  <img src="images/2.jpg" style="width:100%">
+  <div class="numbertext">3 / 3</div>
+  <img src="images/3.jpg" style="width:100%">
   <div class="text">Play</div>
 </div>
 
-<a class="prev" onclick="plusSlides(-1)">&#10094;</a>
-<a class="next" onclick="plusSlides(1)">&#10095;</a>
+
+<div class="mySlides fade">
+  <div class="numbertext">3 / 4</div>
+  <img src="images/2.jpg" style="width:100%">
+  <div class="text">Play</div>
+</div>
 
 </div>
 <br>
 
 <div style="text-align:center">
-  <span class="dot" onclick="currentSlide(1)"></span> 
-  <span class="dot" onclick="currentSlide(2)"></span> 
-  <span class="dot" onclick="currentSlide(3)"></span> 
-  <span class="dot" onclick="currentSlide(4)"></span> 
+  <span class="dot"></span> 
+  <span class="dot"></span> 
+  <span class="dot"></span> 
+  <span class="dot"></span>
 </div>
 
 <script>
-var slideIndex = 1;
-showSlides(slideIndex);
+var slideIndex = 0;
+showSlides();
 
-function plusSlides(n) {
-  showSlides(slideIndex += n);
-}
-
-function currentSlide(n) {
-  showSlides(slideIndex = n);
-}
-
-function showSlides(n) {
+function showSlides() {
   var i;
   var slides = document.getElementsByClassName("mySlides");
   var dots = document.getElementsByClassName("dot");
-  if (n > slides.length) {slideIndex = 1}    
-  if (n < 1) {slideIndex = slides.length}
   for (i = 0; i < slides.length; i++) {
-      slides[i].style.display = "none";  
+    slides[i].style.display = "none";  
   }
+  slideIndex++;
+  if (slideIndex > slides.length) {slideIndex = 1}    
   for (i = 0; i < dots.length; i++) {
-      dots[i].className = dots[i].className.replace(" active", "");
+    dots[i].className = dots[i].className.replace(" active", "");
   }
   slides[slideIndex-1].style.display = "block";  
   dots[slideIndex-1].className += " active";
+  setTimeout(showSlides, 2000); // Change image every 2 seconds
 }
 </script>
+
 <!--brows by grade-->
-<div class="container">
-<h2>Brows by Grade</h2>
-<p>
-<button class="but-black ">perschool</button>
-<button class="button button2">number1</button>
-<button class="button button2">number2</button>
-<button class="button button2">number3</button>
-<button class="button button2">number4</button>
-<button class="button button2">number5</button>
-<hr>
 
-<!--popular subject-->
-<h2>popular Subject</h2>
-<button class="button button2">popular subject</button>
-<button class="button button2">view all subject</button>
+<h1>Browse by Grade</h1>
 
-<hr>
-<!--popular Game-->
-<h2><u>popular Game</u></h2>
-<h2>View AllGames</h2>
-<form method="post">
-<label>Search Games</label>
-<input type="text" name="Search">
-<input type="submit" name="submit">	
+<div class="btn-group">
+  <button>Grade-1</button>
+  <button>Grade-2</button>
+  <button>Grade-3</button>
+  <button>Grade-4</button>
+  <button>Grade-5</button>
+  <button>Grade-6</button>
+</div>
 <br><br>
+<hr>
 
+  <!--popular subject-->
 
+  <h1>Popular Subjects</h1>
+<div class="subjects-btn">
+  <button class="bon">Mathematics</button>
+  <button class="bon">Science</button>
+  <button class="bon">English</button>
+  <button class="bon">History</button>
+  <button class="bon">Health</button>
+</div> 
 
-<div class="box">
-				<div class="bicon">
-					<img src="images/game4.png" class="logbcon">
-				</div>
-				<div class="content">
-                <a href="www.game.lk"><h2>Play</h2></a>
-                <p>Quize(Grade-4/game-1)</p>
-				</div>
-			</div>
+<br><br><br>
 
+<hr>
 
-      <div class="box">
-				<div class="bicon">
-					<img src="images/game4.png" class="logbcon">
-				</div>
-				<div class="content">
-                <a href="www.game.lk"><h2>Play</h2></a>
-                <p>Quize(Grade-4/game-1)</p>
-				</div>
-			</div>
+<!--popular Game-->
+<div class="game-header">
+  <h1>Popular Games</h1>
+  <a href="games.php">
+    <button class="butt"><span>View AllGames </span></button>
+  </a>
+  <form action="search.php" method="get">
+  <label>Search Games</label>
+  <input type="text" name="search">
+  <input type="submit" value="Search">
+</div>
 
-
-      <div class="box">
-				<div class="bicon">
-					<img src="images/game4.png" class="logbcon">
-				</div>
-				<div class="content">
-                <a href="www.game.lk"><h2>Play</h2></a>
-                <p>Quize(Grade-4/game-1)</p>
-				</div>
-			</div>
-</body>
-
-
-  <?php
-  include('./footer.php'); 
-  ?>
-</html>
+<div class="game-container">
+<?php 
+  require 'includes/database.inc.php';
+  $count = 1;
+  $sql = "SELECT gameID, gameName, gameGrade, gameCategory, gameSubject, gameAccess, gThumbnail FROM Game";
+  $result = mysqli_query($conn, $sql);
+  while($row = mysqli_fetch_assoc($result)) {
+    // if($count < 5){
+    echo '<div class="box">
+          <div class="bicon">
+          <img src="games/thumbnails/'.$row["gThumbnail"].'" class="logbcon">
+          </div>
+          <h3>'.$row["gameName"].'</h3>
+          <button class="playBTN">
+          <a href="game.php?gameID='.$row["gameID"].'">Play 🎮</a></button>
+          <h4>'.$row["gameCategory"].'/'.$row["gameGrade"].'</h4>
+          
+          </div>';
+    //   $count = $count + 1;
+    // }
+  }
+?>
+</div>
+<?php
+include 'footer.php';
+?>

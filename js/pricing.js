@@ -13,13 +13,13 @@ var btnSwitchValue = "monthly";
 var btnSwitch = document.getElementById("btnSwitchRound");
 
 btnSwitch.addEventListener("click", function () {
-  var monthlyValue = 150;
+  var monthlyValue = 9;
   var annualyValue = 0;
 
   if (btnSwitchValue === "monthly") {
-    annualyValue = monthlyValue - monthlyValue * 0.02;
+    annualyValue = monthlyValue * 12 * 0.8;
 
-    document.getElementById("value").innerHTML = "$" + annualyValue + "/Annu";
+    document.getElementById("value").innerHTML = "$" + annualyValue + "/year";
     btnSwitchValue = "Annualy";
   } else {
     document.getElementById("value").innerHTML = "$" + monthlyValue + "/mon";
