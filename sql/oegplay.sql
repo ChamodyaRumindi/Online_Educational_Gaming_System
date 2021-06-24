@@ -39,7 +39,7 @@ CREATE TABLE `admin` (
 
 LOCK TABLES `admin` WRITE;
 /*!40000 ALTER TABLE `admin` DISABLE KEYS */;
-INSERT INTO `admin` VALUES (2,'pasindulakshan','Pasindu','Lakshan','4abeccbafe94c737a66d81103ae01bfcabfcab77b71c05fac3a3e3b357de450e',NULL),(4,'pasindux','Pasindu','Lakshan','$2y$10$GjoMOGzoeOVpk4fRny4JZOwO.i72P8zLcFbVXCwmfeQGjgflJXaqm','pasindux-60b3fe83e91991.87655486.jpg');
+INSERT INTO `admin` VALUES (2,'pasindulakshan','Pasindu','Lakshan','4abeccbafe94c737a66d81103ae01bfcabfcab77b71c05fac3a3e3b357de450e',NULL),(4,'pasindux','Pasindu','Rangana','$2y$10$GjoMOGzoeOVpk4fRny4JZOwO.i72P8zLcFbVXCwmfeQGjgflJXaqm','pasindux-60cae44a96ad98.21656586.jpg');
 /*!40000 ALTER TABLE `admin` ENABLE KEYS */;
 UNLOCK TABLES;
 
@@ -112,10 +112,8 @@ CREATE TABLE `contact` (
   `view_datetime` datetime NOT NULL,
   PRIMARY KEY (`contactID`,`memberID`),
   KEY `FK_Contact1` (`memberID`),
-  KEY `FK_Contact2` (`adminID`),
-  CONSTRAINT `FK_Contact1` FOREIGN KEY (`memberID`) REFERENCES `member` (`memberID`),
-  CONSTRAINT `FK_Contact2` FOREIGN KEY (`adminID`) REFERENCES `admin` (`adminID`)
-) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
+  KEY `FK_Contact2` (`adminID`)
+) ENGINE=InnoDB AUTO_INCREMENT=74 DEFAULT CHARSET=utf8mb4;
 /*!40101 SET character_set_client = @saved_cs_client */;
 
 --
@@ -124,6 +122,7 @@ CREATE TABLE `contact` (
 
 LOCK TABLES `contact` WRITE;
 /*!40000 ALTER TABLE `contact` DISABLE KEYS */;
+INSERT INTO `contact` VALUES (54,34,'Pasindu Lakshan','English','dkp9912@gmail.com','Add more questions based on parts of speech','2021-06-16 16:14:08',0,'0000-00-00 00:00:00'),(64,34,'Pasindu Lakshan','Test','dkp9912@gmail.com','Test','2021-06-17 06:30:08',0,'0000-00-00 00:00:00');
 /*!40000 ALTER TABLE `contact` ENABLE KEYS */;
 UNLOCK TABLES;
 
@@ -204,7 +203,7 @@ CREATE TABLE `game` (
   KEY `FK_Game2` (`devID`),
   CONSTRAINT `FK_Game1` FOREIGN KEY (`adminID`) REFERENCES `admin` (`adminID`),
   CONSTRAINT `FK_Game2` FOREIGN KEY (`devID`) REFERENCES `developer` (`devID`)
-) ENGINE=InnoDB AUTO_INCREMENT=74 DEFAULT CHARSET=utf8mb4;
+) ENGINE=InnoDB AUTO_INCREMENT=144 DEFAULT CHARSET=utf8mb4;
 /*!40101 SET character_set_client = @saved_cs_client */;
 
 --
@@ -213,7 +212,7 @@ CREATE TABLE `game` (
 
 LOCK TABLES `game` WRITE;
 /*!40000 ALTER TABLE `game` DISABLE KEYS */;
-INSERT INTO `game` VALUES (64,'Bingo Additions','Grade 5','Quiz','Mathematics','Bingo Addition Game is a quiz to test your knowledge of additions.','Choose the correct answer from the given answers. and then click the next questions button. after answering all questions you can submit the answers by clicking submit button.','Free',4,1,'60b22b9b033530.99447546.php','60b22b9b5b1a44.82255669.jpg','2021-05-29','2021-05-29');
+INSERT INTO `game` VALUES (64,'Bingo Additions','Grade 5','Quiz','Mathematics','Bingo Addition Game is a quiz to test your knowledge of additions.','Choose the correct answer from the given answers. and then click the next questions button. after answering all questions you can submit the answers by clicking submit button.','Free',4,1,'60b22b9b033530.99447546.php','60b22b9b5b1a44.82255669.jpg','2021-05-29','2021-05-29'),(84,'Bingo Additions','Preschool','Quiz','English','Bingo Addition Game is an educational & interactive way to learn addition online','Clicks the start now button. then follow the on-screen instructions','Free',4,1,'60ca1619948e43.99828745.php','60ca161994cb02.17460918.jpg','2021-06-16','2021-06-16'),(94,'Multiplication Race','Grade 1','Puzzle','Mathematics','Practice your multiplication skills with this awesome game','Clicks the start now button. then follow the on-screen instructions','Free',4,1,'60ca16c52acd60.58879549.php','60ca16c52adc89.11965572.jpg','2021-06-16','2021-06-16'),(104,'Active Passive','Grade 2','Quiz','English','Best way learn how to convert Active voice to Passive Voice','Clicks the start now button. then follow the on-screen instructions','Premium',4,1,'60ca17f5ab2eb9.99260990.php','60ca17f5ab5804.94635590.jpg','2021-06-16','2021-06-16'),(114,'Find Synonyms','Grade 3','Quiz','English','This game teaches synonyms. Learn Synonyms while having fun','Clicks the start now button. then follow the on-screen instructions','Free',4,1,'60ca184b802ca4.37349484.php','60ca184b804af3.22390049.jpg','2021-06-16','2021-06-16'),(124,'Measuring Matter','Grade 4','Puzzle','Mathematics','learn about the various tools and units of measuring matter','Clicks the start now button. then follow the on-screen instructions','Free',4,1,'60ca189a0ebb19.11820884.php','60ca189a0ed787.60588537.jpg','2021-06-16','2021-06-16');
 /*!40000 ALTER TABLE `game` ENABLE KEYS */;
 UNLOCK TABLES;
 
@@ -260,7 +259,7 @@ CREATE TABLE `history` (
   KEY `FK_History2` (`gameID`),
   CONSTRAINT `FK_History1` FOREIGN KEY (`memberID`) REFERENCES `member` (`memberID`),
   CONSTRAINT `FK_History2` FOREIGN KEY (`gameID`) REFERENCES `game` (`gameID`)
-) ENGINE=InnoDB AUTO_INCREMENT=74 DEFAULT CHARSET=utf8mb4;
+) ENGINE=InnoDB AUTO_INCREMENT=94 DEFAULT CHARSET=utf8mb4;
 /*!40101 SET character_set_client = @saved_cs_client */;
 
 --
@@ -269,7 +268,7 @@ CREATE TABLE `history` (
 
 LOCK TABLES `history` WRITE;
 /*!40000 ALTER TABLE `history` DISABLE KEYS */;
-INSERT INTO `history` VALUES (4,34,64,'2021-05-29 03:39:48',10),(14,34,64,'2021-05-29 02:23:43',100),(24,34,64,'2021-05-29 05:12:23',200),(34,34,64,'2021-05-30 04:34:56',90),(44,34,64,'2021-05-31 05:12:12',70),(54,34,64,'2021-05-31 06:45:42',80),(64,34,64,'2021-05-31 07:46:23',140);
+INSERT INTO `history` VALUES (4,34,64,'2021-05-29 03:39:48',10),(14,34,64,'2021-05-29 02:23:43',100),(24,34,64,'2021-05-29 05:12:23',200),(34,34,64,'2021-05-30 04:34:56',90),(44,34,64,'2021-05-31 05:12:12',70),(54,34,64,'2021-05-31 06:45:42',80),(64,34,64,'2021-05-31 07:46:23',140),(74,34,114,'2021-06-17 08:09:06',3),(84,34,114,'2021-06-17 08:10:14',0);
 /*!40000 ALTER TABLE `history` ENABLE KEYS */;
 UNLOCK TABLES;
 
@@ -292,7 +291,7 @@ CREATE TABLE `member` (
   PRIMARY KEY (`memberID`),
   KEY `FK_Member` (`TID`),
   CONSTRAINT `FK_Member` FOREIGN KEY (`TID`) REFERENCES `type` (`TID`)
-) ENGINE=InnoDB AUTO_INCREMENT=144 DEFAULT CHARSET=utf8mb4;
+) ENGINE=InnoDB AUTO_INCREMENT=174 DEFAULT CHARSET=utf8mb4;
 /*!40101 SET character_set_client = @saved_cs_client */;
 
 --
@@ -301,7 +300,7 @@ CREATE TABLE `member` (
 
 LOCK TABLES `member` WRITE;
 /*!40000 ALTER TABLE `member` DISABLE KEYS */;
-INSERT INTO `member` VALUES (34,'pasindux','Pasindu','Lakshan','$2y$10$/mde2Cm21yzlSeOnZLL/1.2u2jUOmCvUiSdaAHLV6MjTY8c6FP47m','No Rank',2,'pasindux-60b4f25acda595.63732602.jpg'),(44,'rumi','chamodya','rumindi','$2y$10$VvR83FC87gpbVGFQWeCy8etLNE40Z7kBE2JGDSrAA/.UdUcgNfP56','No Rank',2,NULL),(54,'cham','cham','rumindi','$2y$10$Y0PIZZq1Kcf9rPHAbMyiGehUg8LUuLjt3VC6b8rjoj31GMhwzbc06','No Rank',2,NULL),(64,'ruuuu','ruu','chaa','$2y$10$n57EbAFPHRWoVfujy9P53uC4xRmimUzoGzLtx4qQ0IpWsaqCahXy2','No Rank',2,NULL),(74,'kkl','ddss','fff','$2y$10$dr/pPBm6wN5vmD5TEXF1Te79UiEEgUnQYbqPvC5KPduaTqGgJny.S','No Rank',2,NULL),(84,'rumindi','rumi','cham','$2y$10$onBPvlPkJ7iei3ZX1Csc4.5BO0dpsZYbci9u2TWcLOI1KuwZ2L08i','No Rank',2,NULL),(94,'nethu','nethmini','tharuka','$2y$10$AgUUXvcCaS4Bq0G.puNVzOC5GNJ66XR6WI5UwACys7ti8MV58dPQW','No Rank',1,NULL),(104,'chamodya','ruu','mi','$2y$10$SKrOZQMBK.sbl7r9OpGaYOUgPJuuMM7LohsJmB3dafHZc7GjE5Kce','No Rank',2,NULL),(114,'chaa','chaa','ruu','$2y$10$B9mXsGv20zSQgSc5Nkgt3.0vjeuohxBUcOTPYkeyOsA6c1oTGmXl.','No Rank',2,NULL),(124,'qaaa','qqq','qqqq','$2y$10$livZ2Z7/.U3Bc2zLqi5kA.4xoT2qSV/DMAGlq99uqqJ4LjneS7l7q','No Rank',2,NULL),(134,'qqq','mmm','yyy','$2y$10$Bu3VD53PzHw6oRzROhB5cuoNBMvAWyniORd8sIU7CZ1QvIGC58NIe','No Rank',2,NULL);
+INSERT INTO `member` VALUES (34,'pasindux','Pasindu','Rangana','$2y$10$/mde2Cm21yzlSeOnZLL/1.2u2jUOmCvUiSdaAHLV6MjTY8c6FP47m','No Rank',2,'pasindux-60b4f25acda595.63732602.jpg'),(44,'rumi','chamodya','rumindi','$2y$10$VvR83FC87gpbVGFQWeCy8etLNE40Z7kBE2JGDSrAA/.UdUcgNfP56','No Rank',2,NULL),(54,'cham','cham','rumindi','$2y$10$Y0PIZZq1Kcf9rPHAbMyiGehUg8LUuLjt3VC6b8rjoj31GMhwzbc06','No Rank',2,NULL),(64,'ruuuu','ruu','chaa','$2y$10$n57EbAFPHRWoVfujy9P53uC4xRmimUzoGzLtx4qQ0IpWsaqCahXy2','No Rank',2,NULL),(74,'kkl','ddss','fff','$2y$10$dr/pPBm6wN5vmD5TEXF1Te79UiEEgUnQYbqPvC5KPduaTqGgJny.S','No Rank',2,NULL),(84,'rumindi','rumi','cham','$2y$10$onBPvlPkJ7iei3ZX1Csc4.5BO0dpsZYbci9u2TWcLOI1KuwZ2L08i','No Rank',2,NULL),(94,'nethu','nethmini','tharuka','$2y$10$AgUUXvcCaS4Bq0G.puNVzOC5GNJ66XR6WI5UwACys7ti8MV58dPQW','No Rank',1,NULL),(114,'chaa','chaa','ruu','$2y$10$B9mXsGv20zSQgSc5Nkgt3.0vjeuohxBUcOTPYkeyOsA6c1oTGmXl.','No Rank',2,NULL),(124,'qaaa','qqq','qqqq','$2y$10$livZ2Z7/.U3Bc2zLqi5kA.4xoT2qSV/DMAGlq99uqqJ4LjneS7l7q','No Rank',2,NULL),(134,'qqq','mmm','yyy','$2y$10$Bu3VD53PzHw6oRzROhB5cuoNBMvAWyniORd8sIU7CZ1QvIGC58NIe','No Rank',2,NULL),(144,'chanaka','chanaka','kamal','$2y$10$2quYGsN71TqD1o664ZQweOoGvS0hh2lFzWAUsSi3zvag6H3jaApV2','No Rank',2,NULL),(154,'nayana','nayana','tharu','$2y$10$H4/hfZn3OFaeOLS7YVpSRe3Kxapa49PDo4lY38YGlFKEkKwqeSF0O','No Rank',2,NULL);
 /*!40000 ALTER TABLE `member` ENABLE KEYS */;
 UNLOCK TABLES;
 
@@ -327,7 +326,7 @@ CREATE TABLE `member_email` (
 
 LOCK TABLES `member_email` WRITE;
 /*!40000 ALTER TABLE `member_email` DISABLE KEYS */;
-INSERT INTO `member_email` VALUES (34,'dkp9912@gmail.com','Primary'),(44,'rumicham99@gmail.com','Primary'),(54,'aasss@ahana.gmail.com','Primary'),(64,'asss@gmail.com','Primary'),(74,'asg@gmail.com','Primary'),(84,'abc@gamil.com','Primary'),(94,'tharukatharu16@gmail.com','Primary'),(104,'asd@gmail.com','Primary'),(114,'aswdd@gamil.com','Primary'),(124,'awd@gmail.com','Primary'),(134,'sde@gmail.com','Primary');
+INSERT INTO `member_email` VALUES (34,'test@gmail.com','Primary'),(44,'rumicham99@gmail.com','Primary'),(54,'aasss@ahana.gmail.com','Primary'),(64,'asss@gmail.com','Primary'),(74,'asg@gmail.com','Primary'),(84,'abc@gamil.com','Primary'),(94,'tharukatharu16@gmail.com','Primary'),(114,'aswdd@gamil.com','Primary'),(124,'awd@gmail.com','Primary'),(134,'sde@gmail.com','Primary'),(144,'chanakakamal99@gmail.com','Primary'),(154,'ffff@gmail.com','Primary');
 /*!40000 ALTER TABLE `member_email` ENABLE KEYS */;
 UNLOCK TABLES;
 
@@ -348,7 +347,7 @@ CREATE TABLE `membership` (
   PRIMARY KEY (`MID`),
   KEY `FK_Membership1` (`memberID`),
   CONSTRAINT `FK_Membership1` FOREIGN KEY (`memberID`) REFERENCES `member` (`memberID`) ON DELETE CASCADE
-) ENGINE=InnoDB AUTO_INCREMENT=124 DEFAULT CHARSET=utf8mb4;
+) ENGINE=InnoDB AUTO_INCREMENT=154 DEFAULT CHARSET=utf8mb4;
 /*!40101 SET character_set_client = @saved_cs_client */;
 
 --
@@ -357,7 +356,7 @@ CREATE TABLE `membership` (
 
 LOCK TABLES `membership` WRITE;
 /*!40000 ALTER TABLE `membership` DISABLE KEYS */;
-INSERT INTO `membership` VALUES (14,34,' ',' ','2021-05-24','0000-00-00'),(24,44,'','','2021-05-29','0000-00-00'),(34,54,'','','2021-05-30','0000-00-00'),(44,64,'','','2021-05-30','0000-00-00'),(54,74,'','','2021-05-30','0000-00-00'),(64,84,'','','2021-05-31','0000-00-00'),(74,94,'','','2021-05-31','0000-00-00'),(84,104,'','','2021-05-31','0000-00-00'),(94,114,'','','2021-05-31','0000-00-00'),(104,124,'','','2021-05-31','0000-00-00'),(114,134,'','','2021-05-31','0000-00-00');
+INSERT INTO `membership` VALUES (14,34,'Annual','Canceled','2021-05-24','2021-07-21'),(24,44,'','','2021-05-29','0000-00-00'),(34,54,'','','2021-05-30','0000-00-00'),(44,64,'','','2021-05-30','0000-00-00'),(54,74,'','','2021-05-30','0000-00-00'),(64,84,'','','2021-05-31','0000-00-00'),(74,94,'','','2021-05-31','0000-00-00'),(94,114,'','','2021-05-31','0000-00-00'),(104,124,'','','2021-05-31','0000-00-00'),(114,134,' ',' ','2021-05-31','0000-00-00'),(124,144,'','','2021-06-16','0000-00-00'),(134,154,'','','2021-06-17','0000-00-00');
 /*!40000 ALTER TABLE `membership` ENABLE KEYS */;
 UNLOCK TABLES;
 
@@ -380,7 +379,7 @@ CREATE TABLE `payment` (
   KEY `FK_Payment2` (`MID`),
   CONSTRAINT `FK_Payment1` FOREIGN KEY (`memberID`) REFERENCES `member` (`memberID`),
   CONSTRAINT `FK_Payment2` FOREIGN KEY (`MID`) REFERENCES `membership` (`MID`)
-) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
+) ENGINE=InnoDB AUTO_INCREMENT=704 DEFAULT CHARSET=utf8mb4;
 /*!40101 SET character_set_client = @saved_cs_client */;
 
 --
@@ -389,6 +388,7 @@ CREATE TABLE `payment` (
 
 LOCK TABLES `payment` WRITE;
 /*!40000 ALTER TABLE `payment` DISABLE KEYS */;
+INSERT INTO `payment` VALUES (474,34,'2020-07-12 16:23:23',60,'Paypal',14),(484,34,'2020-08-12 16:23:23',80,'Paypal',14),(494,34,'2020-09-12 16:23:23',120,'Paypal',14),(504,34,'2020-10-12 16:23:23',100,'Paypal',14),(514,34,'2020-11-12 16:23:23',90,'Paypal',14),(524,34,'2020-12-12 16:23:23',200,'Paypal',14),(534,34,'2021-01-12 16:23:23',300,'Paypal',14),(544,34,'2021-02-12 16:23:23',270,'Paypal',14),(554,34,'2021-03-12 16:23:23',400,'Paypal',14),(564,34,'2021-04-12 16:23:23',600,'Paypal',14),(574,34,'2021-05-12 16:23:23',550,'Paypal',14),(584,34,'2021-06-05 16:23:23',750,'Paypal',14),(594,34,'2020-08-12 16:23:23',80,'Paypal',14),(604,34,'2020-09-12 16:23:23',120,'Paypal',14),(614,34,'2020-10-12 16:23:23',100,'Paypal',14),(624,34,'2020-11-12 16:23:23',90,'Paypal',14),(634,34,'2020-12-12 16:23:23',200,'Paypal',14),(644,34,'2021-01-12 16:23:23',300,'Paypal',14),(654,34,'2021-02-12 16:23:23',270,'Paypal',14),(664,34,'2021-03-12 16:23:23',400,'Paypal',14),(674,34,'2021-04-12 16:23:23',600,'Paypal',14),(684,34,'2021-05-12 16:23:23',550,'Paypal',14);
 /*!40000 ALTER TABLE `payment` ENABLE KEYS */;
 UNLOCK TABLES;
 
@@ -482,4 +482,4 @@ UNLOCK TABLES;
 /*!40101 SET COLLATION_CONNECTION=@OLD_COLLATION_CONNECTION */;
 /*!40111 SET SQL_NOTES=@OLD_SQL_NOTES */;
 
--- Dump completed on 2021-05-31 23:21:21
+-- Dump completed on 2021-06-24 14:10:14
